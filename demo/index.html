@@ -12,6 +12,7 @@
       import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
       import '@polymer/iron-demo-helpers/demo-snippet';
     </script>
+    <script type="module" src="../src/auro-radio-group.js"></script>
     <script type="module" src="../src/auro-radio.js"></script>
     <script src="../demo/alert.js"></script>
     <script type="module">
@@ -60,9 +61,179 @@
         </span>
       </p>
 
+      <p>Default radio button group</p>
       <demo-snippet>
         <template>
-          <auro-radio cssClass="testClass">Hello World!</auro-radio>
+          <auro-radio-group label="Form label goes here">
+            <auro-radio
+              id="radio1"
+              label="Yes"
+              name="radioDemo1"
+              value="yes"
+            ></auro-radio>
+            <auro-radio
+              id="radio2"
+              label="No"
+              name="radioDemo1"
+              value="no"
+            ></auro-radio>
+            <auro-radio
+              id="radio3"
+              label="Maybe"
+              name="radioDemo1"
+              value="maybe"
+            ></auro-radio>
+          </auro-radio-group>
+        </template>
+      </demo-snippet>
+
+      <p>Radio button group, <code>horizontal</code> option (limit 3 min breakpoint-narrow)</p>
+      <demo-snippet>
+        <template>
+          <auro-radio-group label="Form label goes here" horizontal>
+            <auro-radio
+              id="radio4"
+              label="Yes"
+              name="radioDemo2"
+              value="yes"
+            ></auro-radio>
+            <auro-radio
+              id="radio5"
+              label="No"
+              name="radioDemo2"
+              value="no"
+            ></auro-radio>
+            <auro-radio
+              id="radio6"
+              label="Maybe"
+              name="radioDemo2"
+              value="maybe"
+            ></auro-radio>
+          </auro-radio-group>
+        </template>
+      </demo-snippet>
+
+      <p>Radio button group, <code>horizontal</code> option ignored due to option limit (3)</p>
+      <demo-snippet>
+        <template>
+          <auro-radio-group label="Form label goes here" horizontal>
+            <auro-radio
+              id="radio7"
+              label="Yes"
+              name="radioDemo3"
+              value="yes"
+            ></auro-radio>
+            <auro-radio
+              id="radio8"
+              label="No"
+              name="radioDemo3"
+              value="no"
+            ></auro-radio>
+            <auro-radio
+              id="radio9"
+              label="Maybe"
+              name="radioDemo3"
+              value="maybe"
+            ></auro-radio>
+            <auro-radio
+              id="radio10"
+              label="Somewhat"
+              name="radioDemo3"
+              value="somewhat"
+            ></auro-radio>
+            <auro-radio
+              id="radio11"
+              label="Yuppers"
+              name="radioDemo3"
+              value="yuppers"
+            ></auro-radio>
+            <auro-radio
+              id="radio12"
+              label="Nope"
+              name="radioDemo3"
+              value="nope"
+            ></auro-radio>
+          </auro-radio-group>
+        </template>
+      </demo-snippet>
+
+      <p>Radio button group with option set to <code>checked</code></p>
+      <demo-snippet>
+        <template>
+          <auro-radio-group label="Form label goes here">
+            <auro-radio
+              id="radio13"
+              label="Yes"
+              name="radioDemo4"
+              value="yes"
+            ></auro-radio>
+            <auro-radio
+              id="radio14"
+              label="No"
+              name="radioDemo4"
+              value="no"
+              checked="true"
+            ></auro-radio>
+            <auro-radio
+              id="radio15"
+              label="Maybe"
+              name="radioDemo4"
+              value="maybe"
+            ></auro-radio>
+          </auro-radio-group>
+        </template>
+      </demo-snippet>
+
+      <p>Radio button group set <code>disabled</code></p>
+      <demo-snippet>
+        <template>
+          <auro-radio-group label="Form label goes here" disabled>
+            <auro-radio
+              id="radio16"
+              label="Yes"
+              name="radioDemo5"
+              value="yes"
+            ></auro-radio>
+            <auro-radio
+              id="radio17"
+              label="No"
+              name="radioDemo5"
+              value="no"
+              checked
+            ></auro-radio>
+            <auro-radio
+              id="radio18"
+              label="Maybe"
+              name="radioDemo5"
+              value="maybe"
+            ></auro-radio>
+          </auro-radio-group>
+        </template>
+      </demo-snippet>
+
+      <p>Radio button group with error</p>
+      <demo-snippet>
+        <template>
+          <auro-radio-group label="Form label goes here" error="Selection is required; please update.">
+            <auro-radio
+              id="radio19"
+              label="Yes"
+              name="radioDemo6"
+              value="yes"
+            ></auro-radio>
+            <auro-radio
+              id="radio20"
+              label="No"
+              name="radioDemo6"
+              value="no"
+            ></auro-radio>
+            <auro-radio
+              id="radio21"
+              label="Maybe"
+              name="radioDemo6"
+              value="maybe"
+            ></auro-radio>
+          </auro-radio-group>
         </template>
       </demo-snippet>
 
@@ -81,4 +252,6 @@
       <p>Info ...</p>
     </div>
   </body>
+
+  <script type="module" src="../demo/events.js" defer></script>
 </html>

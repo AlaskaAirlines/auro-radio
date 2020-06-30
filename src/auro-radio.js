@@ -6,7 +6,7 @@
 import { LitElement, html } from "lit-element";
 import { classMap } from 'lit-html/directives/class-map';
 import {ifDefined} from 'lit-html/directives/if-defined';
-import componentProperties from './tokens/componentShapeProperties-css.js';
+import componentProperties from './_deprecated-componentShapeProperties-css.js';
 
 
 // Import touch detection lib

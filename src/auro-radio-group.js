@@ -16,6 +16,9 @@ class AuroRadioGroup extends LitElement {
     super();
 
     this.index = 0;
+    this.zero = 0;
+    this.one = 1;
+    this.three = 3;
   }
 
   static get properties() {
@@ -44,9 +47,9 @@ class AuroRadioGroup extends LitElement {
   initializeIndex() {
     const index = this.items.findIndex((item) => item.checked);
 
-    this.index = index < 0 ? 0 : index;
-    if (this.items.length > 0) {
-      this.items[this.index].tabIndex = 0;
+    this.index = index < this.zero ? this.zero : index;
+    if (this.items.length > this.zero) {
+      this.items[this.index].tabIndex = this.zero;
     }
   }
 
@@ -54,7 +57,7 @@ class AuroRadioGroup extends LitElement {
     this.index = this.items.indexOf(event.target);
     this.items.forEach((item) => {
       if (item === event.target) {
-        item.tabIndex = 0;
+        item.tabIndex = this.zero;
       } else {
         const sdInput = item.shadowRoot.querySelector('input');
 
@@ -91,7 +94,7 @@ class AuroRadioGroup extends LitElement {
       case "Right":
       case "ArrowRight":
         event.preventDefault();
-        this.selectItem(this.index === this.items.length - 1 ? 0 : this.index + 1);
+        this.selectItem(this.index === this.items.length - this.one ? this.zero : this.index + this.one);
         break;
 
       case "Up":
@@ -99,7 +102,7 @@ class AuroRadioGroup extends LitElement {
       case "Left":
       case "ArrowLeft":
         event.preventDefault();
-        this.selectItem(this.index === 0 ? this.items.length - 1 : this.index - 1);
+        this.selectItem(this.index === this.zero ? this.items.length - this.one : this.index - this.one);
         break;
       default:
         break;
@@ -114,7 +117,7 @@ class AuroRadioGroup extends LitElement {
 
   render() {
     const groupClasses = {
-      'displayFlex': this.horizontal && this.items.length <= 3
+      'displayFlex': this.horizontal && this.items.length <= this.three
     }
 
     return html`

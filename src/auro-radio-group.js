@@ -8,7 +8,7 @@ import { classMap } from 'lit-html/directives/class-map';
 import 'focus-visible/dist/focus-visible.min.js';
 
 // Import the processed CSS file into the scope of the component
-import componentProperties from './tokens/componentShapeProperties-css.js';
+import componentProperties from './_deprecated-componentShapeProperties-css.js';
 import styleCss from "./ods-style-css.js";
 
 class AuroRadioGroup extends LitElement {

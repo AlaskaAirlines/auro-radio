@@ -6,12 +6,11 @@
 import { LitElement, html } from "lit-element";
 import { classMap } from 'lit-html/directives/class-map';
 import {ifDefined} from 'lit-html/directives/if-defined';
-import componentProperties from './_deprecated-componentShapeProperties-css.js';
 
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
-import styleCss from "./ods-style-css.js";
+import styleCss from "./auro-radio-css.js";
 
 // build the component class
 class AuroRadio extends LitElement {
@@ -70,16 +69,17 @@ class AuroRadio extends LitElement {
     const labelClasses = {
       'ods-inputLabel': true,
       'ods-inputLabel--radio': true,
+      'label': true,
+      'label--rdo': true,
       'errorBorder': Boolean(this.error)
     }
 
     return html`
-      ${componentProperties}
       ${styleCss}
 
-      <div class="ods-inputGroup">
+      <div class="ods-inputGroup rdoGroup">
         <input
-          class="util_displayHiddenVisually ods-inputOption"
+          class="util_displayHiddenVisually ods-inputOption rdo--input"
           @focus="${this.handleFocus}"
           @input="${this.handleInput}"
           ?disabled="${this.disabled}"

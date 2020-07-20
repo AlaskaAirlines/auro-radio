@@ -32,6 +32,10 @@ class AuroRadio extends LitElement {
         type: Boolean,
         reflect: true
       },
+      required: {
+        type: Boolean,
+        reflect: true
+      },
       error: {
         type: String,
         reflect: true
@@ -64,6 +68,22 @@ class AuroRadio extends LitElement {
     }))
   }
 
+  invalid(error) {
+    if (error) {
+      return 'true';
+    }
+
+    return 'false'
+  }
+
+  isRequired(required) {
+    if (required) {
+      return 'true';
+    }
+
+    return 'false'
+  }
+
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     const labelClasses = {
@@ -83,6 +103,8 @@ class AuroRadio extends LitElement {
           @focus="${this.handleFocus}"
           @input="${this.handleInput}"
           ?disabled="${this.disabled}"
+          aria-invalid="${this.invalid(this.error)}"
+          aria-required="${this.isRequired(this.required)}"
           ?checked="${this.checked}"
           id="${ifDefined(this.id)}"
           name="${ifDefined(this.name)}"

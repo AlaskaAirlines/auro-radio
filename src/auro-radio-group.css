@@ -302,14 +302,24 @@
   --auro-text-body-height-lg: 1.625rem; }
 
 :host {
-  display: block; }
+  display: block;
+  padding-bottom: var(--auro-size-md); }
+
+:host([error]) {
+  color: var(--auro-color-text-error-on-light); }
+
+:host([disabled]) {
+  color: var(--auro-color-text-disabled-on-light); }
 
 fieldset {
   all: unset; }
 
-@media screen and (min-width: 660px) {
-  .displayFlex slot {
-    display: flex; } }
+.displayFlex legend + slot {
+  display: flex;
+  white-space: nowrap; }
 
 legend {
   margin-bottom: var(--auro-size-md); }
+
+.errorText {
+  color: var(--auro-color-text-error-on-light); }

@@ -20,12 +20,15 @@ class AuroRadioGroup extends LitElement {
     this.three = 3;
   }
 
+  // MOVE TO STATIC STYLES
+
+  // NEED PROP FOR REQUIRED
   static get properties() {
     return {
       disabled:   { type: Boolean },
       horizontal: { type: Boolean },
-      error:      { type: String },
-      label:      { type: String }
+      required:   { type: Boolean },
+      error:      { type: String }
     };
   }
 
@@ -36,6 +39,10 @@ class AuroRadioGroup extends LitElement {
 
     this.items.forEach((el) => {
       el.disabled = this.disabled
+    });
+
+    this.items.forEach((el) => {
+      el.required = this.required
     });
 
     this.addEventListener('toggleSelected', this.handleToggleSelected);
@@ -125,15 +132,15 @@ class AuroRadioGroup extends LitElement {
       ${this.errorChange()}
 
       <fieldset class="${classMap(groupClasses)}">
-        ${this.label
-          ? html`<legend>${this.label}</legend>`
-          : html``
+        ${this.required
+          ? html`<legend><slot name="legend"></slot></legend>`
+          : html`<legend><slot name="legend"></slot> (optional)</legend>`
         }
         <slot></slot>
       </fieldset>
 
       ${this.error
-        ? html`<p class="errorText">${this.error}</p>`
+        ? html`<p role="alert" class="errorText">${this.error}</p>`
         : html``}
     `;
   }

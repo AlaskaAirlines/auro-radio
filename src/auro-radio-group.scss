@@ -15,21 +15,32 @@
 // container styles - defines the look of the outer custom componet
 :host {
   display: block;
+  padding-bottom: var(--auro-size-md);
+}
+
+:host([error]) {
+  color: var(--auro-color-text-error-on-light);
+}
+
+:host([disabled]) {
+  color: var(--auro-color-text-disabled-on-light);
 }
 
 fieldset {
   all: unset;
 }
 
-// refactor
 .displayFlex {
-  slot {
-    @include auro_breakpoint--sm {
-      display: flex;
-    }
+  legend + slot {
+    display: flex;
+    white-space: nowrap;
   }
 }
 
 legend {
   margin-bottom: var(--auro-size-md);
+}
+
+.errorText {
+  color: var(--auro-color-text-error-on-light)
 }

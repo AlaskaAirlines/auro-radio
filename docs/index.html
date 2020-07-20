@@ -19,12 +19,6 @@
       }
     }
 
-    .wc-wrapper auro-radio {
-      display: inline-block;
-      margin-bottom: var(--auro-size-md);
-      margin-right: var(--auro-size-md);
-    }
-
     .codeWrapper {
       background-color: var(--auro-color-brand-midnight-400);
       color: #fff;
@@ -51,7 +45,14 @@
     }
 
     var auroRadio = [
-      '<auro-radio cssClass="testClass">Hello World</auro-radio>'
+      `
+<auro-radio-group>
+  <span slot="legend">Form label goes here</span>
+  <auro-radio id="radio13" label="Yes" name="radioDemo4" value="yes"></auro-radio>
+  <auro-radio id="radio14" label="No" name="radioDemo4" value="no" checked="true"></auro-radio>
+  <auro-radio id="radio15" label="Maybe" name="radioDemo4" value="maybe"></auro-radio>
+</auro-radio-group>
+`,
     ]
   </script>
 </head>
@@ -89,6 +90,7 @@
     <!-- for initial build and test only -->
     <script src="./polyfills.js"></script>
     <script src="./auro-radio__bundled.js"></script>
+    <script src="./auro-radio-group__bundled.js"></script>
 
     <!-- once first build has been released, update with the links below -->
     <!-- Be sure to update the :version number -->

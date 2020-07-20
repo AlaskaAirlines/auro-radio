@@ -3,7 +3,8 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 const config = {
   entry: {
-    ['auro-radio__bundled']: './src/auro-radio.js'
+    ['auro-radio__bundled']: './src/auro-radio.js',
+    ['auro-radio-group__bundled']: './src/auro-radio-group.js'
   },
   output: {
     path: path.resolve(__dirname, './dist'),

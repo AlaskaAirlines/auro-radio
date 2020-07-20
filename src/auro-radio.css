@@ -408,3 +408,7 @@
 
 .rdo--input:checked + .errorBorder:after {
   border-color: var(--auro-color-border-error-on-light); }
+
+.errorText {
+  color: var(--auro-color-text-error-on-light);
+  margin-bottom: 0; }

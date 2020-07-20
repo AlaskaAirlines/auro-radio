@@ -61,10 +61,46 @@
         </span>
       </p>
 
+      <p>Group only</p>
+      <demo-snippet>
+        <template>
+          <auro-radio-group>
+          </auro-radio-group>
+        </template>
+      </demo-snippet>
+
+      <p>Default radio button group required</p>
+      <demo-snippet>
+        <template>
+          <auro-radio-group required>
+            <span slot="legend">Form label goes here</span>
+            <auro-radio
+              id="radio10"
+              label="Yes"
+              name="radioDemo10"
+              value="yes"
+            ></auro-radio>
+            <auro-radio
+              id="radio20"
+              label="No"
+              name="radioDemo10"
+              value="no"
+            ></auro-radio>
+            <auro-radio
+              id="radio30"
+              label="Maybe"
+              name="radioDemo10"
+              value="maybe"
+            ></auro-radio>
+          </auro-radio-group>
+        </template>
+      </demo-snippet>
+
       <p>Default radio button group</p>
       <demo-snippet>
         <template>
-          <auro-radio-group label="Form label goes here">
+          <auro-radio-group>
+            <span slot="legend">Form label goes here</span>
             <auro-radio
               id="radio1"
               label="Yes"
@@ -90,7 +126,8 @@
       <p>Radio button group, <code>horizontal</code> option (limit 3 min breakpoint-narrow)</p>
       <demo-snippet>
         <template>
-          <auro-radio-group label="Form label goes here" horizontal>
+          <auro-radio-group horizontal>
+            <span slot="legend">Form label goes here</span>
             <auro-radio
               id="radio4"
               label="Yes"
@@ -116,7 +153,8 @@
       <p>Radio button group, <code>horizontal</code> option ignored due to option limit (3)</p>
       <demo-snippet>
         <template>
-          <auro-radio-group label="Form label goes here" horizontal>
+          <auro-radio-group horizontal>
+            <span slot="legend">Form label goes here</span>
             <auro-radio
               id="radio7"
               label="Yes"
@@ -160,7 +198,8 @@
       <p>Radio button group with option set to <code>checked</code></p>
       <demo-snippet>
         <template>
-          <auro-radio-group label="Form label goes here">
+          <auro-radio-group>
+            <span slot="legend">Form label goes here</span>
             <auro-radio
               id="radio13"
               label="Yes"
@@ -187,7 +226,8 @@
       <p>Radio button group set <code>disabled</code></p>
       <demo-snippet>
         <template>
-          <auro-radio-group label="Form label goes here" disabled>
+          <auro-radio-group disabled>
+            <span slot="legend">Form label goes here</span>
             <auro-radio
               id="radio16"
               label="Yes"
@@ -214,7 +254,8 @@
       <p>Radio button group with error</p>
       <demo-snippet>
         <template>
-          <auro-radio-group label="Form label goes here" error="Selection is required; please update.">
+          <auro-radio-group error="Selection is required; please update.">
+            <span slot="legend">Form label goes here</span>
             <auro-radio
               id="radio19"
               label="Yes"

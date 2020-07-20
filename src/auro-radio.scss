@@ -38,7 +38,6 @@
   .rdoGroup {
     display: block;
     background-color: var(--auro-color-ui-default-on-light);
-
     padding-right: var(--auro-size-xs);
 
     .rdo--input {
@@ -140,4 +139,9 @@
       }
     }
   }
+}
+
+.errorText {
+  color: var(--auro-color-text-error-on-light);
+  margin-bottom: 0;
 }

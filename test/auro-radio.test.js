@@ -11,23 +11,24 @@ import '../src/auro-radio-group.js';
 describe('auro-radio-group', () => {
   it('has the expected properties', async () => {
     const expectedError = "Expected error message";
-    const expectedLabel = "expectedLabel";
 
     const el = await fixture(html`
       <auro-radio-group
         horizontal
+        required
         error=${expectedError}
-        label=${expectedLabel}
       ></auro-radio-group>
     `);
 
     const root = el.shadowRoot;
-    const label = root.querySelector('legend');
     const error = root.querySelector('p');
 
     expect(el.horizontal).to.be.true;
-    expect(label.textContent).be.equal(expectedLabel);
+    expect(el.required).to.be.true;
     expect(error.textContent).be.equal(expectedError);
+    expect(el).dom.to.equal(`
+    <auro-radio-group horizontal required error="${expectedError}">
+    </auro-radio-group>`);
   });
 
   it('exhibits the correct group checking behavior', async () => {
@@ -436,7 +437,6 @@ describe('auro-radio-group', () => {
 describe('auro-radio', () => {
   it('has the expected properties', async () => {
     const expectedId = "testId",
-      expectedLabel = "testLabel",
       expectedName = "testName",
       expectedValue = "testValue",
       expectedError = "testError",
@@ -445,17 +445,16 @@ describe('auro-radio', () => {
     const el = await fixture(html`
       <auro-radio
         id="${expectedId}"
-        label="${expectedLabel}"
         name="${expectedName}"
         value="${expectedValue}"
         checked
         disabled
+        required
         error=${expectedError}
       ></auro-radio>
     `);
 
     const root = el.shadowRoot;
-    const label = root.querySelector('label');
     const input = root.querySelector('input');
     const errorBorder = root.querySelector('.errorBorder');
 
@@ -466,7 +465,9 @@ describe('auro-radio', () => {
     expect(input.value).to.equal(expectedValue);
     expect(input.name).to.equal(expectedName);
     expect(input.type).to.equal('radio');
-    expect(label.textContent).to.equal(expectedLabel);
     expect(errorBorder).to.not.be.undefined;
+    expect(el).dom.to.equal(`
+    <auro-radio id="${expectedId}" tabindex="-1" name="${expectedName}" value="${expectedValue}" error="${expectedError}" checked disabled required>
+    </auro-radio>`);
   });
 });

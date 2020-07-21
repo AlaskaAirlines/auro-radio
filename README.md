@@ -1,4 +1,4 @@
-## Element auro-radio
+# Auro-radio web component
 
 `<auro-radio>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of wrapping `<input type='radio'/>` elements with styling and behavior.
 

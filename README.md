@@ -1,6 +1,6 @@
 ## Element auro-radio
 
-`<auro-radio>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
+`<auro-radio>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of wrapping `<input type='radio'/>` elements with styling and behavior.
 
 ## Docs
 
@@ -12,9 +12,9 @@ For the most up to date information on UI development browser support, see [docs
 
 ## Install
 
-[![Build Status](https://img.shields.io/travis/AlaskaAirlines/auro-radio.svg?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/auro-radio)
-[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux//auro-radio.svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux//auro-radio)
-[![License](https://img.shields.io/npm/l/@alaskaairux/orion-design-tokens.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Build Status](https://img.shields.io/travis/AlaskaAirlines/auro-radio?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/auro-radio)
+[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-radio?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux/auro-radio)
+[![License](https://img.shields.io/npm/l/@alaskaairux/auro-radio.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ```shell
 $ npm i @alaskaairux/auro-radio
@@ -36,16 +36,19 @@ Any update to the Auro Design Tokens will be immediately reflected with browsers
 
 ### Define dependency in project component
 
-Defining the component dependency within each component that is using the `<auro-radio>` component.
+Defining the component dependency within each component that is using the `<auro-checkbox>` component.
 
 ```javascript
-import "@alaskaairux/auro-radio";
+import "@alaskaairux/auro-checkbox";
+import "@alaskaairux/auro-checkbox/dist/auro-checkbox-group";
 ```
 
 **Reference component in HTML**
 
 ```html
-<auro-radio>Hello World</auro-radio>
+<auro-checkbox-group>
+  <auro-checkbox></auro-checkbox>
+</auro-checkbox-group>
 ```
 
 ## Install bundled assets from CDN
@@ -58,36 +61,15 @@ In cases where the project is not able to process JS assets, there are pre-proce
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-web-core-style-sheets@:version/dist/bundled/baseline.css" />
 
-<script src="https://unpkg.com/@alaskaairux/auro-radio@:version/dist/polyfills.js"></script>
-<script src="https://unpkg.com/@alaskaairux/auro-radio@:version/dist/auro-radio__bundled.js"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-checkbox@:version/dist/polyfills.js"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-checkbox@:version/dist/auro-checkbox__bundled.js"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-checkbox@:version/dist/auro-checkbox-group__bundled.js"></script>
 ```
 
 ### polyfills.js
 
 The `polyfills.js` is packaged with this component, but **IT IS NOT NEEDED** to load a polyfill per component. The `polyfills.js` will work for all additional components added to the project.
 
-
-## auro-radio use cases
-
-The `<auro-radio>` element should be used in situations where users may:
-
-* ...
-* ...
-* ...
-
-## Properties:
-
-| Attribute | Value type | Description |
-|----|----|----|
-| attr | string, boolean, function | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
-
-## API Code Examples
-
-Default auro-radio
-
-```html
-<auro-radio>Hello World</auro-radio>
-```
 
 ## Development
 
@@ -116,4 +98,4 @@ $ npm run serve
 Open [localhost:3001](http://localhost:3001/)
 
 ### Testing
-Automated tests are required for every Auro component. See `.\test\auro-radio.test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TESTS.md) for more details.
+Automated tests are required for every Auro component. See `.\test\auro-checkbox.test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TESTS.md) for more details.

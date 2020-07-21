@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.0.1](https://github.com/AlaskaAirlines/auro-radio/compare/v1.0.0...v1.0.1) (2020-07-21)
+
+
+### Performance Improvements
+
+* update component to use static styles ([a956ca2](https://github.com/AlaskaAirlines/auro-radio/commit/a956ca2fbc906ab76fcad9c7005cce6b259e6be9))
+
 # 1.0.0 (2020-07-21)
 
 

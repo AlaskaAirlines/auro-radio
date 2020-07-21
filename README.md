@@ -8,7 +8,7 @@ All information regarding Project Setup, Technical Details, Tests and informatio
 
 ## UI development browser support
 
-For the most up to date information on UI development browser support, see [docs/BROWSER_SUPPORT.md](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/BROWSER_SUPPORT.md)
+For the most up to date information on [UI development browser support](https://auro.alaskaair.com/support/browsersSupport).
 
 ## Install
 
@@ -75,7 +75,7 @@ The `polyfills.js` is packaged with this component, but **IT IS NOT NEEDED** to 
 
 In order to develop against this project, if you are not part of the core team, you will be required to fork the project prior to submitting a pull request.
 
-Please be sure to review the [contribution guidelines](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/CONTRIBUTING.md) for this project. Please make sure to **pay special attention** to the [conventional commits](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/CONTRIBUTING.md#conventional-commits) section of the document.
+Please be sure to review the [contribution guidelines](https://auro.alaskaair.com/getting-started/developers/contributing) for this project. Please make sure to **pay special attention** to the **conventional commits** section of the document.
 
 ### Start development environment
 

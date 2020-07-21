@@ -61,6 +61,24 @@
         </span>
       </p>
 
+      <p>Radio only</p>
+      <demo-snippet>
+        <template>
+            <auro-radio id="radio10" label="Yes" name="radioDemo10" value="yes" checked></auro-radio>
+        </template>
+      </demo-snippet>
+
+      <p>Simple group</p>
+      <demo-snippet>
+        <template>
+            <auro-radio-group required>
+              <span slot="legend">Will you pick a plan?</span>
+              <auro-radio id="radio10" label="Yes" name="radioDemo10" value="yes"></auro-radio>
+              <auro-radio id="radio20" label="No" name="radioDemo10" value="no"></auro-radio>
+            </auro-radio-group>
+        </template>
+      </demo-snippet>
+
       <p>Group only</p>
       <demo-snippet>
         <template>
@@ -267,6 +285,7 @@
               label="No"
               name="radioDemo6"
               value="no"
+              checked
             ></auro-radio>
             <auro-radio
               id="radio21"

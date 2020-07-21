@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html } from "lit-element";
+import { LitElement, html, css } from "lit-element";
 import { classMap } from 'lit-html/directives/class-map';
 import {ifDefined} from 'lit-html/directives/if-defined';
 
@@ -19,6 +19,12 @@ class AuroRadio extends LitElement {
     this.checked = false;
     this.disabled = false;
     this.tabIndex = -1;
+  }
+
+  static get styles() {
+    return css`
+      ${styleCss}
+    `;
   }
 
   // function to define props used within the scope of thie component
@@ -95,8 +101,6 @@ class AuroRadio extends LitElement {
     }
 
     return html`
-      ${styleCss}
-
       <div class="ods-inputGroup rdoGroup">
         <input
           class="util_displayHiddenVisually ods-inputOption rdo--input"

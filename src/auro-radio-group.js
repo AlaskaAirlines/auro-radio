@@ -1,7 +1,7 @@
 // Copyright (c) Alaska Air. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 // ---------------------------------------------------------------------
-import { LitElement, html } from "lit-element";
+import { LitElement, html, css } from "lit-element";
 import { classMap } from 'lit-html/directives/class-map';
 
 // Import touch detection lib
@@ -20,9 +20,12 @@ class AuroRadioGroup extends LitElement {
     this.three = 3;
   }
 
-  // MOVE TO STATIC STYLES
+  static get styles() {
+    return css`
+      ${styleCss}
+    `;
+  }
 
-  // NEED PROP FOR REQUIRED
   static get properties() {
     return {
       disabled:   { type: Boolean },
@@ -127,8 +130,6 @@ class AuroRadioGroup extends LitElement {
     }
 
     return html`
-      ${styleCss}
-
       ${this.errorChange()}
 
       <fieldset class="${classMap(groupClasses)}">

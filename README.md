@@ -36,19 +36,19 @@ Any update to the Auro Design Tokens will be immediately reflected with browsers
 
 ### Define dependency in project component
 
-Defining the component dependency within each component that is using the `<auro-checkbox>` component.
+Defining the component dependency within each component that is using the `<auro-radio>` component.
 
 ```javascript
-import "@alaskaairux/auro-checkbox";
-import "@alaskaairux/auro-checkbox/dist/auro-checkbox-group";
+import "@alaskaairux/auro-radio";
+import "@alaskaairux/auro-radio/dist/auro-radio-group";
 ```
 
 **Reference component in HTML**
 
 ```html
-<auro-checkbox-group>
-  <auro-checkbox></auro-checkbox>
-</auro-checkbox-group>
+<auro-radio-group>
+  <auro-radio></auro-radio>
+</auro-radio-group>
 ```
 
 ## Install bundled assets from CDN
@@ -61,9 +61,9 @@ In cases where the project is not able to process JS assets, there are pre-proce
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-web-core-style-sheets@:version/dist/bundled/baseline.css" />
 
-<script src="https://unpkg.com/@alaskaairux/auro-checkbox@:version/dist/polyfills.js"></script>
-<script src="https://unpkg.com/@alaskaairux/auro-checkbox@:version/dist/auro-checkbox__bundled.js"></script>
-<script src="https://unpkg.com/@alaskaairux/auro-checkbox@:version/dist/auro-checkbox-group__bundled.js"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-radio@:version/dist/polyfills.js"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-radio@:version/dist/auro-radio__bundled.js"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-radio@:version/dist/auro-radio-group__bundled.js"></script>
 ```
 
 ### polyfills.js
@@ -98,4 +98,4 @@ $ npm run serve
 Open [localhost:3001](http://localhost:3001/)
 
 ### Testing
-Automated tests are required for every Auro component. See `.\test\auro-checkbox.test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TESTS.md) for more details.
+Automated tests are required for every Auro component. See `.\test\auro-radio.test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TESTS.md) for more details.

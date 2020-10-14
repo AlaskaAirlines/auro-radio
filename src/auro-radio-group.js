@@ -40,9 +40,11 @@ class AuroRadioGroup extends LitElement {
     this.items = Array.from(this.querySelectorAll('auro-radio'));
     this.initializeIndex();
 
-    this.items.forEach((el) => {
-      el.disabled = this.disabled
-    });
+    if (this.disabled) {
+      this.items.forEach((el) => {
+        el.disabled = this.disabled
+      });
+    }
 
     this.items.forEach((el) => {
       el.required = this.required
@@ -54,11 +56,15 @@ class AuroRadioGroup extends LitElement {
   }
 
   initializeIndex() {
-    const index = this.items.findIndex((item) => item.checked);
+    if (!this.disabled) {
+      const index = this.items.findIndex((item) => item.hasAttribute('checked') && !item.hasAttribute('disabled')),
+            nextEnabledIndex = this.items.findIndex((item) => !item.hasAttribute('disabled'));
 
-    this.index = index < this.zero ? this.zero : index;
-    if (this.items.length > this.zero) {
-      this.items[this.index].tabIndex = this.zero;
+      this.index = index >= this.zero ? index : nextEnabledIndex;
+
+      if (this.index >= this.zero) {
+        this.items[this.index].tabIndex = this.zero;
+      }
     }
   }
 
@@ -91,6 +97,22 @@ class AuroRadioGroup extends LitElement {
     this.index = index;
   }
 
+  selectNextItem(index, moveDirection) {
+    let currIndex = index;
+
+    for (currIndex; currIndex < this.items.length; moveDirection === "Down" ? currIndex += this.one : currIndex -= this.one) {
+      currIndex = currIndex === -this.one ? this.items.length - this.one : currIndex;
+      const sdItem = this.items[currIndex].shadowRoot.querySelector('input');
+
+      if (!sdItem.disabled) {
+        sdItem.click();
+        sdItem.focus();
+        this.index = currIndex;
+        break;
+      }
+    }
+  }
+
   handleKeyDown(event) {
     switch (event.key) {
       case " ":
@@ -103,7 +125,7 @@ class AuroRadioGroup extends LitElement {
       case "Right":
       case "ArrowRight":
         event.preventDefault();
-        this.selectItem(this.index === this.items.length - this.one ? this.zero : this.index + this.one);
+        this.selectNextItem(this.index === this.items.length - this.one ? this.zero : this.index + this.one, "Down");
         break;
 
       case "Up":
@@ -111,7 +133,7 @@ class AuroRadioGroup extends LitElement {
       case "Left":
       case "ArrowLeft":
         event.preventDefault();
-        this.selectItem(this.index === this.zero ? this.items.length - this.one : this.index - this.one);
+        this.selectNextItem(this.index === this.zero ? this.items.length - this.one : this.index - this.one, "Up");
         break;
       default:
         break;
@@ -134,9 +156,9 @@ class AuroRadioGroup extends LitElement {
 
       <fieldset class="${classMap(groupClasses)}">
         ${this.required
-          ? html`<legend><slot name="legend"></slot></legend>`
-          : html`<legend><slot name="legend"></slot> (optional)</legend>`
-        }
+        ? html`<legend><slot name="legend"></slot></legend>`
+        : html`<legend><slot name="legend"></slot> (optional)</legend>`
+      }
         <slot></slot>
       </fieldset>
 

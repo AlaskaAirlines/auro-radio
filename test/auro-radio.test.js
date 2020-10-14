@@ -432,6 +432,216 @@ describe('auro-radio-group', () => {
 
     expect(el.items.length).to.equal(0);
   });
+
+  it('supports individual radio buttons being disabled in a group', async () => {
+    const el = await fixture(html`
+      <auro-radio-group
+      >
+        <auro-radio
+          id="alaska"
+          label="Alaska"
+          name="states"
+          value="alaska"
+        ></auro-radio>
+
+        <auro-radio
+          id="washington"
+          label="Washington"
+          name="states"
+          value="washington"
+          checked
+        ></auro-radio>
+
+        <auro-radio
+          id="california"
+          label="California"
+          name="states"
+          value="california"
+          disabled
+        ></auro-radio>
+
+        <auro-radio
+        id="wisconsin"
+        label="Wisconsin"
+        name="states"
+        value="wisconsin"
+        disabled
+      ></auro-radio>
+      </auro-radio-group>
+    `);
+
+    const alaskaRadio = el.querySelector("auro-radio[id=alaska]");
+    const washingtonRadio = el.querySelector("auro-radio[id=washington]");
+    const californiaRadio = el.querySelector("auro-radio[id=california]");
+    const wisconsinRadio = el.querySelector("auro-radio[id=wisconsin]");
+
+    expect(alaskaRadio.checked).to.not.be.true;
+    expect(washingtonRadio.checked).to.be.true;
+    expect(californiaRadio.checked).to.not.be.true;
+    expect(wisconsinRadio.checked).to.not.be.true;
+
+    el.dispatchEvent(new KeyboardEvent('keydown', {key: "Down"}));
+
+    await elementUpdated(el);
+
+    expect(alaskaRadio.checked, "Alaska Radio should be false").to.not.be.true;
+    expect(washingtonRadio.checked, "Washington Radio should be true").to.be.true;
+    expect(californiaRadio.checked, "California Radio should be false").to.not.be.true;
+    expect(wisconsinRadio.checked, "Wisconsin Radio should be false").to.not.be.true;
+    expect(californiaRadio.disabled, "California Radio should be disabled").to.be.true;
+    expect(wisconsinRadio.disabled, "Wisconsin Radio should be disabled").to.be.true;
+  });
+
+  it('disabled radio buttons in a group are skipped over on keydown events', async () => {
+    const el = await fixture(html`
+      <auro-radio-group
+      >
+        <auro-radio
+          id="alaska"
+          label="Alaska"
+          name="states"
+          value="alaska"
+          disabled
+        ></auro-radio>
+
+        <auro-radio
+          id="washington"
+          label="Washington"
+          name="states"
+          value="washington"
+          checked
+        ></auro-radio>
+
+        <auro-radio
+          id="california"
+          label="California"
+          name="states"
+          value="california"
+          disabled
+        ></auro-radio>
+
+        <auro-radio
+        id="wisconsin"
+        label="Wisconsin"
+        name="states"
+        value="wisconsin"
+      ></auro-radio>
+
+      <auro-radio
+        id="oregon"
+        label="Oregon"
+        name="states"
+        value="oregon"
+      ></auro-radio>
+      </auro-radio-group>
+    `);
+
+    const alaskaRadio = el.querySelector("auro-radio[id=alaska]");
+    const washingtonRadio = el.querySelector("auro-radio[id=washington]");
+    const californiaRadio = el.querySelector("auro-radio[id=california]");
+    const wisconsinRadio = el.querySelector("auro-radio[id=wisconsin]");
+    const oregonRadio = el.querySelector("auro-radio[id=oregon]");
+
+    expect(alaskaRadio.checked).to.not.be.true;
+    expect(washingtonRadio.checked).to.be.true;
+    expect(californiaRadio.checked).to.not.be.true;
+    expect(wisconsinRadio.checked).to.not.be.true;
+    expect(oregonRadio.checked).to.not.be.true;
+
+    el.dispatchEvent(new KeyboardEvent('keydown', {key: "Down"}));
+
+    await elementUpdated(el);
+
+    expect(alaskaRadio.checked, "Alaska Radio should be false").to.not.be.true;
+    expect(washingtonRadio.checked, "Washington Radio should be false").to.not.true;
+    expect(californiaRadio.checked, "California Radio should be false").to.not.be.true;
+    expect(wisconsinRadio.checked, "Wisconsin Radio should be true").to.be.true;
+    expect(oregonRadio.checked, "Oregon Radio should be false").to.not.be.true;
+
+    el.dispatchEvent(new KeyboardEvent('keydown', {key: "Down"}));
+    el.dispatchEvent(new KeyboardEvent('keydown', {key: "Down"}));
+
+    await elementUpdated(el);
+
+    expect(alaskaRadio.checked, "Alaska Radio should be false").to.not.be.true;
+    expect(washingtonRadio.checked, "Washington Radio should be true").to.be.true;
+    expect(californiaRadio.checked, "California Radio should be false").to.not.be.true;
+    expect(wisconsinRadio.checked, "Wisconsin Radio should be false").to.not.be.true;
+    expect(oregonRadio.checked, "Oregon Radio should be false").to.not.be.true;
+
+    el.dispatchEvent(new KeyboardEvent('keydown', {key: "Up"}));
+
+    await elementUpdated(el);
+
+    expect(alaskaRadio.checked, "Alaska Radio should be false").to.not.be.true;
+    expect(washingtonRadio.checked, "Washington Radio should be false").to.not.be.true;
+    expect(californiaRadio.checked, "California Radio should be false").to.not.be.true;
+    expect(wisconsinRadio.checked, "Wisconsin Radio should be false").to.not.be.true;
+    expect(oregonRadio.checked, "Oregon Radio should be true").to.be.true;
+  });
+
+  it('Supports all radio buttons being set to disabled if the group is disabled, even if some individual components are not explicitly set to disabled', async () => {
+    const el = await fixture(html`
+      <auro-radio-group
+      disabled
+      >
+        <auro-radio
+          id="alaska"
+          label="Alaska"
+          name="states"
+          value="alaska"
+        ></auro-radio>
+
+        <auro-radio
+          id="washington"
+          label="Washington"
+          name="states"
+          value="washington"
+          checked
+        ></auro-radio>
+
+        <auro-radio
+          id="california"
+          label="California"
+          name="states"
+          value="california"
+          disabled
+        ></auro-radio>
+
+        <auro-radio
+        id="wisconsin"
+        label="Wisconsin"
+        name="states"
+        value="wisconsin"
+        disabled
+      ></auro-radio>
+      </auro-radio-group>
+    `);
+
+    const alaskaRadio = el.querySelector("auro-radio[id=alaska]");
+    const washingtonRadio = el.querySelector("auro-radio[id=washington]");
+    const californiaRadio = el.querySelector("auro-radio[id=california]");
+    const wisconsinRadio = el.querySelector("auro-radio[id=wisconsin]");
+
+    expect(alaskaRadio.checked).to.not.be.true;
+    expect(washingtonRadio.checked).to.be.true;
+    expect(californiaRadio.checked).to.not.be.true;
+    expect(wisconsinRadio.checked).to.not.be.true;
+
+    el.dispatchEvent(new KeyboardEvent('keydown', {key: "Down"}));
+
+    await elementUpdated(el);
+
+    expect(alaskaRadio.checked, "Alaska Radio should be false").to.not.be.true;
+    expect(washingtonRadio.checked, "Washington Radio should be true").to.be.true;
+    expect(californiaRadio.checked, "California Radio should be false").to.not.be.true;
+    expect(wisconsinRadio.checked, "Wisconsin Radio should be false").to.not.be.true;
+
+    expect(alaskaRadio.disabled, "Alaska Radio should be true").to.be.true;
+    expect(washingtonRadio.disabled, "Washington Radio should be true").to.be.true;
+    expect(californiaRadio.disabled, "California Radio should be disabled").to.be.true;
+    expect(wisconsinRadio.disabled, "Wisconsin Radio should be disabled").to.be.true;
+  });
 });
 
 describe('auro-radio', () => {

@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [1.1.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.0.1...v1.1.0) (2020-10-19)
+
+
+### Features
+
+* add support for disabling individual radio buttons in a radio group ([3fb7ff4](https://github.com/AlaskaAirlines/auro-radio/commit/3fb7ff47808b0a589c15db23b6258d5c79e2888a))
+
 ## [1.0.1](https://github.com/AlaskaAirlines/auro-radio/compare/v1.0.0...v1.0.1) (2020-07-21)
 
 

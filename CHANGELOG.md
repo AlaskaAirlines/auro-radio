@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.1.1](https://github.com/AlaskaAirlines/auro-radio/compare/v1.1.0...v1.1.1) (2020-11-10)
+
+
+### Bug Fixes
+
+* fix focus outline in high-contrast mode ([820a647](https://github.com/AlaskaAirlines/auro-radio/commit/820a647433bbac9591e2116bde931e9f222d1c31))
+
 # [1.1.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.0.1...v1.1.0) (2020-10-19)
 
 

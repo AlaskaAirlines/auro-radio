@@ -38,6 +38,7 @@
   .rdoGroup {
     display: block;
     background-color: var(--auro-color-ui-default-on-light);
+    outline: 3px solid transparent; // for Windows High Contrast mode
     padding-right: var(--auro-size-xs);
 
     .rdo--input {
@@ -83,7 +84,6 @@
 
     & + .label {
       &:after {
-        // opacity: 1;
         border-color: var(--auro-color-ui-default-on-light);
         box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-base-white);
         background-color: var(--auro-color-ui-default-on-light);

@@ -57,6 +57,13 @@ class AuroRadio extends LitElement {
     };
   }
 
+  handleChange(event) {
+    this.checked = event.target.checked;
+    const customEvent = new CustomEvent(event.type, event);
+
+    this.dispatchEvent(customEvent);
+  }
+
   handleInput(event) {
     this.checked = event.target.checked;
     this.dispatchEvent(new CustomEvent('toggleSelected', {
@@ -106,6 +113,7 @@ class AuroRadio extends LitElement {
           class="util_displayHiddenVisually ods-inputOption rdo--input"
           @focus="${this.handleFocus}"
           @input="${this.handleInput}"
+          @change="${this.handleChange}"
           ?disabled="${this.disabled}"
           aria-invalid="${this.invalid(this.error)}"
           aria-required="${this.isRequired(this.required)}"
@@ -113,7 +121,7 @@ class AuroRadio extends LitElement {
           id="${ifDefined(this.id)}"
           name="${ifDefined(this.name)}"
           type="radio"
-          .value="${ifDefined(this.value)}"
+          value="${ifDefined(this.value)}"
           tabIndex="-1"
         />
 

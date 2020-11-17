@@ -311,6 +311,22 @@
         </template>
       </demo-snippet>
 
+      <p>Group with onchange</p>
+      <demo-snippet>
+        <template>
+          <script>
+            function setAction(event){
+              console.log("Custom Event: " + event);
+            }
+          </script>
+            <auro-radio-group required>
+              <span slot="legend">Will you pick a plan?</span>
+              <auro-radio id="radio10" label="Yes" name="radioDemo10" value="yes" onchange="setAction(event)"></auro-radio>
+              <auro-radio id="radio20" label="No" name="radioDemo10" value="no" onchange="setAction(event)"></auro-radio>
+            </auro-radio-group>
+        </template>
+      </demo-snippet>
+
       <h2>Element &#60;auro-radio&#62;</h2>
 
       <pre><code>class AuroRadio extends LitElement</code></pre>

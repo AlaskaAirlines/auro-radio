@@ -121,7 +121,7 @@ class AuroRadio extends LitElement {
           id="${ifDefined(this.id)}"
           name="${ifDefined(this.name)}"
           type="radio"
-          value="${ifDefined(this.value)}"
+          .value="${ifDefined(this.value)}"
           tabIndex="-1"
         />
 

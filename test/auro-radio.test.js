@@ -412,8 +412,13 @@ describe('auro-radio-group', () => {
     `),
     alaskaradio = el.querySelector("auro-radio[id=alaska]"),
     alaskaradioInput = alaskaradio.shadowRoot.querySelector('input');
+    
+    var changeEventDetected;
 
     let result = false;
+    el.addEventListener('change', (event) => {
+      changeEventDetected = event.type;
+    });
 
     el.addEventListener('input', (event) => {
       result = event.target.checked;
@@ -422,6 +427,7 @@ describe('auro-radio-group', () => {
     alaskaradioInput.click();
 
     expect(result).to.be.true;
+    expect(changeEventDetected).to.equal("change");
   });
 
   it('does not crash for empty input option groups', async () => {

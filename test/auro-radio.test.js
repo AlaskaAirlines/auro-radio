@@ -417,7 +417,7 @@ describe('auro-radio-group', () => {
 
     let result = false;
     el.addEventListener('change', (event) => {
-      changeEventDetected = event.type;
+      changeEventDetected = true;
     });
 
     el.addEventListener('input', (event) => {
@@ -427,7 +427,7 @@ describe('auro-radio-group', () => {
     alaskaradioInput.click();
 
     expect(result).to.be.true;
-    expect(changeEventDetected).to.equal("change");
+    expect(changeEventDetected).to.be.true;
   });
 
   it('does not crash for empty input option groups', async () => {

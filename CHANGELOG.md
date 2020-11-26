@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [1.2.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.1.1...v1.2.0) (2020-11-26)
+
+
+### Features
+
+* add new onChange event handler ([ead8659](https://github.com/AlaskaAirlines/auro-radio/commit/ead8659bba617f95af43763837cbf812e5c3e82a))
+
 ## [1.1.1](https://github.com/AlaskaAirlines/auro-radio/compare/v1.1.0...v1.1.1) (2020-11-10)
 
 

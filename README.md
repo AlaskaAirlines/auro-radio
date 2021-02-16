@@ -67,6 +67,9 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 
 <script src="https://unpkg.com/@alaskaairux/auro-radio@latest/dist/auro-radio__bundled.js" type="module"></script>
 <script src="https://unpkg.com/@alaskaairux/auro-radio@latest/dist/auro-radio__bundled.es5.js" nomodule></script>
+
+<script src="https://unpkg.com/@alaskaairux/auro-radio@latest/dist/auro-radio-group__bundled.js" type="module"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-radio@latest/dist/auro-radio-group__bundled.es5.js" nomodule></script>
 ```
 
 

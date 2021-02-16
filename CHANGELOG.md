@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [1.3.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.2.0...v1.3.0) (2021-02-16)
+
+
+### Features
+
+* upgrade bundle support ([39e7fce](https://github.com/AlaskaAirlines/auro-radio/commit/39e7fcedd678ed24157145a823350f8b90038902))
+
 # [1.2.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.1.1...v1.2.0) (2020-11-26)
 
 

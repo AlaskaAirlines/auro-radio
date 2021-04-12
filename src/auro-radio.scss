@@ -21,6 +21,8 @@
 
 :host {
   display: block;
+
+  outline: unset;
 }
 
 :host([error='true']) {
@@ -37,9 +39,11 @@
 
   .rdoGroup {
     display: block;
-    background-color: var(--auro-color-ui-default-on-light);
-    outline: 3px solid transparent; // for Windows High Contrast mode
+
     padding-right: var(--auro-size-xs);
+
+    outline: 3px solid transparent; // for Windows High Contrast mode
+    background-color: var(--auro-color-ui-default-on-light);
 
     .rdo--input {
       & + label {
@@ -50,8 +54,8 @@
         + .label {
           &:after {
             border-color: var(--auro-color-base-white);
-            box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-ui-default-on-light);
             background-color: var(--auro-color-base-white);
+            box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-ui-default-on-light);
           }
         }
       }
@@ -65,8 +69,10 @@
 
 .rdoGroup {
   position: relative;
-  padding-left: var(--auro-size-xs);
+
   padding-right: var(--auro-size-xs);
+  padding-left: var(--auro-size-xs);
+
   line-height: calc((var(--auro-size-xl)) + (var(--auro-size-xxs)))
 }
 
@@ -76,8 +82,8 @@
       & + .label {
         &:after {
           border-color: var(--auro-color-base-gray-200);
-          box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-base-white);
           background-color: var(--auro-color-base-gray-200);
+          box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-base-white);
         }
       }
     }
@@ -85,8 +91,8 @@
     & + .label {
       &:after {
         border-color: var(--auro-color-ui-default-on-light);
-        box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-base-white);
         background-color: var(--auro-color-ui-default-on-light);
+        box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-base-white);
       }
     }
   }
@@ -106,22 +112,27 @@
 
 .label {
   display: block;
+
   margin-left: var(--auro-size-xl);
 
   &:after {
-    content: '';
     position: absolute;
+    z-index: 1;
     top: var(--auro-size-xxs);
     left: var(--auro-size-xs);
+
     width: var(--auro-size-lg);
     height: var(--auro-size-lg);
+
+    content: '';
+
     border-radius: 50%;
-    z-index: 1;
   }
 
   &:after {
-    -webkit-tap-highlight-color: transparent;
     border: 1px solid;
+
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
@@ -130,14 +141,15 @@
     & + .errorBorder {
       &:after {
         border-color: var(--auro-color-border-error-on-light);
-        box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-base-white);
         background-color: var(--auro-color-border-error-on-light);
+        box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-base-white);
       }
     }
   }
 }
 
 .errorText {
-  color: var(--auro-color-text-error-on-light);
   margin-bottom: 0;
+
+  color: var(--auro-color-text-error-on-light);
 }

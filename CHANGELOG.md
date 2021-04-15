@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.3.1](https://github.com/AlaskaAirlines/auro-radio/compare/v1.3.0...v1.3.1) (2021-04-15)
+
+
+### Bug Fixes
+
+* unset auro-radio outline css ([2fd0af2](https://github.com/AlaskaAirlines/auro-radio/commit/2fd0af29f16a504d9835c00ce0f378511ace981c))
+
 # [1.3.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.2.0...v1.3.0) (2021-02-16)
 
 

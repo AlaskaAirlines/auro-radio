@@ -55,6 +55,10 @@ class AuroRadioGroup extends LitElement {
     this.addEventListener('focusSelected', this.handleFocusSelected);
   }
 
+  handleSlotChange() {
+    this.items = Array.from(this.querySelectorAll('auro-radio'));
+  }
+
   initializeIndex() {
     if (!this.disabled) {
       const index = this.items.findIndex((item) => item.hasAttribute('checked') && !item.hasAttribute('disabled')),
@@ -159,7 +163,7 @@ class AuroRadioGroup extends LitElement {
         ? html`<legend><slot name="legend"></slot></legend>`
         : html`<legend><slot name="legend"></slot> (optional)</legend>`
       }
-        <slot></slot>
+        <slot @slotchange=${this.handleSlotChange}></slot>
       </fieldset>
 
       ${this.error

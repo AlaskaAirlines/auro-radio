@@ -412,7 +412,7 @@ describe('auro-radio-group', () => {
     `),
     alaskaradio = el.querySelector("auro-radio[id=alaska]"),
     alaskaradioInput = alaskaradio.shadowRoot.querySelector('input');
-    
+
     var changeEventDetected;
 
     let result = false;
@@ -648,6 +648,51 @@ describe('auro-radio-group', () => {
     expect(californiaRadio.disabled, "California Radio should be disabled").to.be.true;
     expect(wisconsinRadio.disabled, "Wisconsin Radio should be disabled").to.be.true;
   });
+
+  it('reacts to slot changes', async () => {
+    const el = await fixture(html`<auro-radio-group label="Select your state of residence"></auro-radio-group>`);
+
+    // render radio children after the group has connected
+    await fixture(html`
+      <auro-radio
+        id="alaska"
+        label="Alaska"
+        name="states"
+        value="alaska"
+      ></auro-radio>
+
+      <auro-radio
+        id="washington"
+        label="Washington"
+        name="states"
+        value="washington"
+      ></auro-radio>
+    `, { parentNode: el });
+
+    const alaskaRadio = el.querySelector("auro-radio[id=alaska]");
+    const alaskaRadioInput = alaskaRadio.shadowRoot.querySelector('input');
+
+    const washingtonRadio = el.querySelector("auro-radio[id=washington]");
+    const washingtonRadioInput = washingtonRadio.shadowRoot.querySelector('input');
+
+    expect(alaskaRadio.checked, "Alaska Radio Button Initially Unchecked").to.not.be.true;
+    expect(washingtonRadio.checked, "Washington Radio Button Initially Unchecked").to.not.be.true;
+
+    alaskaRadioInput.click();
+    await elementUpdated(el);
+
+    // Selecting the first radio button should make it `checked`
+    expect(alaskaRadio.checked, "Alaska Radio Button Clicked: Checked").to.be.true;
+    expect(washingtonRadio.checked, "Washington Radio Button Unchecked (Alaska Clicked)").to.not.be.true;
+
+    washingtonRadioInput.click();
+    await elementUpdated(el);
+
+    // Selecting the second radio button should make it `checked`
+    // and the first radio button should be `unchecked`
+    expect(alaskaRadio.checked, "Alaska Radio Button Unchecked (Washington Clicked)").to.not.be.true;
+    expect(washingtonRadio.checked, "Washington Radio Button Clicked: Checked").to.be.true;
+  })
 });
 
 describe('auro-radio', () => {

@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.3.3](https://github.com/AlaskaAirlines/auro-radio/compare/v1.3.2...v1.3.3) (2021-06-04)
+
+
+### Bug Fixes
+
+* allow changing selection in VoiceOver [#36](https://github.com/AlaskaAirlines/auro-radio/issues/36) ([62a1076](https://github.com/AlaskaAirlines/auro-radio/commit/62a1076326d43d4a64a9d86e16d975b8ef125469))
+
 ## [1.3.2](https://github.com/AlaskaAirlines/auro-radio/compare/v1.3.1...v1.3.2) (2021-06-03)
 
 

@@ -37,6 +37,12 @@ class AuroRadioGroup extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
+    this.handleItems();
+    this.addEventListener('toggleSelected', this.handleToggleSelected);
+    this.addEventListener('keydown', this.handleKeyDown);
+  }
+
+  handleItems() {
     this.items = Array.from(this.querySelectorAll('auro-radio'));
     this.initializeIndex();
 
@@ -49,13 +55,10 @@ class AuroRadioGroup extends LitElement {
     this.items.forEach((el) => {
       el.required = this.required
     });
-
-    this.addEventListener('toggleSelected', this.handleToggleSelected);
-    this.addEventListener('keydown', this.handleKeyDown);
   }
 
   handleSlotChange() {
-    this.items = Array.from(this.querySelectorAll('auro-radio'));
+    this.handleItems();
   }
 
   initializeIndex() {

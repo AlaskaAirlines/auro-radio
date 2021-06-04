@@ -52,7 +52,6 @@ class AuroRadioGroup extends LitElement {
 
     this.addEventListener('toggleSelected', this.handleToggleSelected);
     this.addEventListener('keydown', this.handleKeyDown);
-    this.addEventListener('focusSelected', this.handleFocusSelected);
   }
 
   handleSlotChange() {
@@ -142,12 +141,6 @@ class AuroRadioGroup extends LitElement {
       default:
         break;
     }
-  }
-
-  handleFocusSelected() {
-    const sdItem = this.items[this.index].shadowRoot.querySelector('input');
-
-    sdItem.focus();
   }
 
   render() {

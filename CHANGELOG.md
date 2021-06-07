@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.3.4](https://github.com/AlaskaAirlines/auro-radio/compare/v1.3.3...v1.3.4) (2021-06-07)
+
+
+### Bug Fixes
+
+* **slots:** improve dynamic slot change handling ([7a1f6eb](https://github.com/AlaskaAirlines/auro-radio/commit/7a1f6eb76022f9645b6ecc34cf8a5ce9834a1b56))
+
 ## [1.3.3](https://github.com/AlaskaAirlines/auro-radio/compare/v1.3.2...v1.3.3) (2021-06-04)
 
 

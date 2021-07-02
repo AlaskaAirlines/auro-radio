@@ -13,11 +13,7 @@ import styleCss from "./auro-radio-group-css.js";
 class AuroRadioGroup extends LitElement {
   constructor() {
     super();
-
-    this.index = 0;
-    this.zero = 0;
-    this.one = 1;
-    this.three = 3;
+    this.items = Array.from(this.querySelectorAll('auro-radio'));
   }
 
   static get styles() {
@@ -31,7 +27,8 @@ class AuroRadioGroup extends LitElement {
       disabled:   { type: Boolean },
       horizontal: { type: Boolean },
       required:   { type: Boolean },
-      error:      { type: String }
+      error:      { type: String },
+      index:      { type: Number, reflect: true}
     };
   }
 
@@ -42,8 +39,16 @@ class AuroRadioGroup extends LitElement {
     this.addEventListener('keydown', this.handleKeyDown);
   }
 
+  attributeChangedCallback() {
+    if (this.index === 0) {
+      this.items.forEach((item) => {
+        item.tabIndex = -1;
+      })
+      this.items[this.index].tabIndex = 0;
+    }
+  }
+
   handleItems() {
-    this.items = Array.from(this.querySelectorAll('auro-radio'));
     this.initializeIndex();
 
     if (this.disabled) {
@@ -63,25 +68,26 @@ class AuroRadioGroup extends LitElement {
 
   initializeIndex() {
     if (!this.disabled) {
-      const index = this.items.findIndex((item) => item.hasAttribute('checked') && !item.hasAttribute('disabled')),
-            nextEnabledIndex = this.items.findIndex((item) => !item.hasAttribute('disabled'));
+      const index = this.items.findIndex((item) => item.hasAttribute('checked') && !item.hasAttribute('disabled'));
+      const nextEnabledIndex = this.items.findIndex((item) => !item.hasAttribute('disabled'));
 
-      this.index = index >= this.zero ? index : nextEnabledIndex;
+      this.index = index >= 0 ? index : nextEnabledIndex;
 
-      if (this.index >= this.zero) {
-        this.items[this.index].tabIndex = this.zero;
+      if (this.index >= 0) {
+        this.items[this.index].tabIndex = 0;
       }
     }
   }
 
   handleToggleSelected(event) {
+
     this.index = this.items.indexOf(event.target);
+
     this.items.forEach((item) => {
       if (item === event.target) {
-        item.tabIndex = this.zero;
+        item.tabIndex = 0;
       } else {
         const sdInput = item.shadowRoot.querySelector('input');
-
         sdInput.checked = false;
         item.checked = false;
         item.tabIndex = -1;
@@ -106,8 +112,8 @@ class AuroRadioGroup extends LitElement {
   selectNextItem(index, moveDirection) {
     let currIndex = index;
 
-    for (currIndex; currIndex < this.items.length; moveDirection === "Down" ? currIndex += this.one : currIndex -= this.one) {
-      currIndex = currIndex === -this.one ? this.items.length - this.one : currIndex;
+    for (currIndex; currIndex < this.items.length; moveDirection === "Down" ? currIndex += 1 : currIndex -= 1) {
+      currIndex = currIndex === -1 ? this.items.length - 1 : currIndex;
       const sdItem = this.items[currIndex].shadowRoot.querySelector('input');
 
       if (!sdItem.disabled) {
@@ -131,7 +137,7 @@ class AuroRadioGroup extends LitElement {
       case "Right":
       case "ArrowRight":
         event.preventDefault();
-        this.selectNextItem(this.index === this.items.length - this.one ? this.zero : this.index + this.one, "Down");
+        this.selectNextItem(this.index === this.items.length - 1 ? 0 : this.index + 1, "Down");
         break;
 
       case "Up":
@@ -139,7 +145,7 @@ class AuroRadioGroup extends LitElement {
       case "Left":
       case "ArrowLeft":
         event.preventDefault();
-        this.selectNextItem(this.index === this.zero ? this.items.length - this.one : this.index - this.one, "Up");
+        this.selectNextItem(this.index === 0 ? this.items.length - 1 : this.index - 1, "Up");
         break;
       default:
         break;
@@ -148,7 +154,7 @@ class AuroRadioGroup extends LitElement {
 
   render() {
     const groupClasses = {
-      'displayFlex': this.horizontal && this.items.length <= this.three
+      'displayFlex': this.horizontal && this.items.length <= 3
     }
 
     return html`

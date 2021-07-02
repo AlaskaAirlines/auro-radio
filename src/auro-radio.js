@@ -27,13 +27,13 @@ class AuroRadio extends LitElement {
     `;
   }
 
-  // function to define props used within the scope of thie component
+  // function to define props used within the scope of this component
   static get properties() {
     return {
       checked: {
-          type: Boolean,
-          reflect: true
-        },
+        type: Boolean,
+        reflect: true
+      },
       disabled: {
         type: Boolean,
         reflect: true
@@ -117,7 +117,7 @@ class AuroRadio extends LitElement {
           ?disabled="${this.disabled}"
           aria-invalid="${this.invalid(this.error)}"
           aria-required="${this.isRequired(this.required)}"
-          ?checked="${this.checked}"
+          .checked="${this.checked}"
           id="${ifDefined(this.id)}"
           name="${ifDefined(this.name)}"
           type="radio"

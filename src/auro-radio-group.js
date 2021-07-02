@@ -10,9 +10,13 @@ import 'focus-visible/dist/focus-visible.min.js';
 // Import the processed CSS file into the scope of the component
 import styleCss from "./auro-radio-group-css.js";
 
+/* eslint no-magic-numbers: ["error", { "ignore": [0, 1, -1] }] */
+
 class AuroRadioGroup extends LitElement {
   constructor() {
     super();
+    this.index = 0;
+    this.max = 3;
     this.items = Array.from(this.querySelectorAll('auro-radio'));
   }
 
@@ -86,6 +90,7 @@ class AuroRadioGroup extends LitElement {
         item.tabIndex = 0;
       } else {
         const sdInput = item.shadowRoot.querySelector('input');
+
         sdInput.checked = false;
         item.checked = false;
         item.tabIndex = -1;
@@ -152,7 +157,7 @@ class AuroRadioGroup extends LitElement {
 
   render() {
     const groupClasses = {
-      'displayFlex': this.horizontal && this.items.length <= 3
+      'displayFlex': this.horizontal && this.items.length <= this.max
     }
 
     return html`

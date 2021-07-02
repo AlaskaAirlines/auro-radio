@@ -18,3 +18,4 @@
 | id | string | sets the individual `id` per element |
 | name | string | Accepts any string, `DOMString` representing the value of the input |
 | value | string | sets the elements input value |
+| index | number | allow for programmatic updating of the custom elements index count |

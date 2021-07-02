@@ -61,12 +61,12 @@
         </span>
       </p>
 
-      <!-- <p>Radio only</p>
+      <p>Radio only</p>
       <demo-snippet>
         <template>
             <auro-radio id="radio10" label="Yes" name="radioDemo10" value="yes" checked></auro-radio>
         </template>
-      </demo-snippet> -->
+      </demo-snippet>
 
       <p>Group with pre-selected option and clear-all button</p>
       <demo-snippet>
@@ -87,16 +87,13 @@
               const button = document.querySelector('button');
 
               button.addEventListener('click', reset);
-              button.addEventListener('click', resetIndex);
 
-              function resetIndex() {
+              function reset() {
                 const groups = document.querySelectorAll('auro-radio-group');
                 groups.forEach(group => {
                   group.index = 0;
                 })
-              }
 
-              function reset() {
                 const buttons = document.querySelectorAll('auro-radio');
                 buttons.forEach(button => {
                   button.checked = false;
@@ -108,7 +105,7 @@
         </template>
       </demo-snippet>
 
-      <!-- <p>Group only</p>
+      <p>Group only</p>
       <demo-snippet>
         <template>
           <auro-radio-group>
@@ -338,7 +335,7 @@
               <auro-radio id="radio26" label="Probably" name="radioDemo7" value="probably"></auro-radio>
             </auro-radio-group>
         </template>
-      </demo-snippet> -->
+      </demo-snippet>
 
     </div>
   </body>

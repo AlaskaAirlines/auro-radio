@@ -28,7 +28,6 @@ class AuroRadioGroup extends LitElement {
       horizontal: { type: Boolean },
       required:   { type: Boolean },
       error:      { type: String },
-      index:      { type: Number, reflect: true}
     };
   }
 
@@ -37,15 +36,14 @@ class AuroRadioGroup extends LitElement {
     this.handleItems();
     this.addEventListener('toggleSelected', this.handleToggleSelected);
     this.addEventListener('keydown', this.handleKeyDown);
+    this.addEventListener('resetRadio', this.reset);
   }
 
-  attributeChangedCallback() {
-    if (this.index === 0) {
-      this.items.forEach((item) => {
-        item.tabIndex = -1;
-      })
-      this.items[this.index].tabIndex = 0;
-    }
+  reset() {
+    this.items.forEach((item) => {
+      item.tabIndex = -1;
+    })
+    this.items[this.index].tabIndex = 0;
   }
 
   handleItems() {

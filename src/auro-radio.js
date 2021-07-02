@@ -81,6 +81,15 @@ class AuroRadio extends LitElement {
     }))
   }
 
+  updated(changedProperties) {
+    if (changedProperties.has('checked'))  {
+      this.dispatchEvent(new CustomEvent('resetRadio', {
+        bubbles: true,
+        composed: true
+      }))
+    }
+  }
+
   invalid(error) {
     if (error) {
       return 'true';

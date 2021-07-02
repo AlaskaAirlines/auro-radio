@@ -61,25 +61,54 @@
         </span>
       </p>
 
-      <p>Radio only</p>
+      <!-- <p>Radio only</p>
       <demo-snippet>
         <template>
             <auro-radio id="radio10" label="Yes" name="radioDemo10" value="yes" checked></auro-radio>
         </template>
-      </demo-snippet>
+      </demo-snippet> -->
 
-      <p>Simple group</p>
+      <p>Group with pre-selected option and clear-all button</p>
       <demo-snippet>
         <template>
             <auro-radio-group required>
               <span slot="legend">Will you pick a plan?</span>
               <auro-radio id="radio10" label="Yes" name="radioDemo10" value="yes"></auro-radio>
               <auro-radio id="radio20" label="No" name="radioDemo10" value="no"></auro-radio>
+              <auro-radio id="radio30" label="Maybe so" name="radioDemo10" value="no" checked></auro-radio>
+              <auro-radio id="radio40" label="Ummm no" name="radioDemo10" value="no"></auro-radio>
+              <auro-radio id="radio50" label="Nope nope nope" name="radioDemo10" value="no" ></auro-radio>
             </auro-radio-group>
+
+            <button>click me to clear radio buttons</button>
+
+            <script>
+              const group = document.querySelector('auro-radio-group');
+              const button = document.querySelector('button');
+
+              button.addEventListener('click', reset);
+              button.addEventListener('click', resetIndex);
+
+              function resetIndex() {
+                const groups = document.querySelectorAll('auro-radio-group');
+                groups.forEach(group => {
+                  group.index = 0;
+                })
+              }
+
+              function reset() {
+                const buttons = document.querySelectorAll('auro-radio');
+                buttons.forEach(button => {
+                  button.checked = false;
+                })
+              }
+
+
+            </script>
         </template>
       </demo-snippet>
 
-      <p>Group only</p>
+      <!-- <p>Group only</p>
       <demo-snippet>
         <template>
           <auro-radio-group>
@@ -309,23 +338,10 @@
               <auro-radio id="radio26" label="Probably" name="radioDemo7" value="probably"></auro-radio>
             </auro-radio-group>
         </template>
-      </demo-snippet>
+      </demo-snippet> -->
 
-      <h2>Element &#60;auro-radio&#62;</h2>
-
-      <pre><code>class AuroRadio extends LitElement</code></pre>
-
-      <h3>Styling:</h3>
-      <p>Info ...</p>
-
-      <h3>Responsive state:</h3>
-      <p>Info ...</p>
-
-      <h3>Properties:</h3>
-      <code><strong>string:</strong> string</code>
-      <p>Info ...</p>
     </div>
   </body>
 
-  <script type="module" src="../demo/events.js" defer></script>
+  <!-- <script type="module" src="../demo/events.js" defer></script> -->
 </html>

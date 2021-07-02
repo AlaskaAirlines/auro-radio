@@ -127,7 +127,13 @@ module.exports = {
       "no-lone-blocks": "error",
       "no-lonely-if": "error",
       "no-loop-func": "error",
-      "no-magic-numbers": "warn",
+      "no-magic-numbers": [
+        "error",
+        {
+          "ignore": [0, 1],
+          "ignoreArrayIndexes": true
+        }
+      ],
       "no-mixed-operators": "error",
       "no-mixed-requires": "error",
       "no-multi-assign": "error",
@@ -191,7 +197,6 @@ module.exports = {
       "object-curly-spacing": "off",
       "object-property-newline": "error",
       "object-shorthand": "error",
-      "one-var": "error",
       "one-var-declaration-per-line": "error",
       "operator-assignment": "error",
       "operator-linebreak": "error",

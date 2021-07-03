@@ -19,3 +19,10 @@
 | name | string | Accepts any string, `DOMString` representing the value of the input |
 | value | string | sets the elements input value |
 | index | number | allow for programmatic updating of the custom elements index count |
+
+## Slots
+
+| Name      | Description                                |
+|-----------|--------------------------------------------|
+|  | Places content into the `label` element; will override content from the `label` attribute |
+| `content` | Additional content element within the scope of the custom element; will not highlight with tab focus  |

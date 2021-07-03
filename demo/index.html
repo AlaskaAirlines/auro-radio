@@ -68,7 +68,28 @@
         </template>
       </demo-snippet>
 
-      <p>Group with pre-selected option and clear-all button</p>
+      <p>Group w/slots</p>
+      <demo-snippet>
+        <template>
+            <auro-radio-group required>
+              <span slot="legend">Will you pick a plan?</span>
+              <auro-radio id="radio10" name="radioDemo10" value="yes">
+                <b>Lounge $300 USD</b><br>
+                <span slot="content">
+                  <small>These are small sub-text words</small>
+                  <ul>
+                    <li>All Alaska Lounges...</li>
+                    <li>1 year membership</li>
+                  </ul>
+                </span>
+              </auro-radio>
+              <auro-radio id="radio11" label="No" name="radioDemo11" value="no"></auro-radio>
+              <auro-radio id="radio12" label="No" name="radioDemo12" value="maybe">Maybe</auro-radio>
+            </auro-radio-group>
+        </template>
+      </demo-snippet>
+
+      <p>Simple group</p>
       <demo-snippet>
         <template>
             <auro-radio-group required>

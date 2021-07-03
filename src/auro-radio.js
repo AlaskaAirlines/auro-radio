@@ -134,11 +134,12 @@ class AuroRadio extends LitElement {
           tabIndex="-1"
         />
 
-        <label
-          for="${ifDefined(this.id)}"
-          class="${classMap(labelClasses)}"
-        >${this.label}</label>
+        <label for="${ifDefined(this.id)}" class="${classMap(labelClasses)}">
+          <slot>${this.label}</slot>
+        </label>
+
       </div>
+      <slot name="content" class="slotContent"></slot>
     `;
   }
 }

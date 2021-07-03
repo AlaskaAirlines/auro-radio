@@ -153,3 +153,9 @@
 
   color: var(--auro-color-text-error-on-light);
 }
+
+.slotContent {
+  display: block;
+  margin-left: var(--auro-size-xl);
+  padding-left: var(--auro-size-xs);
+}

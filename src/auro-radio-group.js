@@ -17,7 +17,6 @@ class AuroRadioGroup extends LitElement {
     super();
     this.index = 0;
     this.max = 3;
-    this.items = Array.from(this.querySelectorAll('auro-radio'));
   }
 
   static get styles() {
@@ -51,6 +50,7 @@ class AuroRadioGroup extends LitElement {
   }
 
   handleItems() {
+    this.items = Array.from(this.querySelectorAll('auro-radio'));
     this.initializeIndex();
 
     if (this.disabled) {

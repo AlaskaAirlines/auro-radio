@@ -648,21 +648,23 @@ describe('auro-radio-group', () => {
   });
 
   it('reacts to slot changes', async () => {
-    const el = await fixture(html`<auro-radio-group label="Select your state of residence">
+    const el = await fixture(html`<auro-radio-group label="Select your state of residence"></auro-radio-group>`);
+
+    // render radio children after the group has connected
+    await fixture(html`
       <auro-radio
       id="alaska"
       label="Alaska"
       name="states"
       value="alaska"
     ></auro-radio>
-
     <auro-radio
       id="washington"
       label="Washington"
       name="states"
       value="washington"
     ></auro-radio>
-    </auro-radio-group>`);
+    `, { parentNode: el });
 
     const alaskaRadio = el.querySelector("auro-radio[id=alaska]");
     const alaskaRadioInput = alaskaRadio.shadowRoot.querySelector('input');

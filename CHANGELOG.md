@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+# [1.4.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.3.4...v1.4.0) (2021-07-06)
+
+
+### Bug Fixes
+
+* **checked:** address programatic checked unchecked state ([eeb332a](https://github.com/AlaskaAirlines/auro-radio/commit/eeb332ae95f82785b45a6835ba6f101dc0a271be))
+* **checked:** react to slot changes ([6e622ac](https://github.com/AlaskaAirlines/auro-radio/commit/6e622acd63e564b5d289b5e4b8eeb615d8a70282))
+
+
+### Features
+
+* **checked:** update tests to support new feature ([6ef33ae](https://github.com/AlaskaAirlines/auro-radio/commit/6ef33ae79b53906ca7a56b7d785df57612e7755e))
+
 ## [1.3.4](https://github.com/AlaskaAirlines/auro-radio/compare/v1.3.3...v1.3.4) (2021-06-07)
 
 

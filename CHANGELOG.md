@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [1.5.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.4.0...v1.5.0) (2021-07-13)
+
+
+### Features
+
+* **slots:** add supoprt for label placement in a slot [#40](https://github.com/AlaskaAirlines/auro-radio/issues/40) ([aeb6f88](https://github.com/AlaskaAirlines/auro-radio/commit/aeb6f889e6713543431b8f61cc1bc544687537ab))
+
 # [1.4.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.3.4...v1.4.0) (2021-07-06)
 
 

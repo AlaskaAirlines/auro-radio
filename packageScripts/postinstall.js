@@ -21,6 +21,11 @@ console.log(chalk.hex('#f26135')(`
         Thanks for installing the latest version
                 of `) + chalk.hex('#ffd200').bold(`auro-radio v${pjson.version}.`) + chalk.hex('#f26135')(`
 
+            `) + chalk.hex('#ffd200').bold(`!!!! DEPRECATION ALERT !!!!`) + chalk.hex('#f26135')(`
+              `) + chalk.hex('#ffd200').bold(`@alaskaairux/auro-radio`) + chalk.hex('#f26135')(`
+    will be relocated to `) + chalk.hex('#ffd200').bold(`@aurodesignsystem/auro-radio`) + chalk.hex('#f26135')(`
+              with the next major release.
+
 ╰─────────────────────────────── ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─╯
 `)
 );

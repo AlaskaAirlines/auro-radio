@@ -51,6 +51,32 @@ class AuroRadioGroup extends LitElement {
     this.addEventListener('resetRadio', this.reset);
   }
 
+  /**
+   * LitElement lifecycle method. Called after the DOM has been updated.
+   * @param {Map<string, any>} changedProperties - keys are the names of changed properties, values are the corresponding previous values.
+   * @returns {void}
+   */
+  updated(changedProperties) {
+    if (changedProperties.has('disabled')) {
+      // only change the children if we are making everything disabled, or if we are making everything enabled and there are no individually-disabled radio buttons
+      if (this.disabled || this.items.every((el) => el.disabled)) {
+        this.items.forEach((el) => {
+          el.disabled = this.disabled
+        });
+      }
+    }
+    if (changedProperties.has('required')) {
+      this.items.forEach((el) => {
+        el.required = this.required
+      });
+    }
+    if (changedProperties.has('error')) {
+      this.items.forEach((el) => {
+        el.error = Boolean(this.error)
+      });
+    }
+  }
+
   reset() {
     this.items.forEach((item) => {
       item.tabIndex = -1;
@@ -69,7 +95,8 @@ class AuroRadioGroup extends LitElement {
     }
 
     this.items.forEach((el) => {
-      el.required = this.required
+      el.required = this.required;
+      el.error = Boolean(this.error);
     });
   }
 
@@ -91,7 +118,6 @@ class AuroRadioGroup extends LitElement {
   }
 
   handleToggleSelected(event) {
-
     this.index = this.items.indexOf(event.target);
 
     this.items.forEach((item) => {
@@ -105,12 +131,6 @@ class AuroRadioGroup extends LitElement {
         item.tabIndex = -1;
       }
     })
-  }
-
-  errorChange() {
-    this.items.forEach((el) => {
-      el.error = Boolean(this.error)
-    });
   }
 
   selectItem(index) {
@@ -170,8 +190,6 @@ class AuroRadioGroup extends LitElement {
     }
 
     return html`
-      ${this.errorChange()}
-
       <fieldset class="${classMap(groupClasses)}">
         ${this.required
         ? html`<legend><slot name="legend"></slot></legend>`

@@ -691,6 +691,32 @@ describe('auro-radio-group', () => {
     expect(washingtonRadio.checked, "Washington Radio Button Clicked: Checked").to.be.true;
   });
 
+  it('sets child state after slot change', async () => {
+    const el = await fixture(html`<auro-radio-group label="Select your state of residence" disabled required error="Something went wrong"></auro-radio-group>`);
+
+    // render radio children after the group has connected
+    await fixture(html`
+      <auro-radio
+      id="alaska"
+      label="Alaska"
+      name="states"
+      value="alaska"
+    ></auro-radio>
+    <auro-radio
+      id="washington"
+      label="Washington"
+      name="states"
+      value="washington"
+    ></auro-radio>
+    `, { parentNode: el });
+
+    const radio = el.querySelector('auro-radio');
+
+    expect(radio.disabled).to.be.true;
+    expect(radio.required).to.be.true;
+    expect(radio.error).to.be.true;
+  });
+
   it('sets error on child radios', async () => {
     const el = await fixture(html`
       <auro-radio-group
@@ -714,7 +740,40 @@ describe('auro-radio-group', () => {
 
     const radio = el.querySelector('auro-radio');
 
-    expect(radio.error).to.be.true;
+    expect(radio.error, "child error state was not updated").to.be.true;
+  });
+
+  it('updates states on children', async () => {
+    const el = await fixture(html`
+      <auro-radio-group
+        label="Select your favorite states"
+      >
+        <auro-radio
+          id="alaska"
+          label="Alaska"
+          name="states"
+          value="alaska"
+        ></auro-radio>
+        <auro-radio
+          id="washington"
+          label="Washington"
+          name="states"
+          value="washington"
+        ></auro-radio>
+      </auro-radio-group>
+    `);
+
+    el.disabled = true;
+    el.required = true;
+    el.error = "Something went wrong";
+
+    await elementUpdated(el);
+
+    const radio = el.querySelector('auro-radio');
+
+    expect(radio.disabled, "child disabled state was not updated").to.be.true;
+    expect(radio.required, "child required state was not updated").to.be.true;
+    expect(radio.error, "child error state was not updated").to.be.true;
   });
 });
 
@@ -749,6 +808,7 @@ describe('auro-radio', () => {
     expect(input.name).to.equal(expectedName);
     expect(input.type).to.equal('radio');
     expect(input.getAttribute('aria-invalid')).to.equal('true');
+    expect(input.getAttribute('aria-required')).to.equal('true');
     expect(errorBorder).to.not.be.undefined;
     expect(el).dom.to.equal(`
     <auro-radio id="${expectedId}" tabindex="-1" name="${expectedName}" value="${expectedValue}" error checked disabled required>

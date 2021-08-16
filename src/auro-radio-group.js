@@ -17,6 +17,9 @@ class AuroRadioGroup extends LitElement {
     super();
     this.index = 0;
     this.max = 3;
+    this.disabled = false;
+    this.horizontal = false;
+    this.required = false;
   }
 
   static get styles() {
@@ -27,10 +30,16 @@ class AuroRadioGroup extends LitElement {
 
   static get properties() {
     return {
-      disabled:   { type: Boolean },
+      disabled:   {
+        type: Boolean,
+        reflect: true
+      },
       horizontal: { type: Boolean },
       required:   { type: Boolean },
-      error:      { type: String },
+      error:      {
+        type: String,
+        reflect: true
+       },
     };
   }
 

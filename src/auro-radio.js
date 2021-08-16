@@ -18,6 +18,7 @@ class AuroRadio extends LitElement {
     super();
     this.checked = false;
     this.disabled = false;
+    this.required = false;
     this.tabIndex = -1;
   }
 
@@ -130,7 +131,7 @@ class AuroRadio extends LitElement {
           id="${ifDefined(this.id)}"
           name="${ifDefined(this.name)}"
           type="radio"
-          .value="${ifDefined(this.value)}"
+          .value="${this.value}"
           tabIndex="-1"
         />
 

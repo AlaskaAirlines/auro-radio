@@ -19,6 +19,7 @@ class AuroRadio extends LitElement {
     this.checked = false;
     this.disabled = false;
     this.required = false;
+    this.error = false;
     this.tabIndex = -1;
   }
 
@@ -44,7 +45,7 @@ class AuroRadio extends LitElement {
         reflect: true
       },
       error: {
-        type: String,
+        type: Boolean,
         reflect: true
       },
       id:       { type: String },
@@ -114,7 +115,7 @@ class AuroRadio extends LitElement {
       'ods-inputLabel--radio': true,
       'label': true,
       'label--rdo': true,
-      'errorBorder': Boolean(this.error)
+      'errorBorder': this.error
     }
 
     return html`

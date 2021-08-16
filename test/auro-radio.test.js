@@ -689,7 +689,33 @@ describe('auro-radio-group', () => {
     // and the first radio button should be `unchecked`
     expect(alaskaRadio.checked, "Alaska Radio Button Unchecked (Washington Clicked)").to.not.be.true;
     expect(washingtonRadio.checked, "Washington Radio Button Clicked: Checked").to.be.true;
-  })
+  });
+
+  it('sets error on child radios', async () => {
+    const el = await fixture(html`
+      <auro-radio-group
+        label="Select your favorite states"
+        error="Wrong entry"
+      >
+        <auro-radio
+          id="alaska"
+          label="Alaska"
+          name="states"
+          value="alaska"
+        ></auro-radio>
+        <auro-radio
+          id="washington"
+          label="Washington"
+          name="states"
+          value="washington"
+        ></auro-radio>
+      </auro-radio-group>
+    `);
+
+    const radio = el.querySelector('auro-radio');
+
+    expect(radio.error).to.be.true;
+  });
 });
 
 describe('auro-radio', () => {
@@ -697,7 +723,6 @@ describe('auro-radio', () => {
     const expectedId = "testId",
       expectedName = "testName",
       expectedValue = "testValue",
-      expectedError = "testError",
       expectedTabIndex = -1;
 
     const el = await fixture(html`
@@ -708,7 +733,7 @@ describe('auro-radio', () => {
         checked
         disabled
         required
-        error=${expectedError}
+        error
       ></auro-radio>
     `);
 
@@ -723,9 +748,10 @@ describe('auro-radio', () => {
     expect(input.value).to.equal(expectedValue);
     expect(input.name).to.equal(expectedName);
     expect(input.type).to.equal('radio');
+    expect(input.getAttribute('aria-invalid')).to.equal('true');
     expect(errorBorder).to.not.be.undefined;
     expect(el).dom.to.equal(`
-    <auro-radio id="${expectedId}" tabindex="-1" name="${expectedName}" value="${expectedValue}" error="${expectedError}" checked disabled required>
+    <auro-radio id="${expectedId}" tabindex="-1" name="${expectedName}" value="${expectedValue}" error checked disabled required>
     </auro-radio>`);
   });
 });

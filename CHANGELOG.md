@@ -1,5 +1,14 @@
 # Semantic Release Automated Changelog
 
+## [1.5.1](https://github.com/AlaskaAirlines/auro-radio/compare/v1.5.0...v1.5.1) (2021-08-17)
+
+
+### Bug Fixes
+
+* update child state when group state changes [#49](https://github.com/AlaskaAirlines/auro-radio/issues/49) ([5cf4015](https://github.com/AlaskaAirlines/auro-radio/commit/5cf4015443e5087ba8c73003a86b3d6629bf09cb))
+* **auro-radio:** make error a boolean [#50](https://github.com/AlaskaAirlines/auro-radio/issues/50) ([34ba7af](https://github.com/AlaskaAirlines/auro-radio/commit/34ba7af64126a9c5b98b631d0fcd84e6bb1f1381))
+* reflect props and give default values [#33](https://github.com/AlaskaAirlines/auro-radio/issues/33) ([9ddfbbb](https://github.com/AlaskaAirlines/auro-radio/commit/9ddfbbbad71f500d42084c1dd5b387148fe621af))
+
 # [1.5.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.4.0...v1.5.0) (2021-07-13)
 
 

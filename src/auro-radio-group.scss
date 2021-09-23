@@ -3,16 +3,13 @@
 
 // ---------------------------------------------------------------------
 
-// import legacy variables to support deprecated Sass in WCSS
-@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables";
-
 // Import Auro tokens
-@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
-@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
+@import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
+@import "./node_modules/@alaskaairux/design-tokens//dist/tokens/SassCustomProperties";
 
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 
-// container styles - defines the look of the outer custom componet
+// container styles - defines the look of the outer custom component
 :host {
   display: block;
   padding-bottom: var(--auro-size-md);

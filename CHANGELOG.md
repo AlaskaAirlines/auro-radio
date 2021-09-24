@@ -1,5 +1,14 @@
 # Semantic Release Automated Changelog
 
+## [1.5.2](https://github.com/AlaskaAirlines/auro-radio/compare/v1.5.1...v1.5.2) (2021-09-24)
+
+
+### Bug Fixes
+
+* **deps:** remove unsed dependency ([e8c62c4](https://github.com/AlaskaAirlines/auro-radio/commit/e8c62c4a19fb0f7dbcd56992aea5061231c7a083))
+* **deps:** update to @alaskaairux/design-tokens ([1ac64dd](https://github.com/AlaskaAirlines/auro-radio/commit/1ac64ddb1e038d3ba9461a49a58cbd75fb8350d6))
+* **deps:** update to @alaskaairux/webcorestylesheets ([dbfc556](https://github.com/AlaskaAirlines/auro-radio/commit/dbfc55618d097734192569463a9aff356621a54a))
+
 ## [1.5.1](https://github.com/AlaskaAirlines/auro-radio/compare/v1.5.0...v1.5.1) (2021-08-17)
 
 

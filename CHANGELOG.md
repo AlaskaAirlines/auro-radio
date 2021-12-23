@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.5.3](https://github.com/AlaskaAirlines/auro-radio/compare/v1.5.2...v1.5.3) (2021-12-23)
+
+
+### Bug Fixes
+
+* **group:** initialize items before resetting [#57](https://github.com/AlaskaAirlines/auro-radio/issues/57) ([d79bb12](https://github.com/AlaskaAirlines/auro-radio/commit/d79bb12ab5b98aa6ac946e70f11a3732a85f6851))
+
 ## [1.5.2](https://github.com/AlaskaAirlines/auro-radio/compare/v1.5.1...v1.5.2) (2021-09-24)
 
 

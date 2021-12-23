@@ -78,6 +78,9 @@ class AuroRadioGroup extends LitElement {
   }
 
   reset() {
+    if (this.items.length === 0) {
+      this.handleItems();
+    }
     this.items.forEach((item) => {
       item.tabIndex = -1;
     })

@@ -691,6 +691,39 @@ describe('auro-radio-group', () => {
     expect(washingtonRadio.checked, "Washington Radio Button Clicked: Checked").to.be.true;
   });
 
+  it('handles reset firing before all items initialized', async () => {
+    const el = await fixture(html`<auro-radio-group label="Select your state of residence" required></auro-radio-group>`);
+
+    // render radio children after the group has connected
+    // this is intentionally not awaited
+    const renderChildren = fixture(html`
+      <auro-radio
+      id="alaska"
+      label="Alaska"
+      name="states"
+      value="alaska"
+    ></auro-radio>
+    <auro-radio
+      id="washington"
+      label="Washington"
+      name="states"
+      value="washington"
+    ></auro-radio>
+    `, { parentNode: el });
+
+    // simulate the reset event firing before items are fully initialized
+    // this is a little contrived, but happens when the radio-group is rendered in Svelte
+    // we want to make sure this does not throw an error if the items are not set yet
+    el.reset();
+
+    // finally, wait for everything to finish updating
+    await renderChildren;
+
+    // verify that child state was updated
+    const radio = el.querySelector("auro-radio");
+    expect(radio.required).to.be.true;
+  });
+
   it('sets child state after slot change', async () => {
     const el = await fixture(html`<auro-radio-group label="Select your state of residence" disabled required error="Something went wrong"></auro-radio-group>`);
 

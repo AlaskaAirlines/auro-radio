@@ -114,6 +114,7 @@
 
   &:after {
     position: absolute;
+    background-color: var(--auro-color-base-white);
     z-index: 1;
     top: var(--auro-size-xxs);
     left: var(--auro-size-xs);

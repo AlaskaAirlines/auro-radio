@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.5.4](https://github.com/AlaskaAirlines/auro-radio/compare/v1.5.3...v1.5.4) (2022-06-10)
+
+
+### Bug Fixes
+
+* add white background color [#75](https://github.com/AlaskaAirlines/auro-radio/issues/75) ([fa2be82](https://github.com/AlaskaAirlines/auro-radio/commit/fa2be8242fea1c29a6aa82ca9bfea9e5cfa06ccc))
+
 ## [1.5.3](https://github.com/AlaskaAirlines/auro-radio/compare/v1.5.2...v1.5.3) (2021-12-23)
 
 

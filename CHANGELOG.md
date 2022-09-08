@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.5.5](https://github.com/AlaskaAirlines/auro-radio/compare/v1.5.4...v1.5.5) (2022-09-08)
+
+
+### Bug Fixes
+
+* **disabled ui:** update button border color [#79](https://github.com/AlaskaAirlines/auro-radio/issues/79) ([1937d58](https://github.com/AlaskaAirlines/auro-radio/commit/1937d581a89443be09b1dc1a19acb859456cea34))
+
 ## [1.5.4](https://github.com/AlaskaAirlines/auro-radio/compare/v1.5.3...v1.5.4) (2022-06-10)
 
 

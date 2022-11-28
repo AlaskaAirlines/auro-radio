@@ -68,10 +68,10 @@
         </template>
       </demo-snippet>
 
-      <p>Group w/slots</p>
+      <p>Group with slots</p>
       <demo-snippet>
         <template>
-            <auro-radio-group required>
+            <auro-radio-group required setCustomValidityValueMissing="Choise is required.">
               <span slot="legend">Will you pick a plan?</span>
               <auro-radio id="radio10" name="radioDemo10" value="yes">
                 <b>Lounge $300 USD</b>
@@ -89,19 +89,16 @@
         </template>
       </demo-snippet>
 
-      <p>Simple group</p>
+      <p>Simple group, pre-selected, required</p>
       <demo-snippet>
         <template>
-            <auro-radio-group required>
+            <auro-radio-group id="simpleRadioGroup" required setCustomValidityValueMissing="Answer is required.">
               <span slot="legend">Will you pick a plan?</span>
-              <auro-radio id="radio10" label="Yes" name="radioDemo10" value="yes"></auro-radio>
+              <auro-radio id="radio10" label="Yes" name="radioDemo10" value="yes" checked></auro-radio>
               <auro-radio id="radio20" label="No" name="radioDemo10" value="no"></auro-radio>
-              <auro-radio id="radio30" label="Maybe so" name="radioDemo10" value="no" checked></auro-radio>
-              <auro-radio id="radio40" label="Ummm no" name="radioDemo10" value="no"></auro-radio>
-              <auro-radio id="radio50" label="Nope nope nope" name="radioDemo10" value="no" ></auro-radio>
             </auro-radio-group>
 
-            <button>click me to clear radio buttons</button>
+            <button>Reset radio button group</button>
 
             <script>
               const group = document.querySelector('auro-radio-group');
@@ -110,17 +107,10 @@
               button.addEventListener('click', reset);
 
               function reset() {
-                const groups = document.querySelectorAll('auro-radio-group');
-                groups.forEach(group => {
-                  group.index = 0;
-                })
+                const group = document.querySelector('auro-radio-group#simpleRadioGroup');
 
-                const buttons = document.querySelectorAll('auro-radio');
-                buttons.forEach(button => {
-                  button.checked = false;
-                })
+                group.reset();
               }
-
 
             </script>
         </template>
@@ -316,10 +306,10 @@
         </template>
       </demo-snippet>
 
-      <p>Radio button group with error</p>
+      <p>Radio button group with custom error</p>
       <demo-snippet>
         <template>
-          <auro-radio-group error="Selection is required; please update.">
+          <auro-radio-group error="Custom error help text.">
             <span slot="legend">Form label goes here</span>
             <auro-radio
               id="radio19"

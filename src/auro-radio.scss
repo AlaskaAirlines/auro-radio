@@ -22,10 +22,6 @@
   outline: unset;
 }
 
-:host([error]) {
-  color: var(--auro-color-text-error-on-light);
-}
-
 // block mixin for a11y tab state
 @mixin focus-visible {
   .displayFlex {
@@ -143,12 +139,11 @@
       }
     }
   }
-}
-
-.errorText {
-  margin-bottom: 0;
-
-  color: var(--auro-color-text-error-on-light);
+  + .errorBorder {
+    &:after {
+      color: var(--auro-color-border-error-on-light);
+    }
+  }
 }
 
 .slotContent {

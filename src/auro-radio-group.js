@@ -11,6 +11,17 @@ import 'focus-visible/dist/focus-visible.min.js';
 import styleCss from "./auro-radio-group-css.js";
 
 /* eslint no-magic-numbers: ["error", { "ignore": [0, 1, -1] }] */
+/* eslint-disable max-lines */
+
+/**
+ * @attr {String} validity - Specifies the `validityState` this element is in.
+ * @attr {String} setCustomValidity - Sets a custom help text message to display for all validityStates.
+ * @attr {String} setCustomValidityCustomError - Custom help text message to display when validity = `customError`.
+ * @attr {String} setCustomValidityValueMissing - Custom help text message to display when validity = `valueMissing`.
+ * @attr {String} error - When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value.
+ * @attr {Boolean} noValidate - If set, disables auto-validation on blur.
+ * @attr {Boolean} required - Populates the `required` attribute on the element. Used for client-side validation.
+ */
 
 class AuroRadioGroup extends LitElement {
   constructor() {
@@ -20,6 +31,8 @@ class AuroRadioGroup extends LitElement {
     this.disabled = false;
     this.horizontal = false;
     this.required = false;
+    this.validity = undefined;
+    this.value = undefined;
   }
 
   static get styles() {
@@ -35,11 +48,34 @@ class AuroRadioGroup extends LitElement {
         reflect: true
       },
       horizontal: { type: Boolean },
-      required:   { type: Boolean },
       error:      {
         type: String,
         reflect: true
        },
+      value: {
+        type: Array
+      },
+      noValidate: {
+        type: Boolean,
+        reflect: true
+      },
+      required: {
+        type: Boolean,
+        reflect: true
+      },
+      setCustomValidity: {
+        type: String
+      },
+      setCustomValidityCustomError: {
+        type: String
+      },
+      setCustomValidityValueMissing: {
+        type: String
+      },
+      validity: {
+        type: String,
+        reflect: true
+      }
     };
   }
 
@@ -48,7 +84,29 @@ class AuroRadioGroup extends LitElement {
     this.handleItems();
     this.addEventListener('toggleSelected', this.handleToggleSelected);
     this.addEventListener('keydown', this.handleKeyDown);
-    this.addEventListener('resetRadio', this.reset);
+    this.addEventListener('resetRadio', this.resetRadio);
+    this.addEventListener('auroRadio-blur', this.handleRadioBlur);
+    this.addEventListener('auroRadio-selected', this.handleSelection);
+  }
+
+  /**
+   * Method for handling of selection of a radio element
+   * @returns {void}
+   */
+  handleSelection() {
+    this.validate();
+  }
+
+  /**
+   * Method handles radio element blur
+   * @returns {void}
+   */
+  handleRadioBlur() {
+    if (this.value === undefined) {
+      this.value = '';
+    }
+
+    this.validate();
   }
 
   /**
@@ -71,16 +129,88 @@ class AuroRadioGroup extends LitElement {
       });
     }
     if (changedProperties.has('error')) {
+      this.validate();
+    }
+  }
+
+  /**
+   * Determines the validity state of the element.
+   * @private
+   * @returns {void}
+   */
+  /* eslint-disable max-statements */
+  validate() {
+    // Validate only if noValidate is not true and the input does not have focus
+    if (this.hasAttribute('error')) {
+      this.validity = 'customError';
+      this.setCustomValidity = this.error;
+    } else if (this.value !== undefined && !this.noValidate) {
+      this.validity = 'valid';
+      this.setCustomValidity = '';
+
+      /**
+       * Only validate once we interact with the datepicker
+       * this.value === undefined is the initial state pre-interaction.
+       *
+       * The validityState definitions are located at https://developer.mozilla.org/en-US/docs/Web/API/ValidityState.
+       */
+      if ((!this.value || this.value.length === 0) && this.required) { // eslint-disable-line no-magic-numbers
+        this.validity = 'valueMissing';
+        this.setCustomValidity = this.setCustomValidityValueMissing;
+      }
+    } else {
+      this.validity = undefined;
+      this.removeAttribute('validity');
+    }
+
+    if (this.validity && this.validity !== 'valid') {
+      this.isValid = false;
+
+      // Use the validity message override if it is declared
+      if (this.ValidityMessageOverride) {
+        this.setCustomValidity = this.ValidityMessageOverride;
+      }
+    } else {
+      this.isValid = true;
+    }
+
+    if (this.error || (this.validity && this.validity !== 'valid')) { // eslint-disable-line  no-extra-parens
       this.items.forEach((el) => {
-        el.error = Boolean(this.error)
+        el.setAttribute('error', '');
+      });
+    } else {
+      this.items.forEach((el) => {
+        el.removeAttribute('error');
       });
     }
   }
 
+  /**
+   * Method for a total reset of the radio element
+   * @returns {void}
+   */
   reset() {
+    this.value = undefined;
+    this.index = 0;
+    const buttons = this.querySelectorAll('auro-radio');
+
+    buttons.forEach((button) => {
+      button.checked = false;
+    });
+
+    this.validate();
+  }
+
+  /**
+   * Method handles the reset event from a radio element
+   * @returns {void}
+   */
+  resetRadio() {
     if (this.items.length === 0) {
       this.handleItems();
     }
+
+    // handle tab index
     this.items.forEach((item) => {
       item.tabIndex = -1;
     })
@@ -126,6 +256,9 @@ class AuroRadioGroup extends LitElement {
     this.items.forEach((item) => {
       if (item === event.target) {
         item.tabIndex = 0;
+        if (event.target.value) {
+          this.value = event.target.value;
+        }
       } else {
         const sdInput = item.shadowRoot.querySelector('input');
 
@@ -134,6 +267,8 @@ class AuroRadioGroup extends LitElement {
         item.tabIndex = -1;
       }
     })
+
+    this.validate();
   }
 
   selectItem(index) {
@@ -201,9 +336,16 @@ class AuroRadioGroup extends LitElement {
         <slot @slotchange=${this.handleSlotChange}></slot>
       </fieldset>
 
-      ${this.error
-        ? html`<p role="alert" aria-live="assertive" class="errorText">${this.error}</p>`
-        : html``}
+      ${!this.validity || this.validity === undefined || this.validity === 'valid'
+        ? html`
+          <p class="radioGroupElement-helpText" part="helpText">
+            <slot name="helpText"></slot>
+          </p>`
+        : html`
+          <p class="radioGroupElement-helpText" role="alert" aria-live="assertive" part="helpText">
+            ${this.setCustomValidity}
+          </p>`
+      }
     `;
   }
 }

@@ -12,6 +12,14 @@ import {ifDefined} from 'lit-html/directives/if-defined';
 import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./auro-radio-css.js";
 
+/**
+ * @fires toggleSelected - Notifies that the component has toggled the chexked/selected state.
+ * @fires focusSelected - Notifies that the component has gained focus.
+ * @fires auroRadio-blur - Notifies that the component has lost focus.
+ * @fires resetRadio - Notifies that the component has reset the checked/selected state.
+ * @fires auroRadio-selected - Notifies that the component has been marked as checked/selected.
+ */
+
 // build the component class
 class AuroRadio extends LitElement {
   constructor() {
@@ -75,8 +83,20 @@ class AuroRadio extends LitElement {
     }));
   }
 
+  /**
+   * Method for focus
+   * @returns {void}
+   */
   handleFocus(event) {
     this.dispatchEvent(new CustomEvent('focusSelected', {
+      bubbles: true,
+      composed: true,
+      target: event.target
+    }))
+  }
+
+  handleBlur(event) {
+    this.dispatchEvent(new CustomEvent('auroRadio-blur', {
       bubbles: true,
       composed: true,
       target: event.target
@@ -88,7 +108,14 @@ class AuroRadio extends LitElement {
       this.dispatchEvent(new CustomEvent('resetRadio', {
         bubbles: true,
         composed: true
-      }))
+      }));
+
+      if (this.checked) {
+        this.dispatchEvent(new CustomEvent('auroRadio-selected', {
+          bubbles: true,
+          composed: true
+        }));
+      }
     }
   }
 
@@ -106,6 +133,10 @@ class AuroRadio extends LitElement {
     }
 
     return 'false'
+  }
+
+  firstUpdated() {
+    this.addEventListener('blur', this.handleBlur);
   }
 
   // function that renders the HTML and CSS into  the scope of the component

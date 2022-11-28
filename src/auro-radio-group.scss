@@ -15,10 +15,6 @@
   padding-bottom: var(--auro-size-md);
 }
 
-:host([error]) {
-  color: var(--auro-color-text-error-on-light);
-}
-
 :host([disabled]) {
   color: var(--auro-color-text-disabled-on-light);
 }
@@ -38,6 +34,12 @@ legend {
   margin-bottom: var(--auro-size-md);
 }
 
-.errorText {
-  color: var(--auro-color-text-error-on-light)
+.radioGroupElement-helpText {
+  color: var(--auro-color-text-secondary-on-light);
+}
+
+:host([validity]:not([validity='valid'])) {
+  .radioGroupElement-helpText {
+    color: var(--auro-color-alert-error-on-light);
+  }
 }

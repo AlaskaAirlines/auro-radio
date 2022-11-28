@@ -25,9 +25,9 @@ describe('auro-radio-group', () => {
 
     expect(el.horizontal).to.be.true;
     expect(el.required).to.be.true;
-    expect(error.textContent).be.equal(expectedError);
+    expect(error.textContent).be.contain(expectedError);
     expect(el).dom.to.equal(`
-    <auro-radio-group horizontal required error="${expectedError}">
+    <auro-radio-group horizontal required error="${expectedError}" validity="customError">
     </auro-radio-group>`);
   });
 

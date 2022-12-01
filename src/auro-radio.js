@@ -85,6 +85,7 @@ class AuroRadio extends LitElement {
 
   /**
    * Method for focus
+   * @param {Map<string, any>} event - the trigger event tied to this function
    * @returns {void}
    */
   handleFocus(event) {
@@ -95,6 +96,11 @@ class AuroRadio extends LitElement {
     }))
   }
 
+  /**
+   * Method for focus
+   * @param {Map<string, any>} event - the trigger event tied to this function
+   * @returns {void}
+   */
   handleBlur(event) {
     this.dispatchEvent(new CustomEvent('auroRadio-blur', {
       bubbles: true,

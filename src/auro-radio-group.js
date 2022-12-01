@@ -91,9 +91,16 @@ class AuroRadioGroup extends LitElement {
 
   /**
    * Method for handling of selection of a radio element
+   * @param {Map<string, any>} evt - the trigger event tied to this function
    * @returns {void}
    */
-  handleSelection() {
+  handleSelection(evt) {
+    if (evt.target.hasAttribute('value')) {
+      this.value = evt.target.value
+    } else {
+      this.value = '';
+    }
+
     this.validate();
   }
 

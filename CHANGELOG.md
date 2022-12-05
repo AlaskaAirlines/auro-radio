@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [1.6.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.5.5...v1.6.0) (2022-12-05)
+
+
+### Features
+
+* **validity:** add html5 validity functionality [#85](https://github.com/AlaskaAirlines/auro-radio/issues/85) ([0e02eef](https://github.com/AlaskaAirlines/auro-radio/commit/0e02eefd99f45d681a356753bfbd3f3524af0ebc))
+
 ## [1.5.5](https://github.com/AlaskaAirlines/auro-radio/compare/v1.5.4...v1.5.5) (2022-09-08)
 
 

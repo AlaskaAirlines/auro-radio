@@ -1,19 +1,181 @@
 /**
  * Do not edit directly
- * Generated on Thu, 06 Oct 2022 15:22:14 GMT
+ * Generated on Mon, 27 Mar 2023 21:56:23 GMT
  */
 :root {
-  --auro-animation-default-property: all;
-  --auro-animation-default-duration: 0.3s;
-  --auro-animation-default-timing: ease-out;
   --auro-asset-font-circular-family-name: "AS Circular";
   --auro-asset-font-circular-filename: "ASCircularWeb";
   --auro-asset-font-circular-weight-light: "-Light";
   --auro-asset-font-circular-weight-medium: "-Medium";
   --auro-asset-font-circular-weight-book: "-Book";
-  --auro-breakpoint-sm: 660px;
-  --auro-breakpoint-md: 1024px;
-  --auro-breakpoint-lg: 1232px;
+  --auro-border-radius: 0.375rem;
+  --auro-size-25: 0.125rem; /* 2px */
+  --auro-size-50: 0.25rem; /* 4px */
+  --auro-size-100: 0.5rem; /* 8px */
+  --auro-size-150: 0.75rem; /* 12px */
+  --auro-size-200: 1rem; /* 16px */
+  --auro-size-300: 1.5rem; /* 24px */
+  --auro-size-400: 2rem; /* 32px */
+  --auro-size-500: 2.5rem; /* 40px */
+  --auro-size-600: 3rem; /* 48px */
+  --auro-size-700: 3.5rem; /* 56px */
+  --auro-size-800: 4rem; /* 64px */
+  --auro-size-900: 4.5rem; /* 72px */
+  --auro-size-1000: 5rem; /* 80px */
+  --auro-size-none: 0rem; /* Deprecated token, use 0 value */
+  --auro-size-xxxs: 0.125rem; /* 
+// New token, see auro-size-25 */
+  --auro-size-xxs: 0.25rem; /* 
+// New token, see auro-size-50 */
+  --auro-size-xs: 0.5rem; /* 
+// New token, see auro-size-100 */
+  --auro-size-sm: 0.75rem; /* 
+// New token, see auro-size-150 */
+  --auro-size-md: 1rem; /* 
+// New token, see auro-size-200 */
+  --auro-size-lg: 1.5rem; /* 
+// New token, see auro-size-300 */
+  --auro-size-xl: 2rem; /* 
+// New token, see auro-size-400 */
+  --auro-size-xxl: 3rem; /* 
+// New token, see auro-size-600 */
+  --auro-size-xxxl: 4rem; /* 
+// New token, see auro-size-800 */
+  --auro-unitless-scale-20: 0.25;
+  --auro-unitless-scale-50: 0.5;
+  --auro-unitless-scale-100: 1;
+  --auro-unitless-scale-140: 1.4;
+  --auro-unitless-scale-150: 1.5;
+  --auro-unitless-scale-200: 2;
+  --auro-unitless-scale-300: 3;
+  --auro-unitless-scale-350: 3.5;
+  --auro-animation-default-property: all;
+  --auro-animation-default-duration: 0.3s;
+  --auro-animation-default-timing: ease-out;
+  --auro-breakpoint-sm: 660px; /* 
+// New token, see grid-breakpoint-sm */
+  --auro-breakpoint-md: 1024px; /* 
+// New token, see grid-breakpoint-md */
+  --auro-breakpoint-lg: 1232px; /* 
+// New token, see grid-breakpoint-lg */
+  --auro-depth-dialog: 100;
+  --auro-depth-overlay: 200;
+  --auro-depth-modal: 400;
+  --auro-depth-tooltip: 300;
+  --auro-elevation-100: 0px 0px 5px rgba(0, 0, 0, 0.15); /* for the least amount of emphasis */
+  --auro-elevation-200: 0px 0px 10px rgba(0, 0, 0, 0.15); /* for more emphasis than low elevation */
+  --auro-elevation-300: 0px 0px 15px rgba(0, 0, 0, 0.2); /* for maximum emphasis or differentiation */
+  --auro-grid-breakpoint-xs: 320px;
+  --auro-grid-breakpoint-sm: 576px;
+  --auro-grid-breakpoint-md: 768px;
+  --auro-grid-breakpoint-lg: 1024px;
+  --auro-grid-breakpoint-xl: 1232px;
+  --auro-grid-column-xs: 6;
+  --auro-grid-column-sm: 12;
+  --auro-grid-column-md: 12;
+  --auro-grid-column-lg: 12;
+  --auro-grid-column-xl: 12;
+  --auro-grid-gutter-xs: 0.5rem;
+  --auro-grid-gutter-sm: 1rem;
+  --auro-grid-gutter-md: 1.5rem;
+  --auro-grid-gutter-lg: 1.5rem;
+  --auro-grid-gutter-xl: 2rem;
+  --auro-grid-margin-xs: 1rem;
+  --auro-grid-margin-sm: 1rem;
+  --auro-grid-margin-md: 1.5rem;
+  --auro-grid-margin-lg: 2rem;
+  --auro-grid-margin-xl: 2rem;
+  --auro-font-family-default: "AS Circular", Helvetica Neue, Arial, sans-serif;
+  --auro-font-family-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+  --auro-text-heading-300-weight: 300;
+  --auro-text-heading-300-px: 18px;
+  --auro-text-heading-300-size: 1.125rem;
+  --auro-text-heading-300-height: 1.625rem;
+  --auro-text-heading-300-height-px: 26px;
+  --auro-text-heading-400-weight: 300;
+  --auro-text-heading-400-px: 20px;
+  --auro-text-heading-400-size: 1.25rem;
+  --auro-text-heading-400-height: 1.625rem;
+  --auro-text-heading-400-height-px: 26px;
+  --auro-text-heading-500-weight: 300;
+  --auro-text-heading-500-px-breakpoint-sm: 22px;
+  --auro-text-heading-500-px-breakpoint-md: 24px;
+  --auro-text-heading-500-px-breakpoint-lg: 24px;
+  --auro-text-heading-500-size-breakpoint-sm: 1.375rem;
+  --auro-text-heading-500-size-breakpoint-md: 1.5rem;
+  --auro-text-heading-500-size-breakpoint-lg: 1.5rem;
+  --auro-text-heading-500-height-breakpoint-sm: 1.625rem;
+  --auro-text-heading-500-height-breakpoint-px-sm: 26px;
+  --auro-text-heading-500-height-breakpoint-md: 1.875rem;
+  --auro-text-heading-500-height-breakpoint-px-md: 30px;
+  --auro-text-heading-500-height-breakpoint-lg: 2rem;
+  --auro-text-heading-500-height-breakpoint-px-lg: 32px;
+  --auro-text-heading-600-weight: 300;
+  --auro-text-heading-600-px-breakpoint-sm: 26px;
+  --auro-text-heading-600-px-breakpoint-md: 28px;
+  --auro-text-heading-600-px-breakpoint-lg: 28px;
+  --auro-text-heading-600-size-breakpoint-sm: 1.625rem;
+  --auro-text-heading-600-size-breakpoint-md: 1.75rem;
+  --auro-text-heading-600-size-breakpoint-lg: 1.75rem;
+  --auro-text-heading-600-height-breakpoint-sm: 1.875rem;
+  --auro-text-heading-600-height-breakpoint-px-sm: 30px;
+  --auro-text-heading-600-height-breakpoint-md: 2.125rem;
+  --auro-text-heading-600-height-breakpoint-px-md: 34px;
+  --auro-text-heading-600-height-breakpoint-lg: 2.25rem;
+  --auro-text-heading-600-height-breakpoint-px-lg: 36px;
+  --auro-text-heading-700-weight: 500;
+  --auro-text-heading-700-px-breakpoint-sm: 28px;
+  --auro-text-heading-700-px-breakpoint-md: 32px;
+  --auro-text-heading-700-px-breakpoint-lg: 36px;
+  --auro-text-heading-700-size-breakpoint-sm: 1.75rem;
+  --auro-text-heading-700-size-breakpoint-md: 2rem;
+  --auro-text-heading-700-size-breakpoint-lg: 2.25rem;
+  --auro-text-heading-700-height-breakpoint-sm: 2.125rem;
+  --auro-text-heading-700-height-breakpoint-px-sm: 34px;
+  --auro-text-heading-700-height-breakpoint-md: 2.375rem;
+  --auro-text-heading-700-height-breakpoint-px-md: 38px;
+  --auro-text-heading-700-height-breakpoint-lg: 2.75rem;
+  --auro-text-heading-700-height-breakpoint-px-lg: 44px;
+  --auro-text-heading-800-weight: 500;
+  --auro-text-heading-800-px-breakpoint-sm: 32px;
+  --auro-text-heading-800-px-breakpoint-md: 36px;
+  --auro-text-heading-800-px-breakpoint-lg: 40px;
+  --auro-text-heading-800-size-breakpoint-sm: 2rem;
+  --auro-text-heading-800-size-breakpoint-md: 2.25rem;
+  --auro-text-heading-800-size-breakpoint-lg: 2.5rem;
+  --auro-text-heading-800-height-breakpoint-sm: 2.375rem;
+  --auro-text-heading-800-height-breakpoint-px-sm: 38px;
+  --auro-text-heading-800-height-breakpoint-md: 2.625rem;
+  --auro-text-heading-800-height-breakpoint-px-md: 42px;
+  --auro-text-heading-800-height-breakpoint-lg: 3rem;
+  --auro-text-heading-800-height-breakpoint-px-lg: 48px;
+  --auro-text-heading-default-weight: 500;
+  --auro-text-heading-default-margin: 0;
+  --auro-text-heading-default-spacing: -0.2px;
+  --auro-text-heading-medium-weight: 300;
+  --auro-text-heading-display-weight: 100;
+  --auro-text-heading-display-px-breakpoint-sm: 44px;
+  --auro-text-heading-display-px-breakpoint-md: 48px;
+  --auro-text-heading-display-px-breakpoint-lg: 56px;
+  --auro-text-heading-display-size-breakpoint-sm: 2.75rem;
+  --auro-text-heading-display-size-breakpoint-md: 3rem;
+  --auro-text-heading-display-size-breakpoint-lg: 3.5rem;
+  --auro-text-heading-display-height-breakpoint-sm: 3.375rem;
+  --auro-text-heading-display-height-breakpoint-px-sm: 54px;
+  --auro-text-heading-display-height-breakpoint-md: 3.75rem;
+  --auro-text-heading-display-height-breakpoint-px-md: 60px;
+  --auro-text-heading-display-height-breakpoint-lg: 4.25rem;
+  --auro-text-heading-display-height-breakpoint-px-lg: 68px;
+  --auro-text-body-default-weight: 500;
+  --auro-text-body-size-xxs: 0.625rem;
+  --auro-text-body-size-xs: 0.75rem;
+  --auro-text-body-size-sm: 0.875rem;
+  --auro-text-body-size-default: 1rem;
+  --auro-text-body-size-lg: 1.125rem;
+  --auro-text-body-height-xs: 1rem;
+  --auro-text-body-height-sm: 1.25rem;
+  --auro-text-body-height-default: 1.5rem;
+  --auro-text-body-height-lg: 1.625rem;
   --auro-color-alert-notification-on-light: #0074c8;
   --auro-color-alert-notification-on-dark: #00cff0;
   --auro-color-alert-warning-on-light: #de750c;
@@ -203,145 +365,6 @@
   --auro-color-ui-disabled-on-dark: rgba(0, 207, 240, 0.3);
   --auro-color-ui-bkg-hover-on-dark: rgba(93, 227, 247, 0.1);
   --auro-color-ui-bkg-hover-on-light: rgba(0, 0, 0, 0.06);
-  --auro-depth-dialog: 100;
-  --auro-depth-overlay: 200;
-  --auro-depth-modal: 400;
-  --auro-depth-tooltip: 300;
-  --auro-elevation-100: 0px 0px 5px rgba(0, 0, 0, 0.15); /* for the least amount of emphasis */
-  --auro-elevation-200: 0px 0px 10px rgba(0, 0, 0, 0.15); /* for more emphasis than low elevation */
-  --auro-elevation-300: 0px 0px 15px rgba(0, 0, 0, 0.2); /* for maximum emphasis or differentiation */
-  --auro-border-radius: 0.375rem;
-  --auro-size-25: 0.125rem; /* 2px */
-  --auro-size-50: 0.25rem; /* 4px */
-  --auro-size-100: 0.5rem; /* 8px */
-  --auro-size-150: 0.75rem; /* 12px */
-  --auro-size-200: 1rem; /* 16px */
-  --auro-size-300: 1.5rem; /* 24px */
-  --auro-size-400: 2rem; /* 32px */
-  --auro-size-500: 2.5rem; /* 40px */
-  --auro-size-600: 3rem; /* 48px */
-  --auro-size-700: 3.5rem; /* 56px */
-  --auro-size-800: 4rem; /* 64px */
-  --auro-size-900: 4.5rem; /* 72px */
-  --auro-size-1000: 5rem; /* 80px */
-  --auro-size-none: 0rem; /* Deprecated token, use 0 value */
-  --auro-size-xxxs: 0.125rem; /* 
-// New token, see auro-size-25 */
-  --auro-size-xxs: 0.25rem; /* 
-// New token, see auro-size-50 */
-  --auro-size-xs: 0.5rem; /* 
-// New token, see auro-size-100 */
-  --auro-size-sm: 0.75rem; /* 
-// New token, see auro-size-150 */
-  --auro-size-md: 1rem; /* 
-// New token, see auro-size-200 */
-  --auro-size-lg: 1.5rem; /* 
-// New token, see auro-size-300 */
-  --auro-size-xl: 2rem; /* 
-// New token, see auro-size-400 */
-  --auro-size-xxl: 3rem; /* 
-// New token, see auro-size-600 */
-  --auro-size-xxxl: 4rem; /* 
-// New token, see auro-size-800 */
-  --auro-unitless-scale-20: 0.25;
-  --auro-unitless-scale-50: 0.5;
-  --auro-unitless-scale-100: 1;
-  --auro-unitless-scale-140: 1.4;
-  --auro-unitless-scale-150: 1.5;
-  --auro-unitless-scale-200: 2;
-  --auro-unitless-scale-300: 3;
-  --auro-unitless-scale-350: 3.5;
-  --auro-font-family-default: "AS Circular", Helvetica Neue, Arial, sans-serif;
-  --auro-font-family-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
-  --auro-text-heading-300-weight: 300;
-  --auro-text-heading-300-px: 18px;
-  --auro-text-heading-300-size: 1.125rem;
-  --auro-text-heading-300-height: 1.625rem;
-  --auro-text-heading-300-height-px: 26px;
-  --auro-text-heading-400-weight: 300;
-  --auro-text-heading-400-px: 20px;
-  --auro-text-heading-400-size: 1.25rem;
-  --auro-text-heading-400-height: 1.625rem;
-  --auro-text-heading-400-height-px: 26px;
-  --auro-text-heading-500-weight: 300;
-  --auro-text-heading-500-px-breakpoint-sm: 22px;
-  --auro-text-heading-500-px-breakpoint-md: 24px;
-  --auro-text-heading-500-px-breakpoint-lg: 24px;
-  --auro-text-heading-500-size-breakpoint-sm: 1.375rem;
-  --auro-text-heading-500-size-breakpoint-md: 1.5rem;
-  --auro-text-heading-500-size-breakpoint-lg: 1.5rem;
-  --auro-text-heading-500-height-breakpoint-sm: 1.625rem;
-  --auro-text-heading-500-height-breakpoint-px-sm: 26px;
-  --auro-text-heading-500-height-breakpoint-md: 1.875rem;
-  --auro-text-heading-500-height-breakpoint-px-md: 30px;
-  --auro-text-heading-500-height-breakpoint-lg: 2rem;
-  --auro-text-heading-500-height-breakpoint-px-lg: 32px;
-  --auro-text-heading-600-weight: 300;
-  --auro-text-heading-600-px-breakpoint-sm: 26px;
-  --auro-text-heading-600-px-breakpoint-md: 28px;
-  --auro-text-heading-600-px-breakpoint-lg: 28px;
-  --auro-text-heading-600-size-breakpoint-sm: 1.625rem;
-  --auro-text-heading-600-size-breakpoint-md: 1.75rem;
-  --auro-text-heading-600-size-breakpoint-lg: 1.75rem;
-  --auro-text-heading-600-height-breakpoint-sm: 1.875rem;
-  --auro-text-heading-600-height-breakpoint-px-sm: 30px;
-  --auro-text-heading-600-height-breakpoint-md: 2.125rem;
-  --auro-text-heading-600-height-breakpoint-px-md: 34px;
-  --auro-text-heading-600-height-breakpoint-lg: 2.25rem;
-  --auro-text-heading-600-height-breakpoint-px-lg: 36px;
-  --auro-text-heading-700-weight: 500;
-  --auro-text-heading-700-px-breakpoint-sm: 28px;
-  --auro-text-heading-700-px-breakpoint-md: 32px;
-  --auro-text-heading-700-px-breakpoint-lg: 36px;
-  --auro-text-heading-700-size-breakpoint-sm: 1.75rem;
-  --auro-text-heading-700-size-breakpoint-md: 2rem;
-  --auro-text-heading-700-size-breakpoint-lg: 2.25rem;
-  --auro-text-heading-700-height-breakpoint-sm: 2.125rem;
-  --auro-text-heading-700-height-breakpoint-px-sm: 34px;
-  --auro-text-heading-700-height-breakpoint-md: 2.375rem;
-  --auro-text-heading-700-height-breakpoint-px-md: 38px;
-  --auro-text-heading-700-height-breakpoint-lg: 2.75rem;
-  --auro-text-heading-700-height-breakpoint-px-lg: 44px;
-  --auro-text-heading-800-weight: 500;
-  --auro-text-heading-800-px-breakpoint-sm: 32px;
-  --auro-text-heading-800-px-breakpoint-md: 36px;
-  --auro-text-heading-800-px-breakpoint-lg: 40px;
-  --auro-text-heading-800-size-breakpoint-sm: 2rem;
-  --auro-text-heading-800-size-breakpoint-md: 2.25rem;
-  --auro-text-heading-800-size-breakpoint-lg: 2.5rem;
-  --auro-text-heading-800-height-breakpoint-sm: 2.375rem;
-  --auro-text-heading-800-height-breakpoint-px-sm: 38px;
-  --auro-text-heading-800-height-breakpoint-md: 2.625rem;
-  --auro-text-heading-800-height-breakpoint-px-md: 42px;
-  --auro-text-heading-800-height-breakpoint-lg: 3rem;
-  --auro-text-heading-800-height-breakpoint-px-lg: 48px;
-  --auro-text-heading-default-weight: 500;
-  --auro-text-heading-default-margin: 0;
-  --auro-text-heading-default-spacing: -0.2px;
-  --auro-text-heading-medium-weight: 300;
-  --auro-text-heading-display-weight: 100;
-  --auro-text-heading-display-px-breakpoint-sm: 44px;
-  --auro-text-heading-display-px-breakpoint-md: 48px;
-  --auro-text-heading-display-px-breakpoint-lg: 56px;
-  --auro-text-heading-display-size-breakpoint-sm: 2.75rem;
-  --auro-text-heading-display-size-breakpoint-md: 3rem;
-  --auro-text-heading-display-size-breakpoint-lg: 3.5rem;
-  --auro-text-heading-display-height-breakpoint-sm: 3.375rem;
-  --auro-text-heading-display-height-breakpoint-px-sm: 54px;
-  --auro-text-heading-display-height-breakpoint-md: 3.75rem;
-  --auro-text-heading-display-height-breakpoint-px-md: 60px;
-  --auro-text-heading-display-height-breakpoint-lg: 4.25rem;
-  --auro-text-heading-display-height-breakpoint-px-lg: 68px;
-  --auro-text-body-default-weight: 500;
-  --auro-text-body-size-xxs: 0.625rem;
-  --auro-text-body-size-xs: 0.75rem;
-  --auro-text-body-size-sm: 0.875rem;
-  --auro-text-body-size-default: 1rem;
-  --auro-text-body-size-lg: 1.125rem;
-  --auro-text-body-height-xs: 1rem;
-  --auro-text-body-height-sm: 1.25rem;
-  --auro-text-body-height-default: 1.5rem;
-  --auro-text-body-height-lg: 1.625rem;
 }
 
 @font-face {

@@ -10,6 +10,7 @@ altImports/
 ## CSS built from Sass process
 demo/css
 demo/sass/tokenProperties.scss
+demo/sass/*.css
 src/*.css
 src/_deprecated*
 

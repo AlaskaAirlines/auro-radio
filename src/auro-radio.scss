@@ -1,3 +1,6 @@
+
+
+
 // Copyright (c) 2020 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
@@ -98,6 +101,7 @@
     & + .label--rdo {
       &:after {
         border-color: var(--auro-color-base-gray-200);
+        background-color: var(--auro-color-background-lightest);
       }
     }
   }
@@ -107,6 +111,14 @@
   display: block;
 
   margin-left: var(--auro-size-xl);
+
+  &:hover {
+    cursor: pointer;
+
+    &:after {
+        background-color: var(--auro-color-ui-bkg-hover-on-light);
+    }
+  }
 
   &:after {
     position: absolute;
@@ -120,9 +132,6 @@
     content: '';
 
     border-radius: 50%;
-  }
-
-  &:after {
     border: 1px solid;
     -webkit-tap-highlight-color: transparent;
     background-color: var(--auro-color-background-lightest);

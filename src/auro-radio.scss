@@ -33,7 +33,7 @@
   .rdoGroup {
     display: block;
 
-    padding-right: var(--auro-size-xs);
+    padding-right: var(--auro-size-100);
 
     outline: 3px solid transparent; // for Windows High Contrast mode
     background-color: var(--auro-color-ui-default-on-light);
@@ -63,10 +63,10 @@
 .rdoGroup {
   position: relative;
 
-  padding-right: var(--auro-size-xs);
-  padding-left: var(--auro-size-xs);
+  padding-right: var(--auro-size-100);
+  padding-left: var(--auro-size-100);
 
-  line-height: calc((var(--auro-size-xl)) + (var(--auro-size-xxs)))
+  line-height: var(--auro-size-400);
 }
 
 .rdo--input {
@@ -106,16 +106,16 @@
 .label {
   display: block;
 
-  margin-left: var(--auro-size-xl);
+  margin-left: var(--auro-size-300);
 
   &:after {
     position: absolute;
     z-index: 1;
-    top: var(--auro-size-xxs);
-    left: var(--auro-size-xs);
+    top: var(--auro-size-50);
+    left: var(--auro-size-50);
 
-    width: var(--auro-size-lg);
-    height: var(--auro-size-lg);
+    width: calc(var(--auro-size-200) + var(--auro-size-50));
+    height: calc(var(--auro-size-200) + var(--auro-size-50));
 
     content: '';
 
@@ -148,6 +148,6 @@
 
 .slotContent {
   display: block;
-  margin-left: var(--auro-size-xl);
-  padding-left: var(--auro-size-xs);
+  margin-left: var(--auro-size-400);
+  padding-left: var(--auro-size-100);
 }

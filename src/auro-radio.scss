@@ -92,7 +92,15 @@
 
   &:disabled {
     & + label {
+      cursor: auto;
       color: var(--auro-color-text-disabled-on-light);
+
+      &:hover {
+        &:after {
+          cursor: auto;
+          background-color: var(--auro-color-background-lightest);
+        }
+      }
     }
 
     & + .label--rdo {
@@ -107,6 +115,14 @@
   display: block;
 
   margin-left: var(--auro-size-300);
+  
+  &:hover {
+    cursor: pointer;
+
+    &:after {
+        background-color: var(--auro-color-ui-bkg-hover-on-light);
+    }
+  }
 
   &:after {
     position: absolute;
@@ -120,9 +136,6 @@
     content: '';
 
     border-radius: 50%;
-  }
-
-  &:after {
     border: 1px solid;
     -webkit-tap-highlight-color: transparent;
     background-color: var(--auro-color-background-lightest);

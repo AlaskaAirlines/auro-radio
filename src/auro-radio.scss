@@ -36,19 +36,22 @@
     padding-right: var(--auro-size-100);
 
     outline: 3px solid transparent; // for Windows High Contrast mode
-    background-color: var(--auro-color-ui-default-on-light);
+
+    .label {
+      &:after {
+        outline: 1px solid var(--auro-color-border-active-on-light);
+        border-color: var(--auro-color-border-active-on-light);
+      }
+    }
 
     .rdo--input {
-      & + label {
-        color: var(--auro-color-base-white);
-      }
-
       &:checked {
         + .label {
           &:after {
-            border-color: var(--auro-color-base-white);
-            background-color: var(--auro-color-base-white);
-            box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-ui-default-on-light);
+            outline-color: var(--auro-color-border-active-on-light);
+            border-color: var(--auro-color-border-active-on-light);
+            background-color: var(--auro-color-border-active-on-light);
+            box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-base-white);
           }
         }
       }
@@ -122,6 +125,10 @@
     &:after {
         background-color: var(--auro-color-ui-bkg-hover-on-light);
     }
+  }
+
+  &:focus-visible:after {
+    border-color: var(--auro-color-border-primary-on-light);
   }
 
   &:after {

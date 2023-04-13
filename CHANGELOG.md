@@ -1,5 +1,14 @@
 # Semantic Release Automated Changelog
 
+## [1.6.1](https://github.com/AlaskaAirlines/auro-radio/compare/v1.6.0...v1.6.1) (2023-04-13)
+
+
+### Performance Improvements
+
+* add hover capability [#67](https://github.com/AlaskaAirlines/auro-radio/issues/67) ([a793a67](https://github.com/AlaskaAirlines/auro-radio/commit/a793a67817d5fa7d03ebe8ff0d31913b3f3ef201))
+* update focus state [#98](https://github.com/AlaskaAirlines/auro-radio/issues/98) ([1229d05](https://github.com/AlaskaAirlines/auro-radio/commit/1229d05412ef24a7369465ce018c17ddc983e3af))
+* update references to design tokens [#98](https://github.com/AlaskaAirlines/auro-radio/issues/98) ([bfb2907](https://github.com/AlaskaAirlines/auro-radio/commit/bfb2907cf4e4edfe623cc113026f897225ee2d80))
+
 # [1.6.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.5.5...v1.6.0) (2022-12-05)
 
 

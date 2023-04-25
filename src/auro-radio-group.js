@@ -293,6 +293,10 @@ class AuroRadioGroup extends LitElement {
       currIndex = currIndex === -1 ? this.items.length - 1 : currIndex;
       const sdItem = this.items[currIndex].shadowRoot.querySelector('input');
 
+      if (this.disabled || this.items.every((item) => item.disabled === true)) {
+        sdItem.focus();
+        break;
+      }
       if (!sdItem.disabled) {
         sdItem.click();
         sdItem.focus();

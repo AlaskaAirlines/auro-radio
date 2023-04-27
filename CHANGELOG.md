@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.6.2](https://github.com/AlaskaAirlines/auro-radio/compare/v1.6.1...v1.6.2) (2023-04-27)
+
+
+### Bug Fixes
+
+* **disabled:** add loop safe check [#105](https://github.com/AlaskaAirlines/auro-radio/issues/105) ([ff4e2df](https://github.com/AlaskaAirlines/auro-radio/commit/ff4e2df3304f453a6908e785d99be3756084d7a6))
+
 ## [1.6.1](https://github.com/AlaskaAirlines/auro-radio/compare/v1.6.0...v1.6.1) (2023-04-13)
 
 

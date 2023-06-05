@@ -26,3 +26,9 @@
 |-----------|--------------------------------------------|
 |  | Places content into the `label` element; will override content from the `label` attribute |
 | `content` | Additional content element within the scope of the custom element; will not highlight with tab focus  |
+
+## CSS Shadow Parts
+
+| Part | Description |
+|------|-------------|
+| `radio-group` | Adjust styling of the radio-group fieldset |

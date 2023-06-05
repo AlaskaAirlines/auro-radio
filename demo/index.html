@@ -348,6 +348,42 @@
         </template>
       </demo-snippet>
 
+      <p>Radio button group, <code>radio-group</code> css part in blue</p>
+      <demo-snippet>
+        <template>
+          <style>
+            .example::part(radio-group) {
+              background-color: lightblue;
+            }
+            .example {
+              background-color: lightgrey;
+            }
+          </style>
+      
+          <auro-radio-group class="example">
+            <span slot="legend">Form label goes here</span>
+            <auro-radio
+              id="radio27"
+              label="Yes"
+              name="radioDemo1"
+              value="yes"
+            ></auro-radio>
+            <auro-radio
+              id="radio28"
+              label="No"
+              name="radioDemo1"
+              value="no"
+            ></auro-radio>
+            <auro-radio
+              id="radio29"
+              label="Maybe"
+              name="radioDemo1"
+              value="maybe"
+            ></auro-radio>
+          </auro-radio-group>
+        </template>
+      </demo-snippet>
+
     </div>
   </body>
 

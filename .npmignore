@@ -1,15 +1,31 @@
 # standard ignore
+*config*
+*conf*
+LICENSE
+NOTICE
+
+.github/
 .gitignore
+.eslintrc
 .stylelintrc
-.travis.yml
-demo/
-gulpfile.js
-index.html
-polymer.json
+
+coverage/
+docs/
 scripts/
 test/
+apiExamples/
+docTemplates/
+demo/**/*.css
+demo/**/*.scss
+demo/**/*.html
+
+dist/es5.js
+dist/auro-*.js
+!dist/auro-*__bundled.js
+dist/style-css.js
+
+index.html
 
 # ignore src
-src/**/*
-
-# overrides
+src/**/*.scss
+src/**/*.css

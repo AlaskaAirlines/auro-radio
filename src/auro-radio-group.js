@@ -1,8 +1,9 @@
 // Copyright (c) Alaska Air. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 // ---------------------------------------------------------------------
-import { LitElement, html, css } from "lit-element";
-import { classMap } from 'lit-html/directives/class-map';
+
+import { LitElement, html, css } from "lit";
+import { classMap } from 'lit/directives/class-map.js';
 
 // Import touch detection lib
 import 'focus-visible/dist/focus-visible.min.js';
@@ -23,7 +24,7 @@ import styleCss from "./auro-radio-group-css.js";
  * @attr {Boolean} required - Populates the `required` attribute on the element. Used for client-side validation.
  */
 
-class AuroRadioGroup extends LitElement {
+export class AuroRadioGroup extends LitElement {
   constructor() {
     super();
     this.index = 0;
@@ -51,7 +52,7 @@ class AuroRadioGroup extends LitElement {
       error:      {
         type: String,
         reflect: true
-       },
+      },
       value: {
         type: Array
       },
@@ -90,13 +91,13 @@ class AuroRadioGroup extends LitElement {
   }
 
   /**
-   * Method for handling of selection of a radio element
-   * @param {Map<string, any>} evt - the trigger event tied to this function
+   * Method for handling of selection of a radio element.
+   * @param {Map<string, any>} evt - The trigger event tied to this function.
    * @returns {void}
    */
   handleSelection(evt) {
     if (evt.target.hasAttribute('value')) {
-      this.value = evt.target.value
+      this.value = evt.target.value;
     } else {
       this.value = '';
     }
@@ -105,7 +106,7 @@ class AuroRadioGroup extends LitElement {
   }
 
   /**
-   * Method handles radio element blur
+   * Method handles radio element blur.
    * @returns {void}
    */
   handleRadioBlur() {
@@ -118,7 +119,7 @@ class AuroRadioGroup extends LitElement {
 
   /**
    * LitElement lifecycle method. Called after the DOM has been updated.
-   * @param {Map<string, any>} changedProperties - keys are the names of changed properties, values are the corresponding previous values.
+   * @param {Map<string, any>} changedProperties - Keys are the names of changed properties, values are the corresponding previous values.
    * @returns {void}
    */
   updated(changedProperties) {
@@ -126,13 +127,13 @@ class AuroRadioGroup extends LitElement {
       // only change the children if we are making everything disabled, or if we are making everything enabled and there are no individually-disabled radio buttons
       if (this.disabled || this.items.every((el) => el.disabled)) {
         this.items.forEach((el) => {
-          el.disabled = this.disabled
+          el.disabled = this.disabled;
         });
       }
     }
     if (changedProperties.has('required')) {
       this.items.forEach((el) => {
-        el.required = this.required
+        el.required = this.required;
       });
     }
     if (changedProperties.has('error')) {
@@ -193,7 +194,7 @@ class AuroRadioGroup extends LitElement {
   }
 
   /**
-   * Method for a total reset of the radio element
+   * Method for a total reset of the radio element.
    * @returns {void}
    */
   reset() {
@@ -209,7 +210,7 @@ class AuroRadioGroup extends LitElement {
   }
 
   /**
-   * Method handles the reset event from a radio element
+   * Method handles the reset event from a radio element.
    * @returns {void}
    */
   resetRadio() {
@@ -220,7 +221,8 @@ class AuroRadioGroup extends LitElement {
     // handle tab index
     this.items.forEach((item) => {
       item.tabIndex = -1;
-    })
+    });
+
     this.items[this.index].tabIndex = 0;
   }
 
@@ -230,7 +232,7 @@ class AuroRadioGroup extends LitElement {
 
     if (this.disabled) {
       this.items.forEach((el) => {
-        el.disabled = this.disabled
+        el.disabled = this.disabled;
       });
     }
 
@@ -273,7 +275,7 @@ class AuroRadioGroup extends LitElement {
         item.checked = false;
         item.tabIndex = -1;
       }
-    })
+    });
 
     this.validate();
   }
@@ -336,7 +338,7 @@ class AuroRadioGroup extends LitElement {
   render() {
     const groupClasses = {
       'displayFlex': this.horizontal && this.items.length <= this.max
-    }
+    };
 
     return html`
       <fieldset class="${classMap(groupClasses)}">

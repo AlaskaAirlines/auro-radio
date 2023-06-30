@@ -3,13 +3,27 @@
 
 // ---------------------------------------------------------------------
 
+/* stylelint-disable
+   no-duplicate-selectors,
+   declaration-empty-line-before,
+   selector-max-class,
+   scss/selector-nest-combinators,
+   order/properties-order,
+   selector-class-pattern,
+   max-nesting-depth,
+   selector-max-combinators,
+   selector-max-compound-selectors,
+   scss/selector-no-redundant-nesting-selector,
+   no-descending-specificity,
+   rule-empty-line-before */
+
 // Import Auro tokens
 @import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
 @import './../node_modules/@alaskaairux/design-tokens//dist/tokens/SassCustomProperties';
 
-@import './../node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints';
-@import './../node_modules/@alaskaairux/webcorestylesheets/dist/core';
-@import './../node_modules/@alaskaairux/webcorestylesheets/dist/utilityClasses/displayProperties';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/core';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/utilityClasses/displayProperties';
 
 // container styles - defines the look of the outer custom component
 :host {

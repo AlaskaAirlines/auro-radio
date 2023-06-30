@@ -143,6 +143,12 @@ export class AuroRadio extends LitElement {
 
   firstUpdated() {
     this.addEventListener('blur', this.handleBlur);
+
+    this.input = this.shadowRoot.querySelector('input');
+
+    this.addEventListener('click', () => {
+      this.input.click();
+    });
   }
 
   // function that renders the HTML and CSS into  the scope of the component

@@ -3,9 +3,9 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html, css } from "lit-element";
-import { classMap } from 'lit-html/directives/class-map';
-import {ifDefined} from 'lit-html/directives/if-defined';
+import { LitElement, html, css } from "lit";
+import { classMap } from 'lit/directives/class-map.js';
+import {ifDefined} from 'lit/directives/if-defined.js';
 
 
 // Import touch detection lib
@@ -21,7 +21,7 @@ import styleCss from "./auro-radio-css.js";
  */
 
 // build the component class
-class AuroRadio extends LitElement {
+export class AuroRadio extends LitElement {
   constructor() {
     super();
     this.checked = false;
@@ -84,8 +84,8 @@ class AuroRadio extends LitElement {
   }
 
   /**
-   * Method for focus
-   * @param {Map<string, any>} event - the trigger event tied to this function
+   * Method for focus.
+   * @param {Map<string, any>} event - The trigger event tied to this function.
    * @returns {void}
    */
   handleFocus(event) {
@@ -93,12 +93,12 @@ class AuroRadio extends LitElement {
       bubbles: true,
       composed: true,
       target: event.target
-    }))
+    }));
   }
 
   /**
-   * Method for focus
-   * @param {Map<string, any>} event - the trigger event tied to this function
+   * Method for focus.
+   * @param {Map<string, any>} event - The trigger event tied to this function.
    * @returns {void}
    */
   handleBlur(event) {
@@ -106,7 +106,7 @@ class AuroRadio extends LitElement {
       bubbles: true,
       composed: true,
       target: event.target
-    }))
+    }));
   }
 
   updated(changedProperties) {
@@ -130,7 +130,7 @@ class AuroRadio extends LitElement {
       return 'true';
     }
 
-    return 'false'
+    return 'false';
   }
 
   isRequired(required) {
@@ -138,7 +138,7 @@ class AuroRadio extends LitElement {
       return 'true';
     }
 
-    return 'false'
+    return 'false';
   }
 
   firstUpdated() {
@@ -153,7 +153,7 @@ class AuroRadio extends LitElement {
       'label': true,
       'label--rdo': true,
       'errorBorder': this.error
-    }
+    };
 
     return html`
       <div class="ods-inputGroup rdoGroup">

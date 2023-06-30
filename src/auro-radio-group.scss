@@ -3,11 +3,18 @@
 
 // ---------------------------------------------------------------------
 
+/* stylelint-disable
+   selector-max-combinators,
+   selector-max-compound-selectors,
+   selector-max-type,
+   scss/selector-nest-combinators,
+   selector-class-pattern */
+
 // Import Auro tokens
 @import "./../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
 @import "./../node_modules/@alaskaairux/design-tokens//dist/tokens/SassCustomProperties";
 
-@import "./../node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints";
+@import "./../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints";
 
 // container styles - defines the look of the outer custom component
 :host {

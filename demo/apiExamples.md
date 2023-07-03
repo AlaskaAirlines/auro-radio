@@ -48,7 +48,12 @@
     <div class="exampleWrapper">
       <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
       <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-      <auro-radio>Hello World</auro-radio>
+      <auro-radio-group>
+        <span slot="legend">Form label goes here</span>
+        <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+        <auro-radio id="radio2" label="No" name="radioDemo" value="no"></auro-radio>
+        <auro-radio id="radio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+      </auro-radio-group>
       <!-- AURO-GENERATED-CONTENT:END -->
     </div>
 <auro-accordion lowProfile justifyRight>
@@ -57,117 +62,45 @@
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-radio>Hello World</auro-radio>
+<auro-radio-group>
+  <span slot="legend">Form label goes here</span>
+  <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="radio2" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="radio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+</auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Attribute Examples
+### Horizontal
 
-#### <a name="attributeName"></a>`attributeName`<a href="#auro-radio" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
-Explanation and use description.
+Using the `horizontal` attribute will render the `auro-radio` elements in a horizontal line.
+
+**Note**: Using the horizontal attribute has a limit of 3 options. Beyond three, options will be listed in vertically.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-radio>Hello World</auro-radio>
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/horizontalGroup.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/horizontalGroup.html -->
+  <auro-radio-group horizontal>
+    <span slot="legend">Form label goes here</span>
+    <auro-radio id="radio16" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="radio17" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="radio18" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/horizontalGroup.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/horizontalGroup.html -->
 
 ```html
-<auro-radio>Hello World</auro-radio>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-### Property Examples
-
-#### <a name="propertyName"></a>`propertyName`<a href="#auro-radio" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
-Explanation and use description.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-radio>Hello World</auro-radio>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
-
-```html
-<auro-radio>Hello World</auro-radio>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-### Method Examples
-
-#### <a name="methodName"></a>`methodName`<a href="#auro-radio" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
-Explanation and use description.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-radio>Hello World</auro-radio>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
-
-```html
-<auro-radio>Hello World</auro-radio>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-### Event Examples
-
-#### <a name="eventName"></a>`eventName`<a href="#auro-radio" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
-Explanation and use description.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-radio>Hello World</auro-radio>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
-
-```html
-<auro-radio>Hello World</auro-radio>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-### Slot Examples
-
-#### <a name="slotName"></a>`slotName`<a href="#auro-radio" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
-Explanation and use description.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-radio>Hello World</auro-radio>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
-
-```html
-<auro-radio>Hello World</auro-radio>
+<auro-radio-group horizontal>
+  <span slot="legend">Form label goes here</span>
+  <auro-radio id="radio16" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="radio17" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="radio18" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+</auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>

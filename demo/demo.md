@@ -8,60 +8,29 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
 <!-- The below content is automatically added from ./description.md -->
-`<auro-radio>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis in tellus nec pellentesque. Integer bibendum ligula sit amet vehicula gravida. Maecenas accumsan, ligula vitae molestie iaculis, tellus mi laoreet ex [install instructions](https://auro.alaskaair.com/components/auro/button/install), ac malesuada velit dolor vel mi. Cras et rutrum urna. Sed mattis mi eu tortor ullamcorper, egestas bibendum mauris cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra eros eget neque commodo vulputate. In tempus eu velit at dictum.
-
-Nulla at augue facilisis `odio lobortis` molestie vitae a nulla.
+`<auro-radio>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) that is rendered as a small circle, which is filled or highlighted when selected. Only one `<auro-radio>` component in a given `<auro-radio-group>` can be selected at the same time.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## auro-radio use cases
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
 <!-- The below content is automatically added from ./useCases.md -->
-The `<auro-radio>` element should be used in situations where users may:
-
-* ...
-* ...
-* ...
+The auro-radio component is designed to be a single component for the use of creating an input type radio with an associated label that meets all use case and accessibility standards.
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## Additional Information
-
-> Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam fermentum libero ipsum, ac tempor sapien blandit in. Nam tincidunt non felis molestie varius.
-
-|convallis|tristique|nisl dignissim|eleifend|
-|---|---|---|---|
-|√|√|||
-|||√|√|
-
-Aenean at blandit lorem. Fusce imperdiet mi nec gravida maximus. Quisque nisl libero, condimentum in nisi a, imperdiet lacinia arcu.
-
-```javascript
-toggleDialog = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = 'hidden';
-  dialog.removeAttribute("open");
-  dialog.setAttribute("open", true);
-}
-
-toggleDialogClose = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = '';
-  dialog.removeAttribute("open");
-}
-```
-
 ## Example(s)
+
+### Default
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-radio>Hello World</auro-radio>
+  <auro-radio-group>
+    <span slot="legend">Form label goes here</span>
+    <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="radio2" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="radio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -70,11 +39,178 @@ toggleDialogClose = (elName) => {
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-radio>Hello World</auro-radio>
+<auro-radio-group>
+  <span slot="legend">Form label goes here</span>
+  <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="radio2" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="radio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+</auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-Having a closing statement about your example helps to really complete the thought with your reader.
+
+### Disabled
+
+Use the `disabled` attribute to disable singular `auro-radio` elements or the entire `auro-radio-group`.
+
+#### Group
+
+The `disabled` attribute used to disable the entire `auro-radio-group`.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/disabledGroup.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/disabledGroup.html -->
+  <auro-radio-group disabled>
+    <span slot="legend">Form label goes here</span>
+    <auro-radio id="radio7" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="radio8" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="radio9" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  </auro-radio-group>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabledGroup.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/disabledGroup.html -->
+
+```html
+<auro-radio-group disabled>
+  <span slot="legend">Form label goes here</span>
+  <auro-radio id="radio7" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="radio8" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="radio9" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+</auro-radio-group>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+#### Single
+
+The `disabled` attribute used to disable a single `auro-radio` element.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/disabled.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/disabled.html -->
+  <auro-radio-group>
+    <span slot="legend">Form label goes here</span>
+    <auro-radio id="radio4" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="radio5" label="No" name="radioDemo" value="no" disabled></auro-radio>
+    <auro-radio id="radio6" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  </auro-radio-group>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/disabled.html -->
+
+```html
+<auro-radio-group>
+  <span slot="legend">Form label goes here</span>
+  <auro-radio id="radio4" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="radio5" label="No" name="radioDemo" value="no" disabled></auro-radio>
+  <auro-radio id="radio6" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+</auro-radio-group>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Error
+
+Use the `error` attribute to set an error state on a singular `auro-radio` elements or the entire `auro-radio-group`.
+
+#### Group
+
+The `error` attribute used to set an error state on the entire `auro-radio-group`.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/errorGroup.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/errorGroup.html -->
+  <auro-radio-group error="custom error">
+    <span slot="legend">Form label goes here</span>
+    <auro-radio id="radio13" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="radio14" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="radio15" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  </auro-radio-group>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/errorGroup.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/errorGroup.html -->
+
+```html
+<auro-radio-group error="custom error">
+  <span slot="legend">Form label goes here</span>
+  <auro-radio id="radio13" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="radio14" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="radio15" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+</auro-radio-group>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+#### Single 
+
+The `error` attribute used to set an error state on a single `auro-radio` element.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/error.html -->
+  <auro-radio-group error="custom error">
+    <span slot="legend">Form label goes here</span>
+    <auro-radio id="radio10" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="radio11" label="No" name="radioDemo" value="no" error></auro-radio>
+    <auro-radio id="radio12" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  </auro-radio-group>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/error.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/error.html -->
+
+```html
+<auro-radio-group error="custom error">
+  <span slot="legend">Form label goes here</span>
+  <auro-radio id="radio10" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="radio11" label="No" name="radioDemo" value="no" error></auro-radio>
+  <auro-radio id="radio12" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+</auro-radio-group>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Required
+
+When present, the `required` attribute specifies that an `auro-radio` within the `auro-radio-group` must be checked.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/required.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/required.html -->
+  <auro-radio-group required>
+    <span slot="legend">Form label goes here</span>
+    <auro-radio id="radio19" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="radio20" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="radio21" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  </auro-radio-group>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/required.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/required.html -->
+
+```html
+<auro-radio-group required>
+  <span slot="legend">Form label goes here</span>
+  <auro-radio id="radio19" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="radio20" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="radio21" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+</auro-radio-group>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
 
 ## Recommended Use and Version Control
 
@@ -89,13 +225,31 @@ registerComponent('custom-radio');
 
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-radio` element.
 
+Using the `registerComponent` function to create a custom `auro-radio` will also create a custom `auro-radio-group` with the exact same naming convention, ending in "-group". For example, using `registerComponent('custom-radio')` will result in `custom-radio-group` also being created.
+
 <div class="exampleWrapper">
-  <custom-header display="display">Salutations World!</custom-header>
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/customRadio.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/customRadio.html -->
+  <custom-radio-group>
+    <span slot="legend">Form label goes here</span>
+    <custom-radio id="radio22" label="Yes" name="radioDemo" value="yes"></custom-radio>
+    <custom-radio id="radio23" label="No" name="radioDemo" value="no"></custom-radio>
+    <custom-radio id="radio24" label="Maybe" name="radioDemo" value="maybe"></custom-radio>
+  </custom-radio-group>
+  <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-  ```html
-  <custom-header display="display">Salutations World!</custom-header>
-  ```
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customRadio.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/customRadio.html -->
 
+```html
+<custom-radio-group>
+  <span slot="legend">Form label goes here</span>
+  <custom-radio id="radio22" label="Yes" name="radioDemo" value="yes"></custom-radio>
+  <custom-radio id="radio23" label="No" name="radioDemo" value="no"></custom-radio>
+  <custom-radio id="radio24" label="Maybe" name="radioDemo" value="maybe"></custom-radio>
+</custom-radio-group>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>

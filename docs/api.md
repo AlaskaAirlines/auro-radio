@@ -2,17 +2,17 @@
 
 ## Properties
 
-| Property   | Attribute  | Type      | Default |
-|------------|------------|-----------|---------|
-| `checked`  | `checked`  | `boolean` | false   |
-| `disabled` | `disabled` | `boolean` | false   |
-| `error`    | `error`    | `boolean` | false   |
-| `id`       | `id`       | `string`  |         |
-| `label`    | `label`    | `string`  |         |
-| `name`     | `name`     | `string`  |         |
-| `required` | `required` | `boolean` | false   |
-| `tabIndex` | `tabIndex` | `number`  | -1      |
-| `value`    | `value`    | `string`  |         |
+| Property   | Attribute  | Type      | Default | Description                                      |
+|------------|------------|-----------|---------|--------------------------------------------------|
+| `checked`  | `checked`  | `Boolean` | false   | If set to true, the radio button will be filled. |
+| `disabled` | `disabled` | `Boolean` | false   | If set to true, the radio button will be unclickable. |
+| `error`    | `error`    | `Boolean` | false   | If set to true, sets an error state on the radio button. |
+| `id`       | `id`       | `string`  |         |                                                  |
+| `label`    | `label`    | `string`  |         |                                                  |
+| `name`     | `name`     | `string`  |         |                                                  |
+| `required` | `required` | `Boolean` | false   | Defines element as required.                     |
+| `tabIndex` | `tabIndex` | `number`  | -1      |                                                  |
+| `value`    | `value`    | `string`  |         |                                                  |
 
 ## Methods
 

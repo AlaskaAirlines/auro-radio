@@ -22,6 +22,7 @@ import styleCss from "./auro-radio-group-css.js";
  * @attr {String} error - When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value.
  * @attr {Boolean} noValidate - If set, disables auto-validation on blur.
  * @attr {Boolean} required - Populates the `required` attribute on the element. Used for client-side validation.
+ * @csspart radio-group - Apply css to the fieldset element in the shadow DOM
  */
 
 export class AuroRadioGroup extends LitElement {
@@ -341,7 +342,7 @@ export class AuroRadioGroup extends LitElement {
     };
 
     return html`
-      <fieldset class="${classMap(groupClasses)}">
+      <fieldset class="${classMap(groupClasses)}" part="radio-group">
         ${this.required
         ? html`<legend><slot name="legend"></slot></legend>`
         : html`<legend><slot name="legend"></slot> (optional)</legend>`

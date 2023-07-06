@@ -1,6 +1,47 @@
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
 <!-- The below content is automatically added from ./../api.md -->
 
+# auro-radio-group
+
+## Properties
+
+| Property                        | Attribute                       | Type      | Default     | Description                                      |
+|---------------------------------|---------------------------------|-----------|-------------|--------------------------------------------------|
+| [disabled](#disabled)                      | `disabled`                      | `boolean` | false       |                                                  |
+| [error](#error)                         | `error`                         | `String`  |             | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
+| [horizontal](#horizontal)                    | `horizontal`                    | `boolean` | false       |                                                  |
+| [index](#index)                         |                                 | `number`  | 0           |                                                  |
+| [max](#max)                           |                                 | `number`  | 3           |                                                  |
+| [noValidate](#noValidate)                    | `noValidate`                    | `Boolean` |             | If set, disables auto-validation on blur.        |
+| [required](#required)                      | `required`                      | `Boolean` | false       | Populates the `required` attribute on the element. Used for client-side validation. |
+| [setCustomValidity](#setCustomValidity)             | `setCustomValidity`             | `String`  |             | Sets a custom help text message to display for all validityStates. |
+| [setCustomValidityCustomError](#setCustomValidityCustomError)  | `setCustomValidityCustomError`  | `String`  |             | Custom help text message to display when validity = `customError`. |
+| [setCustomValidityValueMissing](#setCustomValidityValueMissing) | `setCustomValidityValueMissing` | `String`  |             | Custom help text message to display when validity = `valueMissing`. |
+| [validity](#validity)                      | `validity`                      | `String`  | "undefined" | Specifies the `validityState` this element is in. |
+| [value](#value)                         | `value`                         | `array`   | "undefined" |                                                  |
+
+## Methods
+
+| Method                 | Type                                     | Description                                      |
+|------------------------|------------------------------------------|--------------------------------------------------|
+| [handleItems](#handleItems)          | `(): void`                               |                                                  |
+| [handleKeyDown](#handleKeyDown)        | `(event: any): void`                     |                                                  |
+| [handleRadioBlur](#handleRadioBlur)      | `(): void`                               | Method handles radio element blur.               |
+| [handleSelection](#handleSelection)      | `(evt: Map<string, any>): void`          | Method for handling of selection of a radio element.<br /><br />**evt**: The trigger event tied to this function. |
+| [handleSlotChange](#handleSlotChange)     | `(): void`                               |                                                  |
+| [handleToggleSelected](#handleToggleSelected) | `(event: any): void`                     |                                                  |
+| [initializeIndex](#initializeIndex)      | `(): void`                               |                                                  |
+| [reset](#reset)                | `(): void`                               | Method for a total reset of the radio element.   |
+| [resetRadio](#resetRadio)           | `(): void`                               | Method handles the reset event from a radio element. |
+| [selectItem](#selectItem)           | `(index: any): void`                     |                                                  |
+| [selectNextItem](#selectNextItem)       | `(index: any, moveDirection: any): void` |                                                  |
+
+## CSS Shadow Parts
+
+| Part          | Description                                      |
+|---------------|--------------------------------------------------|
+| `radio-group` | Apply css to the fieldset element in the shadow DOM |
+
 # auro-radio
 
 ## Properties

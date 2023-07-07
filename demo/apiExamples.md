@@ -84,30 +84,47 @@
 
 ### Basic
 
-<div class="twoColDemoRow">
-  <div>
-    <div class="exampleWrapper">
-      <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-      <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-      <auro-radio-group>
-        <span slot="legend">Form label goes here</span>
-        <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
-        <auro-radio id="radio2" label="No" name="radioDemo" value="no"></auro-radio>
-        <auro-radio id="radio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
-      </auro-radio-group>
-      <!-- AURO-GENERATED-CONTENT:END -->
-    </div>
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
+  <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
+<auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Basic Group
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basicGroup.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/basicGroup.html -->
+  <auro-radio-group>
+    <span slot="legend">Form label goes here</span>
+    <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  </auro-radio-group>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basicGroup.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/basicGroup.html -->
+
+```html
 <auro-radio-group>
   <span slot="legend">Form label goes here</span>
-  <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
-  <auro-radio id="radio2" label="No" name="radioDemo" value="no"></auro-radio>
-  <auro-radio id="radio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
 </auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -120,27 +137,27 @@ Using the `horizontal` attribute will render the `auro-radio` elements in a hori
 **Note**: Using the horizontal attribute has a limit of 3 options. Beyond three, options will be listed in vertically.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/horizontalGroup.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/horizontalGroup.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/horizontal.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/horizontal.html -->
   <auro-radio-group horizontal>
     <span slot="legend">Form label goes here</span>
-    <auro-radio id="radio16" label="Yes" name="radioDemo" value="yes"></auro-radio>
-    <auro-radio id="radio17" label="No" name="radioDemo" value="no"></auro-radio>
-    <auro-radio id="radio18" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+    <auro-radio id="radio22" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="radio23" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="radio24" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/horizontalGroup.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/horizontalGroup.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/horizontal.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/horizontal.html -->
 
 ```html
 <auro-radio-group horizontal>
   <span slot="legend">Form label goes here</span>
-  <auro-radio id="radio16" label="Yes" name="radioDemo" value="yes"></auro-radio>
-  <auro-radio id="radio17" label="No" name="radioDemo" value="no"></auro-radio>
-  <auro-radio id="radio18" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  <auro-radio id="radio22" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="radio23" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="radio24" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
 </auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->

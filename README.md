@@ -85,12 +85,7 @@ import "@aurodesignsystem/auro-radio";
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-radio-group>
-  <span slot="legend">Form label goes here</span>
-  <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
-  <auro-radio id="radio2" label="No" name="radioDemo" value="no"></auro-radio>
-  <auro-radio id="radio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
-</auro-radio-group>
+<auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 
@@ -120,7 +115,9 @@ We recommend you load these bundles using [differential serving](https://philipw
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
 <!-- The below content is automatically added from ./../docs/partials/useCases.md -->
-The auro-radio component is designed to be a single component for the use of creating an input type radio with an associated label that meets all use case and accessibility standards.
+The `<auro-radio>` element is designed to be a single component for the use of creating an input `type="radio"` with an associated `<label>` that meets all use case and accessibility standards.
+
+The following examples illustrate fully functional `<auro-radio>` elements wrapped with the `<auro-radio-group>` element. The `<auro-radio-group>` element is REQUIRED in order to mantain the relationship between individual `<auro-radio>` elements for functional radio button actions.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Code Examples
@@ -131,12 +128,7 @@ The auro-radio component is designed to be a single component for the use of cre
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-radio-group>
-  <span slot="legend">Form label goes here</span>
-  <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
-  <auro-radio id="radio2" label="No" name="radioDemo" value="no"></auro-radio>
-  <auro-radio id="radio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
-</auro-radio-group>
+<auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 

@@ -28,13 +28,21 @@ import styleCss from "./auro-radio-group-css.js";
 export class AuroRadioGroup extends LitElement {
   constructor() {
     super();
-    this.index = 0;
-    this.max = 3;
     this.disabled = false;
     this.horizontal = false;
     this.required = false;
     this.validity = undefined;
     this.value = undefined;
+
+    /**
+     * @private
+     */
+    this.index = 0;
+
+    /**
+     * @private
+     */
+    this.max = 3;
   }
 
   static get styles() {
@@ -93,12 +101,13 @@ export class AuroRadioGroup extends LitElement {
 
   /**
    * Method for handling of selection of a radio element.
-   * @param {Map<string, any>} evt - The trigger event tied to this function.
+   * @private
+   * @param {Event} event - The trigger event tied to this function.
    * @returns {void}
    */
-  handleSelection(evt) {
-    if (evt.target.hasAttribute('value')) {
-      this.value = evt.target.value;
+  handleSelection(event) {
+    if (event.target.hasAttribute('value')) {
+      this.value = event.target.value;
     } else {
       this.value = '';
     }
@@ -108,6 +117,7 @@ export class AuroRadioGroup extends LitElement {
 
   /**
    * Method handles radio element blur.
+   * @private
    * @returns {void}
    */
   handleRadioBlur() {
@@ -212,6 +222,7 @@ export class AuroRadioGroup extends LitElement {
 
   /**
    * Method handles the reset event from a radio element.
+   * @private
    * @returns {void}
    */
   resetRadio() {
@@ -227,6 +238,11 @@ export class AuroRadioGroup extends LitElement {
     this.items[this.index].tabIndex = 0;
   }
 
+  /**
+   * Method for handling the attributes of each radio input.
+   * @private
+   * @returns {void}
+   */
   handleItems() {
     this.items = Array.from(this.querySelectorAll('auro-radio'));
     this.initializeIndex();
@@ -243,10 +259,20 @@ export class AuroRadioGroup extends LitElement {
     });
   }
 
+  /**
+   * Method for handling slot content changes.
+   * @private
+   * @returns {void}
+   */
   handleSlotChange() {
     this.handleItems();
   }
 
+  /**
+   * Method for initializing the tab index of the checked radio input.
+   * @private
+   * @returns {void}
+   */
   initializeIndex() {
     if (!this.disabled) {
       const index = this.items.findIndex((item) => item.hasAttribute('checked') && !item.hasAttribute('disabled'));
@@ -260,6 +286,12 @@ export class AuroRadioGroup extends LitElement {
     }
   }
 
+  /**
+   * Method for handling a newly selected radio input.
+   * @private
+   * @param {Event} event - The trigger event tied to this function.
+   * @returns {void}
+   */
   handleToggleSelected(event) {
     this.index = this.items.indexOf(event.target);
 
@@ -281,6 +313,12 @@ export class AuroRadioGroup extends LitElement {
     this.validate();
   }
 
+  /**
+   * Method for selecting a radio input.
+   * @private
+   * @param {Number} index - The value of the element's index attribute.
+   * @returns {void}
+   */
   selectItem(index) {
     const sdItem = this.items[index].shadowRoot.querySelector('input');
 
@@ -289,6 +327,13 @@ export class AuroRadioGroup extends LitElement {
     this.index = index;
   }
 
+  /**
+   * Method for selecting the next radio input.
+   * @private
+   * @param {Number} index - The value of the element's index attribute.
+   * @param {String} moveDirection - Arrow key pressed by user.
+   * @returns {void}
+   */
   selectNextItem(index, moveDirection) {
     let currIndex = index;
 
@@ -309,6 +354,12 @@ export class AuroRadioGroup extends LitElement {
     }
   }
 
+  /**
+   * Method for handling a keydown event.
+   * @private
+   * @param {Event} event - The trigger event tied to this function.
+   * @returns {void}
+   */
   handleKeyDown(event) {
     switch (event.key) {
       case " ":
@@ -336,6 +387,7 @@ export class AuroRadioGroup extends LitElement {
     }
   }
 
+  // function that renders the HTML and CSS into  the scope of the component
   render() {
     const groupClasses = {
       'displayFlex': this.horizontal && this.items.length <= this.max

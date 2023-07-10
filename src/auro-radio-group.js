@@ -235,7 +235,9 @@ export class AuroRadioGroup extends LitElement {
       item.tabIndex = -1;
     });
 
-    this.items[this.index].tabIndex = 0;
+    if (!this.disabled) {
+      this.items[this.index].tabIndex = 0;
+    }
   }
 
   /**

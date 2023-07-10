@@ -71,6 +71,12 @@ export class AuroRadio extends LitElement {
     };
   }
 
+  /**
+   * Method for handling content when change event is fired.
+   * @private
+   * @param {Event} event - The trigger event tied to this function.
+   * @returns {void}
+   */
   handleChange(event) {
     this.checked = event.target.checked;
     const customEvent = new CustomEvent(event.type, event);
@@ -78,6 +84,12 @@ export class AuroRadio extends LitElement {
     this.dispatchEvent(customEvent);
   }
 
+   /**
+   * Method for handling content when input event is fired.
+   * @private
+   * @param {Event} event - The trigger event tied to this function.
+   * @returns {void}
+   */
   handleInput(event) {
     this.checked = event.target.checked;
     this.dispatchEvent(new CustomEvent('toggleSelected', {
@@ -88,8 +100,9 @@ export class AuroRadio extends LitElement {
   }
 
   /**
-   * Method for focus.
-   * @param {Map<string, any>} event - The trigger event tied to this function.
+   * Method for handling focus event.
+   * @private
+   * @param {Event} event - The trigger event tied to this function.
    * @returns {void}
    */
   handleFocus(event) {
@@ -101,8 +114,9 @@ export class AuroRadio extends LitElement {
   }
 
   /**
-   * Method for focus.
-   * @param {Map<string, any>} event - The trigger event tied to this function.
+   * Method for handling blur event.
+   * @private
+   * @param {Event} event - The trigger event tied to this function.
    * @returns {void}
    */
   handleBlur(event) {
@@ -129,6 +143,12 @@ export class AuroRadio extends LitElement {
     }
   }
 
+   /**
+   * Method for handling content when it is invalid accessibility wise.
+   * @private
+   * @param {Boolean} error - The element's error attribute.
+   * @returns {void}
+   */
   invalid(error) {
     if (error) {
       return 'true';
@@ -137,6 +157,12 @@ export class AuroRadio extends LitElement {
     return 'false';
   }
 
+   /**
+   * Method for handling passing the required status to aria.
+   * @private
+   * @param {Boolean} required - The element's required attribute.
+   * @returns {void}
+   */
   isRequired(required) {
     if (required) {
       return 'true';

@@ -246,7 +246,7 @@ export class AuroRadioGroup extends LitElement {
    * @returns {void}
    */
   handleItems() {
-    this.items = Array.from(this.querySelectorAll('auro-radio'));
+    this.items = [...this.querySelectorAll(':scope > *:not([slot])')];
     this.initializeIndex();
 
     if (this.disabled) {

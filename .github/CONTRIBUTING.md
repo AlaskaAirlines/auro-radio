@@ -13,7 +13,7 @@ A bug is defined by: "A demonstrable problem that is caused by a file in the rep
 Guidelines for bug reports:
 
 1. Use the search option under Boards > Work Items — check if the issue has already been reported
-1. Check if the issue has been fixed — try to reproduce it using the latest master or development branch in the repository
+1. Check if the issue has been fixed — try to reproduce it using the latest main or development branch in the repository
 1. Isolate the problem — ideally create a reduced test case and a live example
 
 A good bug report shouldn't leave others needing to chase you up for more information. Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS experience the problem? What would you expect to be the outcome? All these details will help people to fix any potential bugs.
@@ -24,7 +24,7 @@ Poor bug reports will be reassigned back to the creator for revision prior to an
 
 No one other than repository managers have direct access to the repository. For all pull requests you must first fork the project to your own Github account.
 
-All new work that is to be considered for merging with the `MASTER` branch must start from a new feature branch of work. This feature branch should be in response to either a bug or a new business requirement.
+All new work that is to be considered for merging with the `MAIN` branch must start from a new feature branch of work. This feature branch should be in response to either a bug or a new business requirement.
 
 ### Feature branch naming
 
@@ -114,7 +114,7 @@ $ fix: address issue #57 in regards to color output
 
 One you have committed new work to your feature branch, be sure to push your updates to the Github repository. Depending on your IDE or CLI configuration this may be a manual or automatic step.
 
-On the pull request page, the new pull request should be `[your-new-branch] into [master]`
+On the pull request page, the new pull request should be `[your-new-branch] into [main]`
 
 Please be sure to follow the **Pull Request template** that appears on the comment window.
 

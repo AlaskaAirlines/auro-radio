@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [2.0.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.7.0...v2.0.0) (2023-08-04)
+
+
+### Performance Improvements
+
+* **docs:** implement minor change to force semantic release ([1688ac4](https://github.com/AlaskaAirlines/auro-radio/commit/1688ac40f59ff613076da9419aa994fd16b013dd))
+
+
+### BREAKING CHANGES
+
+* **docs:** namespace changed to @aurodesignsystem
+
 # [1.7.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.6.2...v1.7.0) (2023-07-19)
 
 

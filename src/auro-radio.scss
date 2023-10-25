@@ -18,12 +18,15 @@
    rule-empty-line-before */
 
 // Import Auro tokens
-@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
-@import './../node_modules/@alaskaairux/design-tokens//dist/tokens/SassCustomProperties';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SassCustomProperties';
 
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints';
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/core';
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/utilityClasses/displayProperties';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties';
+
+// Support for fallback values
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables.scss';
 
 // container styles - defines the look of the outer custom component
 :host {
@@ -47,14 +50,14 @@
   .rdoGroup {
     display: block;
 
-    padding-right: var(--auro-size-100);
+    padding-right: var(--ds-size-100, $ds-size-100);
 
     outline: 3px solid transparent; // for Windows High Contrast mode
 
     .label {
       &:after {
-        outline: 1px solid var(--auro-color-border-active-on-light);
-        border-color: var(--auro-color-border-active-on-light);
+        outline: 1px solid var(--ds-color-border-active-default, $ds-color-border-active-default);
+        border-color: var(--ds-color-border-active-default, $ds-color-border-active-default);
       }
     }
 
@@ -62,10 +65,10 @@
       &:checked {
         + .label {
           &:after {
-            outline-color: var(--auro-color-border-active-on-light);
-            border-color: var(--auro-color-border-active-on-light);
-            background-color: var(--auro-color-border-active-on-light);
-            box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-base-white);
+            outline-color: var(--ds-color-border-active-default, $ds-color-border-active-default);
+            border-color: var(--ds-color-border-active-default, $ds-color-border-active-default);
+            background-color: var(--ds-color-border-active-default, $ds-color-border-active-default);
+            box-shadow: inset 0 0 0 var(--shadow-inset) var(--ds-color-base-white, $ds-color-base-white);
           }
         }
       }
@@ -80,10 +83,10 @@
 .rdoGroup {
   position: relative;
 
-  padding-right: var(--auro-size-100);
-  padding-left: var(--auro-size-100);
+  padding-right: var(--ds-size-100, $ds-size-100);
+  padding-left: var(--ds-size-100, $ds-size-100);
 
-  line-height: var(--auro-size-400);
+  line-height: var(--ds-size-400, $ds-size-400);
 }
 
 .rdo--input {
@@ -91,18 +94,18 @@
     &:disabled {
       & + .label {
         &:after {
-          border-color: var(--auro-color-base-gray-200);
-          background-color: var(--auro-color-base-gray-200);
-          box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-base-white);
+          border-color: var(--ds-color-brand-gray-200, $ds-color-brand-gray-200);
+          background-color: var(--ds-color-brand-gray-200, $ds-color-brand-gray-200);
+          box-shadow: inset 0 0 0 var(--shadow-inset) var(--ds-color-base-white, $ds-color-base-white);
         }
       }
     }
 
     & + .label {
       &:after {
-        border-color: var(--auro-color-ui-default-on-light);
-        background-color: var(--auro-color-ui-default-on-light);
-        box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-base-white);
+        border-color: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
+        background-color: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
+        box-shadow: inset 0 0 0 var(--shadow-inset) var(--ds-color-base-white, $ds-color-base-white);
       }
     }
   }
@@ -110,19 +113,19 @@
   &:disabled {
     & + label {
       cursor: auto;
-      color: var(--auro-color-text-disabled-on-light);
+      color: var(--ds-color-text-disabled-default, $ds-color-text-disabled-default);
 
       &:hover {
         &:after {
           cursor: auto;
-          background-color: var(--auro-color-background-lightest);
+          background-color: var(--ds-color-background-lightest, $ds-color-background-lightest);
         }
       }
     }
 
     & + .label--rdo {
       &:after {
-        border-color: var(--auro-color-base-gray-200);
+        border-color: var(--ds-color-brand-gray-200, $ds-color-brand-gray-200);
       }
     }
   }
@@ -131,35 +134,35 @@
 .label {
   display: block;
 
-  margin-left: var(--auro-size-300);
+  margin-left: var(--ds-size-300, $ds-size-300);
   
   &:hover {
     cursor: pointer;
 
     &:after {
-        background-color: var(--auro-color-ui-bkg-hover-on-light);
+        background-color: var(--ds-color-ui-bkg-hover-default, $ds-color-ui-bkg-hover-default);
     }
   }
 
   &:focus-visible:after {
-    border-color: var(--auro-color-border-primary-on-light);
+    border-color: var(--ds-color-border-primary-default, $ds-color-border-primary-default);
   }
 
   &:after {
     position: absolute;
     z-index: 1;
-    top: var(--auro-size-50);
-    left: var(--auro-size-50);
+    top: var(--ds-size-50, $ds-size-50);
+    left: var(--ds-size-50, $ds-size-50);
 
-    width: calc(var(--auro-size-200) + var(--auro-size-50));
-    height: calc(var(--auro-size-200) + var(--auro-size-50));
+    width: calc(var(--ds-size-200, $ds-size-200) + var(--ds-size-50, $ds-size-50));
+    height: calc(var(--ds-size-200, $ds-size-200) + var(--ds-size-50, $ds-size-50));
 
     content: '';
 
     border-radius: 50%;
     border: 1px solid;
     -webkit-tap-highlight-color: transparent;
-    background-color: var(--auro-color-background-lightest);
+    background-color: var(--ds-color-background-lightest, $ds-color-background-lightest);
   }
 }
 
@@ -167,21 +170,21 @@
   &:checked {
     & + .errorBorder {
       &:after {
-        border-color: var(--auro-color-border-error-on-light);
-        background-color: var(--auro-color-border-error-on-light);
-        box-shadow: inset 0 0 0 var(--shadow-inset) var(--auro-color-base-white);
+        border-color: var(--ds-color-border-error-default, $ds-color-border-error-default);
+        background-color: var(--ds-color-border-error-default, $ds-color-border-error-default);
+        box-shadow: inset 0 0 0 var(--shadow-inset) var(--ds-color-base-white, $ds-color-base-white);
       }
     }
   }
   + .errorBorder {
     &:after {
-      color: var(--auro-color-border-error-on-light);
+      color: var(--ds-color-border-error-default, $ds-color-border-error-default);
     }
   }
 }
 
 .slotContent {
   display: block;
-  margin-left: var(--auro-size-400);
-  padding-left: var(--auro-size-100);
+  margin-left: var(--ds-size-400, $ds-size-400);
+  padding-left: var(--ds-size-100, $ds-size-100);
 }

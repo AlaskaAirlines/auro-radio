@@ -11,19 +11,22 @@
    selector-class-pattern */
 
 // Import Auro tokens
-@import "./../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
-@import "./../node_modules/@alaskaairux/design-tokens//dist/tokens/SassCustomProperties";
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables";
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SassCustomProperties";
 
-@import "./../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints";
+@import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints";
+
+// Support for fallback values
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables.scss';
 
 // container styles - defines the look of the outer custom component
 :host {
   display: block;
-  padding-bottom: var(--auro-size-150);
+  padding-bottom: var(--ds-size-150, $ds-size-150);
 }
 
 :host([disabled]) {
-  color: var(--auro-color-text-disabled-on-light);
+  color: var(--ds-color-text-disabled-default, $ds-color-text-disabled-default);
 }
 
 fieldset {
@@ -38,15 +41,15 @@ fieldset {
 }
 
 legend {
-  margin-bottom: var(--auro-size-150);
+  margin-bottom: var(--ds-size-150, $ds-size-150);
 }
 
 .radioGroupElement-helpText {
-  color: var(--auro-color-text-secondary-on-light);
+  color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
 }
 
 :host([validity]:not([validity='valid'])) {
   .radioGroupElement-helpText {
-    color: var(--auro-color-alert-error-on-light);
+    color: var(--ds-color-alert-error-default, $ds-color-alert-error-default);
   }
 }

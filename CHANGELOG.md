@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.1](https://github.com/AlaskaAirlines/auro-radio/compare/v2.0.0...v2.0.1) (2023-11-01)
+
+
+### Performance Improvements
+
+* **token:** update token per new theming [#115](https://github.com/AlaskaAirlines/auro-radio/issues/115) ([9bb2b49](https://github.com/AlaskaAirlines/auro-radio/commit/9bb2b49785ad28a721c399be3a42ebd3a830a36b))
+
 # [2.0.0](https://github.com/AlaskaAirlines/auro-radio/compare/v1.7.0...v2.0.0) (2023-08-04)
 
 

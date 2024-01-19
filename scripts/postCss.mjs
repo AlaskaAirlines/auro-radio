@@ -1,9 +1,9 @@
-const autoprefixer = require('autoprefixer');
-const postcss = require('postcss');
-const comments = require('postcss-discard-comments');
-const fs = require('fs');
+import autoprefixer from 'autoprefixer';
+import postcss from 'postcss';
+import comments from 'postcss-discard-comments';
+import fs from 'fs';
 
-fs.readFile('src/auro-radio.css', (err, css) => {
+fs.readFile('src/style.css', (err, css) => {
   postcss([autoprefixer, comments])
     .use(comments({
       remove: function(comment) { return comment[0] == "@"; }

@@ -41,7 +41,7 @@
 | [error](#error)    | `error`    | `Boolean` | false   | If set to true, sets an error state on the radio button. |
 | [id](#id)       | `id`       | `string`  |         |                                                  |
 | [label](#label)    | `label`    | `string`  |         |                                                  |
-| radio(#name)     | `name`     | `string`  |         |                                                  |
+| [name](#name)     | `name`     | `string`  |         |                                                  |
 | [required](#required) | `required` | `Boolean` | false   | Defines element as required.                     |
 | [tabIndex](#tabIndex) | `tabIndex` | `number`  | -1      |                                                  |
 | [value](#value)    | `value`    | `string`  |         |                                                  |

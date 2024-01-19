@@ -32,7 +32,7 @@ This is a default configuration of `<auro-radio>`.
   <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
@@ -58,7 +58,7 @@ This is a default configuration using the `<auro-radio-group>` and `<auro-radio>
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basicGroup.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basicGroup.html -->
@@ -85,7 +85,7 @@ This is a default configuration using the `<auro-radio-group>` and `<auro-radio>
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic2.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic2.html -->
@@ -120,7 +120,7 @@ The `disabled` attribute used to disable the entire `<auro-radio-group>`.
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabledGroup.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/disabledGroup.html -->
@@ -151,7 +151,7 @@ The `disabled` attribute used to disable a single `<auro-radio>` element.
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/disabled.html -->
@@ -186,7 +186,7 @@ The `error` attribute used to set an error state on the entire `<auro-radio-grou
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/errorGroup.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/errorGroup.html -->
@@ -217,7 +217,7 @@ The `error` attribute used to set an error state on a single `<auro-radio>` elem
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/error.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/error.html -->
@@ -248,7 +248,7 @@ When present, the `required` attribute specifies that an `<auro-radio>` within t
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/required.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/required.html -->
@@ -279,7 +279,7 @@ Using the `horizontal` attribute will render the checkbox options on a horizonta
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/horizontal.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/horizontal.html -->
@@ -321,7 +321,7 @@ Using the `registerComponent` function to create a custom `<auro-radio>` will al
   </custom-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customRadio.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/customRadio.html -->

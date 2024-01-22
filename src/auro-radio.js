@@ -84,7 +84,7 @@ export class AuroRadio extends LitElement {
     this.dispatchEvent(customEvent);
   }
 
-   /**
+  /**
    * Method for handling content when input event is fired.
    * @private
    * @param {Event} event - The trigger event tied to this function.
@@ -143,7 +143,7 @@ export class AuroRadio extends LitElement {
     }
   }
 
-   /**
+  /**
    * Method for handling content when it is invalid accessibility wise.
    * @private
    * @param {Boolean} error - The element's error attribute.
@@ -157,7 +157,7 @@ export class AuroRadio extends LitElement {
     return 'false';
   }
 
-   /**
+  /**
    * Method for handling passing the required status to aria.
    * @private
    * @param {Boolean} required - The element's required attribute.

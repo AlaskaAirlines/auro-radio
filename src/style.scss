@@ -19,7 +19,6 @@
 
 // Import Auro tokens
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SassCustomProperties';
 
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
@@ -135,7 +134,7 @@
   display: block;
 
   margin-left: var(--ds-size-300, $ds-size-300);
-  
+
   &:hover {
     cursor: pointer;
 

@@ -10,14 +10,14 @@ import {ifDefined} from 'lit/directives/if-defined.js';
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
-import styleCss from "./auro-radio-css.js";
+import styleCss from "./style-css.js";
 
 /**
  * @attr {Boolean} checked - If set to true, the radio button will be filled.
- * @attr {Boolean} disabled - If set to true, the radio button will be unclickable.
+ * @attr {Boolean} disabled - If set to true, the radio button will be non-clickable.
  * @attr {Boolean} required - Defines element as required.
  * @attr {Boolean} error - If set to true, sets an error state on the radio button.
- * @fires toggleSelected - Notifies that the component has toggled the chexked/selected state.
+ * @fires toggleSelected - Notifies that the component has toggled the checked/selected state.
  * @fires focusSelected - Notifies that the component has gained focus.
  * @fires auroRadio-blur - Notifies that the component has lost focus.
  * @fires resetRadio - Notifies that the component has reset the checked/selected state.

@@ -35,7 +35,7 @@
 | Property   | Attribute  | Type      | Default | Description                                      |
 |------------|------------|-----------|---------|--------------------------------------------------|
 | `checked`  | `checked`  | `Boolean` | false   | If set to true, the radio button will be filled. |
-| `disabled` | `disabled` | `Boolean` | false   | If set to true, the radio button will be unclickable. |
+| `disabled` | `disabled` | `Boolean` | false   | If set to true, the radio button will be non-clickable. |
 | `error`    | `error`    | `Boolean` | false   | If set to true, sets an error state on the radio button. |
 | `id`       | `id`       | `string`  |         |                                                  |
 | `label`    | `label`    | `string`  |         |                                                  |
@@ -52,4 +52,4 @@
 | `auroRadio-selected` | `CustomEvent<any>` | Notifies that the component has been marked as checked/selected. |
 | `focusSelected`      | `CustomEvent<any>` | Notifies that the component has gained focus.    |
 | `resetRadio`         | `CustomEvent<any>` | Notifies that the component has reset the checked/selected state. |
-| `toggleSelected`     | `CustomEvent<any>` | Notifies that the component has toggled the chexked/selected state. |
+| `toggleSelected`     | `CustomEvent<any>` | Notifies that the component has toggled the checked/selected state. |

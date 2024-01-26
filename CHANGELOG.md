@@ -1,5 +1,23 @@
 # Semantic Release Automated Changelog
 
+# [2.1.0](https://github.com/AlaskaAirlines/auro-radio/compare/v2.0.1...v2.1.0) (2024-01-26)
+
+
+### Bug Fixes
+
+* update miss for ES6 compliance ([f9f5675](https://github.com/AlaskaAirlines/auro-radio/commit/f9f567594ca99fce9c37f26753402fb55633bccd))
+
+
+### Features
+
+* add suport for SSR projects [#117](https://github.com/AlaskaAirlines/auro-radio/issues/117) ([7a89702](https://github.com/AlaskaAirlines/auro-radio/commit/7a89702df1c4cec1438d520748ba56651b935b44))
+
+
+### Performance Improvements
+
+* update reference to style.css ([e15efc5](https://github.com/AlaskaAirlines/auro-radio/commit/e15efc55a53b2afb76cd8e82863b714785b7de55))
+* update to support node policy ([e269d02](https://github.com/AlaskaAirlines/auro-radio/commit/e269d02deb542d5eae1b4084c56aee3eb0e2348d))
+
 ## [2.0.1](https://github.com/AlaskaAirlines/auro-radio/compare/v2.0.0...v2.0.1) (2023-11-01)
 
 

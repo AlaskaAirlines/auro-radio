@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.1.1](https://github.com/AlaskaAirlines/auro-radio/compare/v2.1.0...v2.1.1) (2024-01-27)
+
+
+### Performance Improvements
+
+* update index per SSR support ([3db9bf9](https://github.com/AlaskaAirlines/auro-radio/commit/3db9bf98f6da8b7019857d7dd23e83a078752784))
+
 # [2.1.0](https://github.com/AlaskaAirlines/auro-radio/compare/v2.0.1...v2.1.0) (2024-01-26)
 
 

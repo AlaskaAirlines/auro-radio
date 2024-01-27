@@ -1,5 +1,5 @@
-import { AuroRadio } from './src/auro-radio';
-import { AuroRadioGroup } from './src/auro-radio-group';
+import { AuroRadio } from './src/auro-radio.js';
+import { AuroRadioGroup } from './src/auro-radio-group.js';
 
 /**
  * Register Custom Element.

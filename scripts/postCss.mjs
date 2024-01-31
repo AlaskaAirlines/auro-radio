@@ -3,7 +3,9 @@ import postcss from 'postcss';
 import comments from 'postcss-discard-comments';
 import path from 'path';
 import fs from 'fs';
-const __dirname = new URL('.', import.meta.url).pathname;
+import { fileURLToPath } from 'url';
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const directoryPath = path.join(__dirname, '../src');
 
 /**

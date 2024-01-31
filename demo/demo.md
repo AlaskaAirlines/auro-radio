@@ -295,6 +295,39 @@ Using the `horizontal` attribute will render the checkbox options on a horizonta
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
+### Custom optional label
+
+Using the `<auro-radio-group>` `optionalLabel` slot, we can override the default optional label text.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/optionalLabel.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/optionalLabel.html -->
+  <auro-radio-group>
+    <span slot="legend">Form label goes here</span>
+    <span slot="optionalLabel">(custom label)</span>
+    <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  </auro-radio-group>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/optionalLabel.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/optionalLabel.html -->
+
+```html
+<auro-radio-group>
+  <span slot="legend">Form label goes here</span>
+  <span slot="optionalLabel">(custom label)</span>
+  <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+</auro-radio-group>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
 ## Recommended Use and Version Control
 
 There are two important parts of every Auro component. The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">class</a> and the custom clement. The class is exported and then used as part of defining the Web Component. When importing this component as described in the <a href="#install">install</a> section, the class is imported and the `<auro-radio>` custom element is defined automatically.

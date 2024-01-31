@@ -23,6 +23,9 @@ import styleCss from "./auro-radio-group-css.js";
  * @attr {Boolean} noValidate - If set, disables auto-validation on blur.
  * @attr {Boolean} required - Populates the `required` attribute on the element. Used for client-side validation.
  * @csspart radio-group - Apply css to the fieldset element in the shadow DOM
+ * @slot {HTMLSlotElement} legend - Allows for the legend to be overridden.
+ * @slot {HTMLSlotElement} optionalLabel - Allows for the optional label to be overridden.
+ * @slot {HTMLSlotElement} helpText - Allows for the helper text to be overridden.
  */
 
 export class AuroRadioGroup extends LitElement {
@@ -399,7 +402,7 @@ export class AuroRadioGroup extends LitElement {
       <fieldset class="${classMap(groupClasses)}" part="radio-group">
         ${this.required
         ? html`<legend><slot name="legend"></slot></legend>`
-        : html`<legend><slot name="legend"></slot> (optional)</legend>`
+        : html`<legend><slot name="legend"></slot> <slot name="optionalLabel">(optional)</slot></legend>`
       }
         <slot @slotchange=${this.handleSlotChange}></slot>
       </fieldset>

@@ -24,6 +24,14 @@
 |---------|------------|------------------------------------------------|
 | [reset](#reset) | `(): void` | Method for a total reset of the radio element. |
 
+## Slots
+
+| Name            | Description                                     |
+|-----------------|-------------------------------------------------|
+| [helpText](#helpText)      | Allows for the helper text to be overridden.    |
+| [legend](#legend)        | Allows for the legend to be overridden.         |
+| [optionalLabel](#optionalLabel) | Allows for the optional label to be overridden. |
+
 ## CSS Shadow Parts
 
 | Part          | Description                                      |

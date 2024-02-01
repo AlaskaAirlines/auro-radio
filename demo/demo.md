@@ -297,14 +297,14 @@ Using the `horizontal` attribute will render the checkbox options on a horizonta
 
 ### Custom optional label
 
-Using the `<auro-radio-group>` `optionalLabel` slot, we can override the default optional label text.
+The `<auro-radio-group>` supports an `optionalLabel` slot, where users can can override the default `(optional)` notification text.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/optionalLabel.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/optionalLabel.html -->
   <auro-radio-group>
     <span slot="legend">Form label goes here</span>
-    <span slot="optionalLabel">(custom label)</span>
+    <span slot="optionalLabel">(add custom label here)</span>
     <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
     <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
     <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
@@ -319,7 +319,7 @@ Using the `<auro-radio-group>` `optionalLabel` slot, we can override the default
 ```html
 <auro-radio-group>
   <span slot="legend">Form label goes here</span>
-  <span slot="optionalLabel">(custom label)</span>
+  <span slot="optionalLabel">(add custom label here)</span>
   <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
   <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
   <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>

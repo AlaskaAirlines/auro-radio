@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [2.2.0](https://github.com/AlaskaAirlines/auro-radio/compare/v2.1.2...v2.2.0) (2024-02-01)
+
+
+### Features
+
+* optionalLabel slot [#96](https://github.com/AlaskaAirlines/auro-radio/issues/96) ([bea59a5](https://github.com/AlaskaAirlines/auro-radio/commit/bea59a51822f003016b30692d4974bd2b5d612b2))
+
+
+### Performance Improvements
+
+* update scripts ([30fb9a3](https://github.com/AlaskaAirlines/auro-radio/commit/30fb9a3a2fcf3789613d0b85bed9f8a5bdcd1a94))
+
 ## [2.1.2](https://github.com/AlaskaAirlines/auro-radio/compare/v2.1.1...v2.1.2) (2024-01-31)
 
 

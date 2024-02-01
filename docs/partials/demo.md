@@ -177,7 +177,7 @@ Using the `horizontal` attribute will render the checkbox options on a horizonta
 
 ### Custom optional label
 
-Using the `<auro-radio-group>` `optionalLabel` slot, we can override the default optional label text.
+The `<auro-radio-group>` supports an `optionalLabel` slot, where users can can override the default `(optional)` notification text.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/optionalLabel.html) -->

@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.1](https://github.com/AlaskaAirlines/auro-radio/compare/v2.2.0...v2.2.1) (2024-02-13)
+
+
+### Performance Improvements
+
+* update deps and add ESM support badge ([791ef26](https://github.com/AlaskaAirlines/auro-radio/commit/791ef26e9ea115081a4cc4b898dbecee685acb96))
+
 # [2.2.0](https://github.com/AlaskaAirlines/auro-radio/compare/v2.1.2...v2.2.0) (2024-02-01)
 
 

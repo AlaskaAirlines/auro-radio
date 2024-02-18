@@ -17,11 +17,11 @@ import styleCss from "./style-css.js";
  * @attr {Boolean} disabled - If set to true, the radio button will be non-clickable.
  * @attr {Boolean} required - Defines element as required.
  * @attr {Boolean} error - If set to true, sets an error state on the radio button.
- * @fires toggleSelected - Notifies that the component has toggled the checked/selected state.
- * @fires focusSelected - Notifies that the component has gained focus.
- * @fires auroRadio-blur - Notifies that the component has lost focus.
- * @fires resetRadio - Notifies that the component has reset the checked/selected state.
- * @fires auroRadio-selected - Notifies that the component has been marked as checked/selected.
+ * @event toggleSelected - Notifies that the component has toggled the checked/selected state.
+ * @event focusSelected - Notifies that the component has gained focus.
+ * @event auroRadio-blur - Notifies that the component has lost focus.
+ * @event resetRadio - Notifies that the component has reset the checked/selected state.
+ * @event auroRadio-selected - Notifies that the component has been marked as checked/selected.
  */
 
 // build the component class

@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.2](https://github.com/AlaskaAirlines/auro-radio/compare/v2.2.1...v2.2.2) (2024-02-18)
+
+
+### Performance Improvements
+
+* **syntax:** fix linters and force build for docs ([1d5a30c](https://github.com/AlaskaAirlines/auro-radio/commit/1d5a30c07946d61613181a62886e246e4a37a4a6))
+
 ## [2.2.1](https://github.com/AlaskaAirlines/auro-radio/compare/v2.2.0...v2.2.1) (2024-02-13)
 
 

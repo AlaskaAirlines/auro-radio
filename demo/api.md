@@ -5,18 +5,19 @@
 
 ## Properties
 
-| Property                        | Attribute                       | Type      | Default     | Description                                      |
-|---------------------------------|---------------------------------|-----------|-------------|--------------------------------------------------|
-| [disabled](#disabled)                      | `disabled`                      | `boolean` | false       |                                                  |
-| [error](#error)                         | `error`                         | `String`  |             | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
-| [horizontal](#horizontal)                    | `horizontal`                    | `boolean` | false       |                                                  |
-| [noValidate](#noValidate)                    | `noValidate`                    | `Boolean` |             | If set, disables auto-validation on blur.        |
-| [required](#required)                      | `required`                      | `Boolean` | false       | Populates the `required` attribute on the element. Used for client-side validation. |
-| [setCustomValidity](#setCustomValidity)             | `setCustomValidity`             | `String`  |             | Sets a custom help text message to display for all validityStates. |
-| [setCustomValidityCustomError](#setCustomValidityCustomError)  | `setCustomValidityCustomError`  | `String`  |             | Custom help text message to display when validity = `customError`. |
-| [setCustomValidityValueMissing](#setCustomValidityValueMissing) | `setCustomValidityValueMissing` | `String`  |             | Custom help text message to display when validity = `valueMissing`. |
-| [validity](#validity)                      | `validity`                      | `String`  | "undefined" | Specifies the `validityState` this element is in. |
-| [value](#value)                         | `value`                         | `array`   | "undefined" |                                                  |
+| Property                        | Attribute                       | Type          | Default     | Description                                      |
+|---------------------------------|---------------------------------|---------------|-------------|--------------------------------------------------|
+| [disabled](#disabled)                      | `disabled`                      | `boolean`     | false       |                                                  |
+| [error](#error)                         | `error`                         | `String`      |             | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
+| [horizontal](#horizontal)                    | `horizontal`                    | `boolean`     | false       |                                                  |
+| [noValidate](#noValidate)                    | `noValidate`                    | `Boolean`     |             | If set, disables auto-validation on blur.        |
+| [optionSelected](#optionSelected)                | `optionSelected`                | `HTMLElement` | "undefined" | Specifies the current selected radio button.     |
+| [required](#required)                      | `required`                      | `Boolean`     | false       | Populates the `required` attribute on the element. Used for client-side validation. |
+| [setCustomValidity](#setCustomValidity)             | `setCustomValidity`             | `String`      |             | Sets a custom help text message to display for all validityStates. |
+| [setCustomValidityCustomError](#setCustomValidityCustomError)  | `setCustomValidityCustomError`  | `String`      |             | Custom help text message to display when validity = `customError`. |
+| [setCustomValidityValueMissing](#setCustomValidityValueMissing) | `setCustomValidityValueMissing` | `String`      |             | Custom help text message to display when validity = `valueMissing`. |
+| [validity](#validity)                      | `validity`                      | `String`      | "undefined" | Specifies the `validityState` this element is in. |
+| [value](#value)                         | `value`                         | `array`       | "undefined" |                                                  |
 
 ## Methods
 
@@ -114,6 +115,37 @@ The following illustrates a default use of the `<auro-radio-group><auro-radio>..
   <auro-radio id="radio4" label="Yes" name="radioDemo" value="yes">Volunteering is AWESOME!</auro-radio>
   <auro-radio id="radio5" label="No" name="radioDemo" value="no">Sorry, I do not have the time or resources</auro-radio>
   <auro-radio id="radio6" label="Maybe" name="radioDemo" value="maybe">Please send me more information</auro-radio>
+</auro-radio-group>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Checked
+
+Use the `checked` attribute to pre-select a `<auro-radio>` element.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/checked.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/checked.html -->
+  <auro-radio-group>
+    <span slot="legend">Form label goes here</span>
+    <auro-radio id="radio4" label="Yes" name="radioDemo" value="yes">Yes</auro-radio>
+    <auro-radio id="radio5" label="No" name="radioDemo" value="no" checked>No</auro-radio>
+    <auro-radio id="radio6" label="Maybe" name="radioDemo" value="maybe">Maybe</auro-radio>
+  </auro-radio-group>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/checked.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/checked.html -->
+
+```html
+<auro-radio-group>
+  <span slot="legend">Form label goes here</span>
+  <auro-radio id="radio4" label="Yes" name="radioDemo" value="yes">Yes</auro-radio>
+  <auro-radio id="radio5" label="No" name="radioDemo" value="no" checked>No</auro-radio>
+  <auro-radio id="radio6" label="Maybe" name="radioDemo" value="maybe">Maybe</auro-radio>
 </auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->

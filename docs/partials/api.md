@@ -37,6 +37,7 @@ The following illustrates a default use of the `<auro-radio-group><auro-radio>..
 
 </auro-accordion>
 
+
 ### Disabled
 
 Use the `disabled` attribute to disable singular `<auro-radio>` elements or the entire `<auro-radio-group>`.
@@ -54,6 +55,23 @@ The `disabled` attribute used to disable the entire `<auro-radio-group>`.
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabledGroup.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
+#### Single
+
+The `disabled` attribute used to disable a single `<auro-radio>` element.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/disabled.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -79,21 +97,19 @@ The `error` attribute used to set an error state on the entire `<auro-radio-grou
 
 </auro-accordion>
 
-### horizontal
+#### Single
 
-Using the `horizontal` attribute will render the `auro-radio` elements in a horizontal line.
-
-**Note**: Using the horizontal attribute has a limit of 3 options. Beyond three, options will be listed in vertically.
+The `error` attribute used to set an error state on a single `<auro-radio>` element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/horizontal.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/horizontal.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/error.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -111,6 +127,23 @@ When present, the `required` attribute specifies that an `<auro-radio>` within t
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/required.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
+### Horizontal radio group
+
+Using the `horizontal` attribute will render the checkbox options on a horizontal line.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/horizontal.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/horizontal.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>

@@ -112,4 +112,20 @@ describe('auro-radio', () => {
 
     await expect(radioButtonOne.hasAttribute('checked')).to.be.true;
   });
+
+  it('selected radio button is correctly assigned to optionSelected attribute', async () => {
+    const el = await fixture(html`
+      <auro-radio-group>
+        <span slot="legend">Form label goes here</span>
+        <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes" checked></auro-radio>
+        <auro-radio id="radio2" label="No" name="radioDemo" value="no"></auro-radio>
+        <auro-radio id="radio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+      </auro-radio-group>
+    `);
+
+    const radioButtons = [...el.querySelectorAll('auro-radio')];
+    const selected = radioButtons.find(radioButton => radioButton.hasAttribute('checked'));
+
+    await expect(el.optionSelected).to.equal(selected);
+  });
 });

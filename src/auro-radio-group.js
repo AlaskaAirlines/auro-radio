@@ -22,6 +22,7 @@ import styleCss from "./auro-radio-group-css.js";
  * @attr {String} error - When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value.
  * @attr {Boolean} noValidate - If set, disables auto-validation on blur.
  * @attr {Boolean} required - Populates the `required` attribute on the element. Used for client-side validation.
+ * @attr {HTMLElement} optionSelected - Specifies the current selected radio button.
  * @csspart radio-group - Apply css to the fieldset element in the shadow DOM
  * @slot {HTMLSlotElement} legend - Allows for the legend to be overridden.
  * @slot {HTMLSlotElement} optionalLabel - Allows for the optional label to be overridden.
@@ -36,6 +37,7 @@ export class AuroRadioGroup extends LitElement {
     this.required = false;
     this.validity = undefined;
     this.value = undefined;
+    this.optionSelected = undefined;
 
     /**
      * @private
@@ -88,6 +90,9 @@ export class AuroRadioGroup extends LitElement {
       validity: {
         type: String,
         reflect: true
+      },
+      optionSelected: {
+        type: HTMLElement
       }
     };
   }
@@ -114,6 +119,8 @@ export class AuroRadioGroup extends LitElement {
     } else {
       this.value = '';
     }
+
+    this.optionSelected = event.target;
 
     this.validate();
   }
@@ -214,6 +221,8 @@ export class AuroRadioGroup extends LitElement {
   reset() {
     this.value = undefined;
     this.index = 0;
+    this.optionSelected = undefined;
+
     const buttons = this.querySelectorAll('auro-radio');
 
     buttons.forEach((button) => {
@@ -314,6 +323,8 @@ export class AuroRadioGroup extends LitElement {
         item.tabIndex = -1;
       }
     });
+
+    this.optionSelected = event.target;
 
     this.validate();
   }

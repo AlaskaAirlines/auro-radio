@@ -37,6 +37,23 @@ The following illustrates a default use of the `<auro-radio-group><auro-radio>..
 
 </auro-accordion>
 
+### Checked
+
+Use the `checked` attribute to pre-select a `<auro-radio>` element.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/checked.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/checked.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
 
 ### Disabled
 

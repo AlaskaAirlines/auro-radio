@@ -20,9 +20,10 @@
     "node": "^18 || ^20"
   },
   "dependencies": {
+    "@aurodesignsystem/auro-formvalidation": "^1.0.3",
     "chalk": "^5.3.0",
-    "lit": "^3.1.1",
-    "focus-visible": "^5.2.0"
+    "focus-visible": "^5.2.0",
+    "lit": "^3.1.1"
   },
   "peerDependencies": {
     "@alaskaairux/design-tokens": "^3.14.0",

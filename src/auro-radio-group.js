@@ -11,6 +11,9 @@ import 'focus-visible/dist/focus-visible.min.js';
 // Import the processed CSS file into the scope of the component
 import styleCss from "./auro-radio-group-css.js";
 
+// Import formvalidaiton class
+import AuroFormValidation from '@aurodesignsystem/auro-formvalidation/src/validation.js';
+
 /* eslint no-magic-numbers: ["error", { "ignore": [0, 1, -1] }] */
 /* eslint-disable max-lines */
 
@@ -36,6 +39,11 @@ export class AuroRadioGroup extends LitElement {
     this.required = false;
     this.validity = undefined;
     this.value = undefined;
+
+    /**
+     * @private
+     */
+    this.validation = new AuroFormValidation();
 
     /**
      * @private
@@ -115,7 +123,7 @@ export class AuroRadioGroup extends LitElement {
       this.value = '';
     }
 
-    this.validate();
+    this.validation.validate(this);
   }
 
   /**
@@ -128,7 +136,7 @@ export class AuroRadioGroup extends LitElement {
       this.value = '';
     }
 
-    this.validate();
+    this.validation.validate(this);
   }
 
   /**
@@ -151,59 +159,7 @@ export class AuroRadioGroup extends LitElement {
       });
     }
     if (changedProperties.has('error')) {
-      this.validate();
-    }
-  }
-
-  /**
-   * Determines the validity state of the element.
-   * @private
-   * @returns {void}
-   */
-  /* eslint-disable max-statements */
-  validate() {
-    // Validate only if noValidate is not true and the input does not have focus
-    if (this.hasAttribute('error')) {
-      this.validity = 'customError';
-      this.setCustomValidity = this.error;
-    } else if (this.value !== undefined && !this.noValidate) {
-      this.validity = 'valid';
-      this.setCustomValidity = '';
-
-      /**
-       * Only validate once we interact with the datepicker
-       * this.value === undefined is the initial state pre-interaction.
-       *
-       * The validityState definitions are located at https://developer.mozilla.org/en-US/docs/Web/API/ValidityState.
-       */
-      if ((!this.value || this.value.length === 0) && this.required) { // eslint-disable-line no-magic-numbers
-        this.validity = 'valueMissing';
-        this.setCustomValidity = this.setCustomValidityValueMissing;
-      }
-    } else {
-      this.validity = undefined;
-      this.removeAttribute('validity');
-    }
-
-    if (this.validity && this.validity !== 'valid') {
-      this.isValid = false;
-
-      // Use the validity message override if it is declared
-      if (this.ValidityMessageOverride) {
-        this.setCustomValidity = this.ValidityMessageOverride;
-      }
-    } else {
-      this.isValid = true;
-    }
-
-    if (this.error || (this.validity && this.validity !== 'valid')) { // eslint-disable-line  no-extra-parens
-      this.items.forEach((el) => {
-        el.setAttribute('error', '');
-      });
-    } else {
-      this.items.forEach((el) => {
-        el.removeAttribute('error');
-      });
+      this.validation.validate(this);
     }
   }
 
@@ -220,7 +176,7 @@ export class AuroRadioGroup extends LitElement {
       button.checked = false;
     });
 
-    this.validate();
+    this.validation.validate(this);
   }
 
   /**
@@ -315,7 +271,7 @@ export class AuroRadioGroup extends LitElement {
       }
     });
 
-    this.validate();
+    this.validation.validate(this);
   }
 
   /**

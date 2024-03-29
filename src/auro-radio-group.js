@@ -11,7 +11,7 @@ import 'focus-visible/dist/focus-visible.min.js';
 // Import the processed CSS file into the scope of the component
 import styleCss from "./auro-radio-group-css.js";
 
-// Import formvalidaiton class
+// Import formvalidation class
 import AuroFormValidation from '@aurodesignsystem/auro-formvalidation/src/validation.js';
 
 /* eslint no-magic-numbers: ["error", { "ignore": [0, 1, -1] }] */
@@ -117,7 +117,7 @@ export class AuroRadioGroup extends LitElement {
    * @returns {void}
    */
   handleSelection(event) {
-    if (event.target.hasAttribute('value')) {
+    if (event.target.value) {
       this.value = event.target.value;
     } else {
       this.value = '';
@@ -160,6 +160,11 @@ export class AuroRadioGroup extends LitElement {
     }
     if (changedProperties.has('error')) {
       this.validation.validate(this);
+    }
+    if (changedProperties.has('validity') && this.validity !== 'valid') {
+      this.items.forEach((el) => {
+        el.error = this.error;
+      });
     }
   }
 

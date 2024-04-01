@@ -16,6 +16,15 @@ describe('auro-radio', () => {
     await expect(el).to.be.true;
   });
 
+  it('web component is successfully created in the document', async () => {
+    // This test fails when attributes are put onto the component before it is attached to the DOM
+    const radio = document.createElement('auro-radio');
+    const radioGroup = document.createElement('auro-radio-group');
+
+    await expect(radio.localName).to.equal('auro-radio');
+    await expect(radioGroup.localName).to.equal('auro-radio-group');
+  });
+
   it('properly handles user input', async () => {
     const el = await fixture(html`
       <auro-radio-group>

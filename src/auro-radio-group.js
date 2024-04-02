@@ -26,6 +26,8 @@ import AuroFormValidation from '@aurodesignsystem/auro-formvalidation/src/valida
  * @attr {Boolean} noValidate - If set, disables auto-validation on blur.
  * @attr {Boolean} required - Populates the `required` attribute on the element. Used for client-side validation.
  * @csspart radio-group - Apply css to the fieldset element in the shadow DOM
+ * @event auroRadioGroup-validated - Notifies that the `validity` value has changed.
+ * @event auroRadioGroup-helpText - Notifies that the `setCustomValidity` value has changed.
  * @slot {HTMLSlotElement} legend - Allows for the legend to be overridden.
  * @slot {HTMLSlotElement} optionalLabel - Allows for the optional label to be overridden.
  * @slot {HTMLSlotElement} helpText - Allows for the helper text to be overridden.

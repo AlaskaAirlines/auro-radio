@@ -121,4 +121,27 @@ describe('auro-radio', () => {
 
     await expect(radioButtonOne.hasAttribute('checked')).to.be.true;
   });
+
+  it('removing error attribute reruns validity even when value is undefined', async () => {
+    const el = await errorFixture();
+
+    await expect(el.getAttribute('validity')).to.be.equal('customError');
+
+    el.removeAttribute('error');
+
+    await elementUpdated(el);
+
+    await expect(el.hasAttribute('validity')).to.be.false;
+  });
 });
+
+async function errorFixture() {
+  return await fixture(html`
+  <auro-radio-group error="There is an error with this form entry">
+    <span slot="legend">Form label goes here</span>
+    <auro-radio label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  </auro-radio-group>
+  `);
+}

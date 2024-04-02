@@ -159,6 +159,12 @@ export class AuroRadioGroup extends LitElement {
       });
     }
     if (changedProperties.has('error')) {
+      if (!this.error) {
+        this.setCustomValidity = undefined;
+        this.validity = undefined;
+        this.removeAttribute('validity');
+      }
+
       this.validation.validate(this);
     }
     if (changedProperties.has('validity') && this.validity !== 'valid') {

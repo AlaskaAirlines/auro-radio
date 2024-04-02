@@ -24,6 +24,13 @@
 |---------|------------|------------------------------------------------|
 | [reset](#reset) | `(): void` | Method for a total reset of the radio element. |
 
+## Events
+
+| Event                      | Description                                      |
+|----------------------------|--------------------------------------------------|
+| `auroRadioGroup-helpText`  | Notifies that the `setCustomValidity` value has changed. |
+| `auroRadioGroup-validated` | Notifies that the `validity` value has changed.  |
+
 ## Slots
 
 | Name            | Description                                     |

@@ -125,13 +125,13 @@ describe('auro-radio', () => {
   it('removing error attribute reruns validity even when value is undefined', async () => {
     const el = await errorFixture();
 
-    await expect(el.getAttribute('validity')).to.be.equal('customError');
+    await expect(el.getAttribute('validity')).to.equal('customError');
 
     el.removeAttribute('error');
 
     await elementUpdated(el);
 
-    await expect(el.hasAttribute('validity')).to.be.false;
+    await expect(el.getAttribute('validity')).to.equal('valid');
   });
 });
 

@@ -14,6 +14,10 @@ import styleCss from "./auro-radio-group-css.js";
 // Import formvalidation class
 import AuroFormValidation from '@aurodesignsystem/auro-formvalidation/src/validation.js';
 
+// Import library runtime utils
+import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
+
 /* eslint no-magic-numbers: ["error", { "ignore": [0, 1, -1] }] */
 /* eslint-disable max-lines */
 
@@ -57,6 +61,11 @@ export class AuroRadioGroup extends LitElement {
      * @private
      */
     this.max = 3;
+
+    /**
+     * @private
+     */
+    this.runtimeUtils = new AuroLibraryRuntimeUtils();
   }
 
   static get styles() {
@@ -111,6 +120,11 @@ export class AuroRadioGroup extends LitElement {
     this.addEventListener('resetRadio', this.resetRadio);
     this.addEventListener('auroRadio-blur', this.handleRadioBlur);
     this.addEventListener('auroRadio-selected', this.handleSelection);
+  }
+
+  firstUpdated() {
+    // Add the tag name as an attribute if it is different than the component name
+    this.runtimeUtils.handleComponentTagRename(this, 'auro-radio-group');
   }
 
   /**

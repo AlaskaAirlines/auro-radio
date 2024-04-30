@@ -11,6 +11,9 @@ import {ifDefined} from 'lit/directives/if-defined.js';
 import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 
+// Import library runtime utils
+import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
 /**
  * @attr {Boolean} checked - If set to true, the radio button will be filled.
  * @attr {Boolean} disabled - If set to true, the radio button will be non-clickable.
@@ -32,6 +35,11 @@ export class AuroRadio extends LitElement {
     this.required = false;
     this.error = false;
     this.tabIndex = -1;
+
+    /**
+     * @private
+     */
+    this.runtimeUtils = new AuroLibraryRuntimeUtils();
   }
 
   static get styles() {
@@ -171,6 +179,9 @@ export class AuroRadio extends LitElement {
   }
 
   firstUpdated() {
+    // Add the tag name as an attribute if it is different than the component name
+    this.runtimeUtils.handleComponentTagRename(this, 'auro-radio');
+
     this.addEventListener('blur', this.handleBlur);
 
     this.input = this.shadowRoot.querySelector('input');

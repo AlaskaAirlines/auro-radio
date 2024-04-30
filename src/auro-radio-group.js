@@ -170,24 +170,27 @@ export class AuroRadioGroup extends LitElement {
         });
       }
     }
+
     if (changedProperties.has('required')) {
       this.items.forEach((el) => {
         el.required = this.required;
       });
     }
-    if (changedProperties.has('error')) {
-      if (!this.error) {
-        this.setCustomValidity = undefined;
-        this.validity = undefined;
-        this.removeAttribute('validity');
-      }
 
-      this.validation.validate(this);
+    if (changedProperties.has('error')) {
+      this.validation.validate(this, true);
     }
-    if (changedProperties.has('validity') && this.validity !== 'valid') {
-      this.items.forEach((el) => {
-        el.error = this.error;
-      });
+
+    if (changedProperties.has('validity')) {
+      if (this.validity && this.validity !== 'valid') {
+        this.items.forEach((el) => {
+          el.setAttribute('error', true);
+        });
+      } else {
+        this.items.forEach((el) => {
+          el.removeAttribute('error');
+        });
+      }
     }
   }
 

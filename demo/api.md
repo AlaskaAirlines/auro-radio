@@ -241,7 +241,7 @@ When present, the `required` attribute specifies that an `<auro-radio>` within t
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/required.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/required.html -->
-  <auro-radio-group required>
+  <auro-radio-group required setCustomValidityValueMissing="value missing">
     <span slot="legend">Form label goes here</span>
     <auro-radio id="radio25" label="Yes" name="radioDemo" value="yes"></auro-radio>
     <auro-radio id="radio26" label="No" name="radioDemo" value="no"></auro-radio>
@@ -255,7 +255,7 @@ When present, the `required` attribute specifies that an `<auro-radio>` within t
 <!-- The below code snippet is automatically added from ./../../apiExamples/required.html -->
 
 ```html
-<auro-radio-group required>
+<auro-radio-group required setCustomValidityValueMissing="value missing">
   <span slot="legend">Form label goes here</span>
   <auro-radio id="radio25" label="Yes" name="radioDemo" value="yes"></auro-radio>
   <auro-radio id="radio26" label="No" name="radioDemo" value="no"></auro-radio>

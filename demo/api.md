@@ -26,11 +26,9 @@
 
 ## Events
 
-| Event                       | Description                                      |
-|-----------------------------|--------------------------------------------------|
-| `auroFormElement-validated` | Notifies that the `validity` and `errorMessage` values have changed. |
-| `auroRadioGroup-helpText`   | Notifies that the `setCustomValidity` value has changed. |
-| `auroRadioGroup-validated`  | Notifies that the `validity` value has changed.  |
+| Event                       | Description                                   |
+|-----------------------------|-----------------------------------------------|
+| `auroFormElement-validated` | Notifies that the element has been validated. |
 
 ## Slots
 

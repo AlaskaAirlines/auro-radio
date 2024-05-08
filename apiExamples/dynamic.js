@@ -5,7 +5,7 @@ export function dynamicExample() {
   for (let i = 0; i < values.length; i++) {
     const radio = document.createElement('auro-radio');
     
-    radio.id = `radio${i}`;
+    radio.id = `radio${i + 100}`;
     radio.label = values[i];
     radio.name = 'radioDemo';
     radio.value = values[i];

@@ -1,5 +1,31 @@
 # Semantic Release Automated Changelog
 
+# [3.0.0](https://github.com/AlaskaAirlines/auro-radio/compare/v2.2.2...v3.0.0) (2024-05-13)
+
+
+### Bug Fixes
+
+* **required:** stop error ui in dynamic implementation [#125](https://github.com/AlaskaAirlines/auro-radio/issues/125) ([a19944a](https://github.com/AlaskaAirlines/auro-radio/commit/a19944a0bc4f1121a294af5aa10974e5d63d6994))
+
+
+### Features
+
+* **event:** add events dispatched by validation repo ([0750f4a](https://github.com/AlaskaAirlines/auro-radio/commit/0750f4aefb3aab7bb0dac29812578a76524b30e8))
+* **library:** add library to repo for custom component use ([d85ef20](https://github.com/AlaskaAirlines/auro-radio/commit/d85ef204a809e1186a4f5e44443f9dd500953df1))
+* **selected:** add optionSelected attribute to radio group [#97](https://github.com/AlaskaAirlines/auro-radio/issues/97) ([ba37820](https://github.com/AlaskaAirlines/auro-radio/commit/ba378205a46e2459cb60ab86b5f628a54c076eab))
+* **validation:** install and use formvalidation repo ([5e4cd59](https://github.com/AlaskaAirlines/auro-radio/commit/5e4cd59f2c980cd70c83cd388a06810375817e92))
+
+
+### Performance Improvements
+
+* **error:** update error handling ([11cf71d](https://github.com/AlaskaAirlines/auro-radio/commit/11cf71d49a0e7a1b28538583ea67daaf27c2bfc3))
+* **validation:** update logic around validation handling [#125](https://github.com/AlaskaAirlines/auro-radio/issues/125) ([3d79361](https://github.com/AlaskaAirlines/auro-radio/commit/3d793619cd4813623e369f5a37b49124577c87d2))
+
+
+### BREAKING CHANGES
+
+* **validation:** The current validation has been removed and replaced by the auro-formvalidation repo to keep validation consistent across all form components.
+
 ## [2.2.2](https://github.com/AlaskaAirlines/auro-radio/compare/v2.2.1...v2.2.2) (2024-02-18)
 
 

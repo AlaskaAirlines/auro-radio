@@ -125,6 +125,37 @@ This is a default configuration using the `<auro-radio-group>` and `<auro-radio>
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
+### Checked
+
+Use the `checked` attribute to pre-select a `<auro-radio>` element.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/checked.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/checked.html -->
+  <auro-radio-group>
+    <span slot="legend">Form label goes here</span>
+    <auro-radio id="radio4" label="Yes" name="radioDemo" value="yes">Yes</auro-radio>
+    <auro-radio id="radio5" label="No" name="radioDemo" value="no" checked>No</auro-radio>
+    <auro-radio id="radio6" label="Maybe" name="radioDemo" value="maybe">Maybe</auro-radio>
+  </auro-radio-group>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/checked.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/checked.html -->
+
+```html
+<auro-radio-group>
+  <span slot="legend">Form label goes here</span>
+  <auro-radio id="radio4" label="Yes" name="radioDemo" value="yes">Yes</auro-radio>
+  <auro-radio id="radio5" label="No" name="radioDemo" value="no" checked>No</auro-radio>
+  <auro-radio id="radio6" label="Maybe" name="radioDemo" value="maybe">Maybe</auro-radio>
+</auro-radio-group>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
 ### Disabled
 
 Use the `disabled` attribute to disable singular `<auro-radio>` elements or the entire `<auro-radio-group>`.

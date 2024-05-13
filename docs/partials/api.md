@@ -5,7 +5,7 @@
 
 ### Default
 
-The following example illustrates the default use of the `<auro-radio>` custom element. `
+The following example illustrates the default use of the `<auro-radio>` custom element.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
@@ -22,7 +22,7 @@ The following example illustrates the default use of the `<auro-radio>` custom e
 
 ### Default Group
 
-The following illustrates a default use of the `<auro-radio-group><auro-radio>...</auro-radio>/<auro-radio-group>` pattern.
+This is a default configuration using the `<auro-radio-group>` and `<auro-radio>` elements. Notice the use of the `slot` attribute to set the group title of the `<auro-radio-group>`.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basicGroup.html) -->

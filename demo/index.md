@@ -1,7 +1,7 @@
 <!--
-The demo.md file is a compiled document. No edits should be made directly to this file.
+The index.md file is a compiled document. No edits should be made directly to this file.
 README.md is created by running `npm run build:docs`.
-This file is generated based on a template fetched from `./docs/partials/demo.md`
+This file is generated based on a template fetched from `./docs/partials/index.md`
 -->
 
 # Radio
@@ -31,7 +31,7 @@ This is a default configuration of `<auro-radio>`.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="basicRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -40,7 +40,7 @@ This is a default configuration of `<auro-radio>`.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+<auro-radio id="basicRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -54,9 +54,9 @@ This is a default configuration using the `<auro-radio-group>` and `<auro-radio>
   <!-- The below content is automatically added from ./../../apiExamples/basicGroup.html -->
   <auro-radio-group>
     <span slot="legend">Form label goes here</span>
-    <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
-    <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
-    <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+    <auro-radio id="basicGroupRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="basicGroupRadio2" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="basicGroupRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
@@ -68,9 +68,9 @@ This is a default configuration using the `<auro-radio-group>` and `<auro-radio>
 ```html
 <auro-radio-group>
   <span slot="legend">Form label goes here</span>
-  <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
-  <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
-  <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  <auro-radio id="basicGroupRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="basicGroupRadio2" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="basicGroupRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
 </auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -96,9 +96,9 @@ Using the `registerComponent` function to create a custom `<auro-radio>` will al
   <!-- The below content is automatically added from ./../../apiExamples/customRadio.html -->
   <custom-radio-group>
     <span slot="legend">Form label goes here</span>
-    <custom-radio id="radio7" label="Yes" name="radioDemo" value="yes"></custom-radio>
-    <custom-radio id="radio8" label="No" name="radioDemo" value="no"></custom-radio>
-    <custom-radio id="radio9" label="Maybe" name="radioDemo" value="maybe"></custom-radio>
+    <custom-radio id="customRadio1" label="Yes" name="radioDemo" value="yes"></custom-radio>
+    <custom-radio id="customRadio2" label="No" name="radioDemo" value="no"></custom-radio>
+    <custom-radio id="customRadio3" label="Maybe" name="radioDemo" value="maybe"></custom-radio>
   </custom-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
@@ -110,9 +110,9 @@ Using the `registerComponent` function to create a custom `<auro-radio>` will al
 ```html
 <custom-radio-group>
   <span slot="legend">Form label goes here</span>
-  <custom-radio id="radio7" label="Yes" name="radioDemo" value="yes"></custom-radio>
-  <custom-radio id="radio8" label="No" name="radioDemo" value="no"></custom-radio>
-  <custom-radio id="radio9" label="Maybe" name="radioDemo" value="maybe"></custom-radio>
+  <custom-radio id="customRadio1" label="Yes" name="radioDemo" value="yes"></custom-radio>
+  <custom-radio id="customRadio2" label="No" name="radioDemo" value="no"></custom-radio>
+  <custom-radio id="customRadio3" label="Maybe" name="radioDemo" value="maybe"></custom-radio>
 </custom-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->

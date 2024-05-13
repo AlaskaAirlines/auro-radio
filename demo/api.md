@@ -75,12 +75,12 @@
 
 ### Default
 
-The following example illustrates the default use of the `<auro-radio>` custom element. `
+The following example illustrates the default use of the `<auro-radio>` custom element.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="basicRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -89,23 +89,23 @@ The following example illustrates the default use of the `<auro-radio>` custom e
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+<auro-radio id="basicRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
 ### Default Group
 
-The following illustrates a default use of the `<auro-radio-group><auro-radio>...</auro-radio>/<auro-radio-group>` pattern.
+This is a default configuration using the `<auro-radio-group>` and `<auro-radio>` elements. Notice the use of the `slot` attribute to set the group title of the `<auro-radio-group>`.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basicGroup.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basicGroup.html -->
   <auro-radio-group>
     <span slot="legend">Form label goes here</span>
-    <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
-    <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
-    <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+    <auro-radio id="basicGroupRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="basicGroupRadio2" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="basicGroupRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
@@ -117,9 +117,9 @@ The following illustrates a default use of the `<auro-radio-group><auro-radio>..
 ```html
 <auro-radio-group>
   <span slot="legend">Form label goes here</span>
-  <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
-  <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
-  <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  <auro-radio id="basicGroupRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="basicGroupRadio2" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="basicGroupRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
 </auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -134,15 +134,15 @@ Use the `disabled` attribute to disable singular `<auro-radio>` elements or the 
   <!-- The below content is automatically added from ./../../apiExamples/disabled.html -->
   <auro-radio-group>
     <span slot="legend">Form label goes here</span>
-    <auro-radio id="radio10" label="Yes" name="radioDemo" value="yes"></auro-radio>
-    <auro-radio id="radio11" label="No" name="radioDemo" value="no" disabled></auro-radio>
-    <auro-radio id="radio12" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+    <auro-radio id="disabledRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="disabledRadio2" label="No" name="radioDemo" value="no" disabled></auro-radio>
+    <auro-radio id="disabledRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
   </auro-radio-group>
   <auro-radio-group disabled>
     <span slot="legend">Form label goes here</span>
-    <auro-radio id="radio13" label="Yes" name="radioDemo" value="yes"></auro-radio>
-    <auro-radio id="radio14" label="No" name="radioDemo" value="no"></auro-radio>
-    <auro-radio id="radio15" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+    <auro-radio id="disabledRadio4" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="disabledRadio5" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="disabledRadio6" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
@@ -154,15 +154,15 @@ Use the `disabled` attribute to disable singular `<auro-radio>` elements or the 
 ```html
 <auro-radio-group>
   <span slot="legend">Form label goes here</span>
-  <auro-radio id="radio10" label="Yes" name="radioDemo" value="yes"></auro-radio>
-  <auro-radio id="radio11" label="No" name="radioDemo" value="no" disabled></auro-radio>
-  <auro-radio id="radio12" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  <auro-radio id="disabledRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="disabledRadio2" label="No" name="radioDemo" value="no" disabled></auro-radio>
+  <auro-radio id="disabledRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
 </auro-radio-group>
 <auro-radio-group disabled>
   <span slot="legend">Form label goes here</span>
-  <auro-radio id="radio13" label="Yes" name="radioDemo" value="yes"></auro-radio>
-  <auro-radio id="radio14" label="No" name="radioDemo" value="no"></auro-radio>
-  <auro-radio id="radio15" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  <auro-radio id="disabledRadio4" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="disabledRadio5" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="disabledRadio6" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
 </auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -177,9 +177,9 @@ Use the `error` attribute to set an error state on the entire `<auro-radio-group
   <!-- The below content is automatically added from ./../../apiExamples/error.html -->
   <auro-radio-group error="There is an error with this form entry">
     <span slot="legend">Form label goes here</span>
-    <auro-radio id="radio19" label="Yes" name="radioDemo" value="yes"></auro-radio>
-    <auro-radio id="radio20" label="No" name="radioDemo" value="no"></auro-radio>
-    <auro-radio id="radio21" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+    <auro-radio id="errorRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="errorRadio2" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="errorRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
@@ -191,9 +191,9 @@ Use the `error` attribute to set an error state on the entire `<auro-radio-group
 ```html
 <auro-radio-group error="There is an error with this form entry">
   <span slot="legend">Form label goes here</span>
-  <auro-radio id="radio19" label="Yes" name="radioDemo" value="yes"></auro-radio>
-  <auro-radio id="radio20" label="No" name="radioDemo" value="no"></auro-radio>
-  <auro-radio id="radio21" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  <auro-radio id="errorRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="errorRadio2" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="errorRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
 </auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -210,9 +210,9 @@ Using the `horizontal` attribute will render the `auro-radio` elements in a hori
   <!-- The below content is automatically added from ./../../apiExamples/horizontal.html -->
   <auro-radio-group horizontal>
     <span slot="legend">Form label goes here</span>
-    <auro-radio id="radio22" label="Yes" name="radioDemo" value="yes"></auro-radio>
-    <auro-radio id="radio23" label="No" name="radioDemo" value="no"></auro-radio>
-    <auro-radio id="radio24" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+    <auro-radio id="horizontalRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="horizontalRadio2" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="horizontalRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
@@ -224,9 +224,9 @@ Using the `horizontal` attribute will render the `auro-radio` elements in a hori
 ```html
 <auro-radio-group horizontal>
   <span slot="legend">Form label goes here</span>
-  <auro-radio id="radio22" label="Yes" name="radioDemo" value="yes"></auro-radio>
-  <auro-radio id="radio23" label="No" name="radioDemo" value="no"></auro-radio>
-  <auro-radio id="radio24" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  <auro-radio id="horizontalRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="horizontalRadio2" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="horizontalRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
 </auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -241,9 +241,9 @@ When present, the `required` attribute specifies that an `<auro-radio>` within t
   <!-- The below content is automatically added from ./../../apiExamples/required.html -->
   <auro-radio-group required setCustomValidityValueMissing="value missing">
     <span slot="legend">Form label goes here</span>
-    <auro-radio id="radio25" label="Yes" name="radioDemo" value="yes"></auro-radio>
-    <auro-radio id="radio26" label="No" name="radioDemo" value="no"></auro-radio>
-    <auro-radio id="radio27" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+    <auro-radio id="requiredRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="requiredRadio2" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="requiredRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
@@ -255,9 +255,9 @@ When present, the `required` attribute specifies that an `<auro-radio>` within t
 ```html
 <auro-radio-group required setCustomValidityValueMissing="value missing">
   <span slot="legend">Form label goes here</span>
-  <auro-radio id="radio25" label="Yes" name="radioDemo" value="yes"></auro-radio>
-  <auro-radio id="radio26" label="No" name="radioDemo" value="no"></auro-radio>
-  <auro-radio id="radio27" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  <auro-radio id="requiredRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="requiredRadio2" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="requiredRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
 </auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -273,9 +273,9 @@ The `<auro-radio-group>` supports an `optionalLabel` slot, where users can can o
   <auro-radio-group>
     <span slot="legend">Form label goes here</span>
     <span slot="optionalLabel">(add custom label here)</span>
-    <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
-    <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
-    <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+    <auro-radio id="labelRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+    <auro-radio id="labelRadio2" label="No" name="radioDemo" value="no"></auro-radio>
+    <auro-radio id="labelRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
   </auro-radio-group>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
@@ -288,9 +288,9 @@ The `<auro-radio-group>` supports an `optionalLabel` slot, where users can can o
 <auro-radio-group>
   <span slot="legend">Form label goes here</span>
   <span slot="optionalLabel">(add custom label here)</span>
-  <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
-  <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
-  <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+  <auro-radio id="labelRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+  <auro-radio id="labelRadio2" label="No" name="radioDemo" value="no"></auro-radio>
+  <auro-radio id="labelRadio3" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
 </auro-radio-group>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -332,7 +332,7 @@ export function dynamicExample() {
   for (let i = 0; i < values.length; i++) {
     const radio = document.createElement('auro-radio');
 
-    radio.id = `radio${i + 100}`;
+    radio.id = `dynamicRadio${i}`;
     radio.label = values[i];
     radio.name = 'radioDemo';
     radio.value = values[i];

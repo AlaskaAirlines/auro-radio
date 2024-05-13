@@ -266,7 +266,7 @@ Using the `horizontal` attribute will render the `auro-radio` elements in a hori
 
 ### Required
 
-When present, the `required` attribute specifies that an `<auro-radio>` within the `<auro-radio-group>` must be checked.
+When present, the `required` attribute specifies that an `<auro-radio>` within the `<auro-radio-group>` must be checked. There is no error message associated with the `required` attribute by default. Use `setCustomValidityValueMissing` to set a custom error message.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/required.html) -->

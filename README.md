@@ -85,7 +85,7 @@ import "@aurodesignsystem/auro-radio";
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+<auro-radio id="basicRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 
@@ -129,7 +129,7 @@ The following examples illustrate fully functional `<auro-radio>` elements wrapp
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
+<auro-radio id="basicRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 

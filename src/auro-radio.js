@@ -3,13 +3,15 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html, css } from "lit";
+import { LitElement, html } from "lit";
 import { classMap } from 'lit/directives/class-map.js';
 import {ifDefined} from 'lit/directives/if-defined.js';
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
+import colorCss from './color-css.js';
+import tokenCss from './tokens-css.js';
 
 // Import library runtime utils
 import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
@@ -43,9 +45,11 @@ export class AuroRadio extends LitElement {
   }
 
   static get styles() {
-    return css`
-      ${styleCss}
-    `;
+    return [
+      styleCss,
+      colorCss,
+      tokenCss
+    ];
   }
 
   // function to define props used within the scope of this component

@@ -17,23 +17,22 @@
 // Support for fallback values
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables.scss';
 
-// container styles - defines the look of the outer custom component
 :host {
-  display: block;
-  padding-bottom: var(--ds-size-150, $ds-size-150);
-}
-
-fieldset {
-  all: unset;
-}
-
-.displayFlex {
-  legend + slot {
-    display: flex;
-    white-space: nowrap;
+  legend {
+    color: var(--ds-auro-radio-group-label-color);
   }
 }
 
-legend {
-  margin-bottom: var(--ds-size-150, $ds-size-150);
+:host([disabled]) {
+  --ds-auro-radio-group-label-color: var(--ds-color-text-disabled-default, $ds-color-text-disabled-default);
+}
+
+.radioGroupElement-helpText {
+  color: var(--ds-radio-group-help-text-color);
+}
+
+:host([validity]:not([validity='valid'])) {
+  .radioGroupElement-helpText {
+    --ds-radio-group-help-text-color: var(--ds-color-alert-error-default, #{$ds-color-alert-error-default});
+  }
 }

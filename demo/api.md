@@ -376,3 +376,29 @@ export function dynamicExample() {
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+
+## Theme Support
+
+The component may be restyled using the following code sample and changing the values of the following token(s).
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
+<!-- The below code snippet is automatically added from ./../../src/tokens.scss -->
+
+```scss
+:host {
+  // auro-radio-group colors
+  --ds-auro-radio-group-help-text-color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
+
+  // auro-radio colors
+  --ds-auro-group-label-color: inherit;
+  --ds-auro-radio-btn-border-color: var(--ds-auro-radio-btn-color);
+  --ds-auro-radio-btn-fill-color: transparent;
+  --ds-auro-radio-btn-inset-color: transparent;
+  --ds-auro-radio-label-color: inherit;
+  --ds-auro-radio-tap-color: transparent;
+
+  // Used as a shorthand to set the fill and border color of the radio button
+  --ds-auro-radio-btn-color: var(--ds-color-border-primary-default, $ds-color-border-primary-default);
+}
+```
+<!-- AURO-GENERATED-CONTENT:END -->

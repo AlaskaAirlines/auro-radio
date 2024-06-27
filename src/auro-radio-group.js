@@ -2,7 +2,7 @@
 // See LICENSE in the project root for license information.
 // ---------------------------------------------------------------------
 
-import { LitElement, html, css } from "lit";
+import { LitElement, html } from "lit";
 import { classMap } from 'lit/directives/class-map.js';
 
 // Import touch detection lib
@@ -10,6 +10,8 @@ import 'focus-visible/dist/focus-visible.min.js';
 
 // Import the processed CSS file into the scope of the component
 import styleCss from "./auro-radio-group-css.js";
+import colorCss from './groupColor-css.js';
+import tokenCss from './tokens-css.js';
 
 // Import formvalidation class
 import AuroFormValidation from '@aurodesignsystem/auro-formvalidation/src/validation.js';
@@ -69,9 +71,11 @@ export class AuroRadioGroup extends LitElement {
   }
 
   static get styles() {
-    return css`
-      ${styleCss}
-    `;
+    return [
+      styleCss,
+      colorCss,
+      tokenCss
+    ];
   }
 
   static get properties() {

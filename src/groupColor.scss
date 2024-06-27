@@ -14,9 +14,6 @@
 @import "./../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables";
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints";
 
-// Support for fallback values
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables.scss';
-
 :host {
   legend {
     color: var(--ds-auro-radio-group-label-color);
@@ -28,11 +25,9 @@
 }
 
 .radioGroupElement-helpText {
-  color: var(--ds-radio-group-help-text-color);
+  color: var(--ds-auro-radio-group-help-text-color);
 }
 
 :host([validity]:not([validity='valid'])) {
-  .radioGroupElement-helpText {
-    --ds-radio-group-help-text-color: var(--ds-color-alert-error-default, #{$ds-color-alert-error-default});
-  }
+  --ds-auro-radio-group-help-text-color: var(--ds-color-alert-error-default, #{$ds-color-alert-error-default});
 }

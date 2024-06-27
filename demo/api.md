@@ -386,16 +386,16 @@ The component may be restyled using the following code sample and changing the v
 
 ```scss
 :host {
-  --ds-auro-group-label-color: inherit;
-  --ds-radio-group-help-text-color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
-  --ds-auro-radio-tap-color: transparent;
-  --ds-auro-radio-label-color: inherit;
-  --ds-auro-radio-btn-inset-color: transparent;
-  --ds-auro-radio-btn-fill-color: transparent;
-  --ds-auro-radio-btn-border-color: var(--ds-auro-radio-btn-color);
+  // auro-radio-group colors
+  --ds-auro-radio-group-help-text-color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
 
-  // Used as a shorthand to set the fill and border color of the radio button
-  --ds-auro-radio-btn-color: var(--ds-color-border-primary-default, $ds-color-border-primary-default);
+  // auro-radio colors
+  --ds-auro-group-label-color: inherit;
+  --ds-auro-radio-btn-border-color: var(--ds-color-border-primary-default, $ds-color-border-primary-default);
+  --ds-auro-radio-btn-fill-color: transparent;
+  --ds-auro-radio-btn-inset-color: transparent;
+  --ds-auro-radio-label-color: inherit;
+  --ds-auro-radio-tap-color: transparent;
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->

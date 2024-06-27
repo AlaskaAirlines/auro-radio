@@ -26,7 +26,6 @@
     "lit": "^3.1.4"
   },
   "peerDependencies": {
-    "@alaskaairux/design-tokens": "^3.14.0",
     "@aurodesignsystem/design-tokens": "^4.1.1",
     "@aurodesignsystem/webcorestylesheets": "^5.0.4"
   },

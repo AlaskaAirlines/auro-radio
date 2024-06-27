@@ -34,9 +34,9 @@
 }
 
 :host([checked]) {
-  --ds-auro-radio-btn-inset-color: #fff;
-  --ds-auro-radio-btn-fill-color: var(--ds-color-border-ui-default-default, #{$ds-color-border-ui-default-default});
-  --ds-auro-radio-btn-color: var(--ds-color-border-ui-default-default, #{$ds-color-border-ui-default-default});
+  --ds-auro-radio-btn-inset-color: var(--ds-color-background-primary-100-default, #{$ds-color-background-primary-100-default});
+  --ds-auro-radio-btn-fill-color: var(--ds-color-border-ui-default-default);
+  --ds-auro-radio-btn-border-color: var(--ds-color-border-ui-default-default);
 }
 
 :host([error]) {
@@ -48,9 +48,9 @@
 }
 
 :host([disabled]) {
-  --ds-auro-radio-btn-border-color: var(--ds-color-brand-gray-200, #{$ds-color-brand-gray-200});
+  --ds-auro-radio-btn-border-color: var(--ds-color-border-ui-disabled-default, #{$ds-color-border-ui-disabled-default});
 }
 
 :host(.focus-visible) {
-  --ds-auro-radio-btn-color: var(--ds-color-border-ui-default-default, #{$ds-color-border-ui-default-default});
+  --ds-auro-radio-btn-border-color: var(--ds-color-border-ui-default-default, #{$ds-color-border-ui-default-default});
 }

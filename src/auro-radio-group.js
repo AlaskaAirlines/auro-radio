@@ -36,7 +36,7 @@ import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/util
  * @slot {HTMLSlotElement} legend - Allows for the legend to be overridden.
  * @slot {HTMLSlotElement} optionalLabel - Allows for the optional label to be overridden.
  * @slot {HTMLSlotElement} helpText - Allows for the helper text to be overridden.
- * @fires auroFormElement-validated - Notifies that the element has been validated.
+ * @event auroFormElement-validated - Notifies that the element has been validated.
  */
 
 export class AuroRadioGroup extends LitElement {

@@ -7,7 +7,7 @@
     "================================================================================"
   ],
   "name": "@aurodesignsystem/auro-radio",
-  "version": "3.0.0",
+  "version": "3.1.0-beta.1",
   "description": "auro-radio HTML custom element",
   "repository": {
     "type": "git",

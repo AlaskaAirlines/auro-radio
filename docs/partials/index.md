@@ -57,8 +57,13 @@ There are two important parts of every Auro component. The <a href="https://deve
 To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `registerComponent(name)` method and pass in a unique name.
 
 ```js
-import './node_modules/@aurodesignsystem/auro-radio';
-registerComponent('custom-radio');
+import { AuroRadio } from './src/auro-radio.js';
+import { AuroRadioGroup } from './src/auro-radio-group.js';
+
+import * as RuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
+RuntimeUtils.default.prototype.registerComponent('custom-radio', AuroRadio);
+RuntimeUtils.default.prototype.registerComponent('custom-radio-group', AuroRadioGroup);
 ```
 
 This will create a new custom element that you can use in your HTML that will function identically to the `<auro-radio>` element.

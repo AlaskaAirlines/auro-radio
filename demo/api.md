@@ -388,9 +388,9 @@ The component may be restyled using the following code sample and changing the v
 :host {
   // auro-radio-group colors
   --ds-auro-radio-group-help-text-color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
+  --ds-auro-radio-group-label-color: inherit;
 
   // auro-radio colors
-  --ds-auro-group-label-color: inherit;
   --ds-auro-radio-btn-border-color: var(--ds-color-border-primary-default, $ds-color-border-primary-default);
   --ds-auro-radio-btn-fill-color: transparent;
   --ds-auro-radio-btn-inset-color: transparent;

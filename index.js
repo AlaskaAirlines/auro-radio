@@ -1,22 +1,7 @@
-import { AuroRadio } from './src/auro-radio.js';
-import { AuroRadioGroup } from './src/auro-radio-group.js';
+import { AuroRadio } from '../src/auro-radio.js';
+import { AuroRadioGroup } from '../src/auro-radio-group.js';
 
-/**
- * Register Custom Element.
- * @param {Object} name - Name to use for custom element.
- * @returns {void}
- */
-const registerComponent = (name = 'custom-radio') => {
-  const groupName = name + '-group';
+import * as RuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
 
-  // alias definition
-  if (!customElements.get(name)) {
-    customElements.define(name, class extends AuroRadio {});
-  }
-
-  if (!customElements.get(groupName)) {
-    customElements.define(groupName, class extends AuroRadioGroup {});
-  }
-}
-
-export { registerComponent }
+RuntimeUtils.default.prototype.registerComponent('custom-radio', AuroRadio);
+RuntimeUtils.default.prototype.registerComponent('custom-radio-group', AuroRadioGroup);

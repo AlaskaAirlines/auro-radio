@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [3.1.0-beta.3](https://github.com/AlaskaAirlines/auro-radio/compare/v3.1.0-beta.2...v3.1.0-beta.3) (2024-09-20)
+
+
+### Bug Fixes
+
+* update incorrect token name ([de01fa3](https://github.com/AlaskaAirlines/auro-radio/commit/de01fa3bb56a8d670311de58712efe7f2cef6fc8))
+
 # [3.0.0](https://github.com/AlaskaAirlines/auro-radio/compare/v2.2.2...v3.0.0) (2024-05-13)
 
 

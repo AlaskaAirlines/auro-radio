@@ -1,31 +1,5 @@
 # Semantic Release Automated Changelog
 
-# [3.1.0-beta.2](https://github.com/AlaskaAirlines/auro-radio/compare/v3.1.0-beta.1...v3.1.0-beta.2) (2024-09-20)
-
-
-### Bug Fixes
-
-* update path to component js files ([4d830b2](https://github.com/AlaskaAirlines/auro-radio/commit/4d830b2c7960b7ef483d2942fe38596660d03a04))
-
-
-### Performance Improvements
-
-* refactor custom component registration config ([6cd6986](https://github.com/AlaskaAirlines/auro-radio/commit/6cd6986a5f8e55635366ad4722595c9d82f4350c))
-* update dependencies and lint configs ([09596d0](https://github.com/AlaskaAirlines/auro-radio/commit/09596d035b0cd92845226e3c1c2c85766c103a1a))
-
-# [3.1.0-beta.1](https://github.com/AlaskaAirlines/auro-radio/compare/v3.0.0...v3.1.0-beta.1) (2024-07-04)
-
-
-### Features
-
-* **theme:** add theme support ([81499bd](https://github.com/AlaskaAirlines/auro-radio/commit/81499bdf4448acdaf73d257ab093d44d53fcc464))
-
-
-### Performance Improvements
-
-* **deps:** update to latest dependencies ([fcff1a9](https://github.com/AlaskaAirlines/auro-radio/commit/fcff1a9d00a2fd093b5237b4050515b5085780a2))
-* **deps:** update to latest dependencies ([c461ffc](https://github.com/AlaskaAirlines/auro-radio/commit/c461ffc2b41ec9da9f43ceab8435d3f3ff960b2c))
-
 # [3.0.0](https://github.com/AlaskaAirlines/auro-radio/compare/v2.2.2...v3.0.0) (2024-05-13)
 
 

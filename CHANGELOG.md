@@ -1,17 +1,5 @@
 # Semantic Release Automated Changelog
 
-# [4.0.0-beta.1](https://github.com/AlaskaAirlines/auro-radio/compare/v3.1.0-beta.3...v4.0.0-beta.1) (2024-09-24)
-
-
-### Performance Improvements
-
-* update dependencies ([1477e9b](https://github.com/AlaskaAirlines/auro-radio/commit/1477e9ba8c3acf6d425e39646bc8ceb9a179e41a))
-
-
-### BREAKING CHANGES
-
-* trigger major release for theme support #124
-
 # [3.0.0](https://github.com/AlaskaAirlines/auro-radio/compare/v2.2.2...v3.0.0) (2024-05-13)
 
 

@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [4.0.1](https://github.com/AlaskaAirlines/auro-radio/compare/v4.0.0...v4.0.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* lock version to 2.8.x ([c26d0c3](https://github.com/AlaskaAirlines/auro-radio/commit/c26d0c3454168c5cc76657ce9e38a2de125d0161))
+* make auro-library a normal dep instead of devDep ([8ede616](https://github.com/AlaskaAirlines/auro-radio/commit/8ede616e6d2f52b4e190f1be8a0e25f9718f7787))
+
 # [4.0.0](https://github.com/AlaskaAirlines/auro-radio/compare/v3.0.0...v4.0.0) (2024-09-30)
 
 

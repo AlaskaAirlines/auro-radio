@@ -119,6 +119,25 @@ export class AuroRadioGroup extends LitElement {
     };
   }
 
+  /**
+   * This will register this element with the browser
+   * @param {string} [name="auro-radio-group"]
+   *
+   * @example
+<<<<<<< Updated upstream
+   * AuroRadioGroup.register("custom-radio") // this will resgiter this element to <custom-radio/>
+=======
+   * AuroRadioGroup.register("custom-radio") // this will register this element to <custom-radio/>
+>>>>>>> Stashed changes
+   *
+   */
+  static register(name = "auro-radio-group") {
+    // default internal definition
+    if (!customElements.get(name)) {
+      customElements.define(name, AuroRadioGroup);
+    }
+  }
+
   connectedCallback() {
     super.connectedCallback();
     this.handleItems();
@@ -418,10 +437,4 @@ export class AuroRadioGroup extends LitElement {
       }
     `;
   }
-}
-
-/* istanbul ignore else */
-// define the name of the custom component
-if (!customElements.get("auro-radio-group")) {
-  customElements.define("auro-radio-group", AuroRadioGroup);
 }

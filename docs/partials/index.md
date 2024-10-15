@@ -54,21 +54,25 @@ This is a default configuration using the `<auro-radio-group>` and `<auro-radio>
 
 There are two important parts of every Auro component. The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">class</a> and the custom clement. The class is exported and then used as part of defining the Web Component. When importing this component as described in the <a href="#install">install</a> section, the class is imported and the `<auro-radio>` custom element is defined automatically.
 
-To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `registerComponent(name)` method and pass in a unique name.
+<<<<<<< Updated upstream
+To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `register(name)` method and pass in a unique name.
+=======
+There are two important parts of every Auro component. The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">class</a> and the custom clement. The class is exported and then used as part of defining the Web Component. When importing this component as described in the <a href="#install">install</a> section, the class is imported and the `<auro-radio>` custom element is defined automatically.
+
+To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our static `register(name)` method on the component class and pass in a unique name.
+>>>>>>> Stashed changes
 
 ```js
 import { AuroRadio } from './src/auro-radio.js';
 import { AuroRadioGroup } from './src/auro-radio-group.js';
 
-import * as RuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
-
-RuntimeUtils.default.prototype.registerComponent('custom-radio', AuroRadio);
-RuntimeUtils.default.prototype.registerComponent('custom-radio-group', AuroRadioGroup);
+AuroRadio.register('custom-radio');
+AuroRadioGroup.register('custom-radio-group');
 ```
 
 This will create a new custom element that you can use in your HTML that will function identically to the `<auro-radio>` element.
 
-Using the `registerComponent` function to create a custom `<auro-radio>` will also create a custom `<auro-radio-group>` with the exact same naming convention, ending in "-group". For example, using `registerComponent('custom-radio')` will result in `<custom-radio-group>` also being created.
+Using the `register` function to create a custom `<auro-radio>` will also create a custom `<auro-radio-group>` with the exact same naming convention, ending in "-group". For example, using `AuroRadio.register('custom-radio')` will result in `<custom-radio-group>` also being created.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/customRadio.html) -->

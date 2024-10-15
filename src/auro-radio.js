@@ -83,6 +83,18 @@ export class AuroRadio extends LitElement {
   }
 
   /**
+   * This will register this element with the browser.
+   * @param {string} [name="auro-radio"] - The name of element that you want to register to.
+   *
+   * @example
+   * AuroRadio.register("custom-radio") // This will resgiter this element to <custom-radio/>
+   *
+   */
+  static register(name = "auro-radio") {
+    AuroLibraryRuntimeUtils.prototype.registerComponent(name, AuroRadio);
+  }
+
+  /**
    * Method for handling content when change event is fired.
    * @private
    * @param {Event} event - The trigger event tied to this function.
@@ -231,10 +243,4 @@ export class AuroRadio extends LitElement {
       <slot name="content" class="slotContent"></slot>
     `;
   }
-}
-
-/* istanbul ignore else */
-// define the name of the custom component
-if (!customElements.get("auro-radio")) {
-  customElements.define("auro-radio", AuroRadio);
 }

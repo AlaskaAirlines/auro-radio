@@ -40,15 +40,7 @@
           Prism.highlightAll();
         });
     </script>
-    <script type="module">
-      import { AuroRadio } from '../src/auro-radio.js';
-      import { AuroRadioGroup } from '../src/auro-radio-group.js';
-
-      import * as RuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
-
-      RuntimeUtils.default.prototype.registerComponent('custom-radio', AuroRadio);
-      RuntimeUtils.default.prototype.registerComponent('custom-radio-group', AuroRadioGroup);
-    </script>
+    <script src="./index.min.js"></script>
 
     <!-- If additional elements are needed for the demo, add them here. -->
     <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>

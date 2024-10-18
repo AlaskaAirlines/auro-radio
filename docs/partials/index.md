@@ -52,7 +52,7 @@ This is a default configuration using the `<auro-radio-group>` and `<auro-radio>
 
 ## Recommended Use and Version Control
 
-There are two important parts of every Auro component. The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">class</a> and the custom clement. The class is exported and then used as part of defining the Web Component. When importing this component as described in the <a href="#install">install</a> section, the class is imported and the `<auro-radio>` custom element is defined automatically.
+There are two important parts of every Auro component. The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">class</a> and the custom element. The class is exported and then used as part of defining the Web Component. When importing this component as described in the <a href="#install">install</a> section, the class is imported and the `<auro-radio>` custom element is defined automatically.
 
 To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our static `register(name)` method on the component class and pass in a unique name.
 

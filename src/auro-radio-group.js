@@ -223,7 +223,7 @@ export class AuroRadioGroup extends LitElement {
     this.value = undefined;
     this.index = 0;
     this.optionSelected = undefined;
-    const buttons = this.querySelectorAll('auro-radio');
+    const buttons = this.querySelectorAll('auro-radio, [auro-radio]');
 
     buttons.forEach((button) => {
       button.checked = false;

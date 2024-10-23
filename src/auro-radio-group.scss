@@ -14,9 +14,6 @@
 @import "./../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables";
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints";
 
-// Support for fallback values
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables.scss';
-
 // container styles - defines the look of the outer custom component
 :host {
   display: block;

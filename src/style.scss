@@ -24,9 +24,6 @@
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties';
 
-// Support for fallback values
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables.scss';
-
 :host {
   display: block;
 

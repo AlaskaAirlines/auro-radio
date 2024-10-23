@@ -1,4 +1,5 @@
 import { dynamicExample } from "../apiExamples/dynamic";
+import '../index.js';
 
 export function initExamples(initCount) {
   initCount = initCount || 0;

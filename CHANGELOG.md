@@ -1,5 +1,22 @@
 # Semantic Release Automated Changelog
 
+# [4.1.0](https://github.com/AlaskaAirlines/auro-radio/compare/v4.0.1...v4.1.0) (2024-10-24)
+
+
+### Bug Fixes
+
+* make `demo/index.min.js` to load as a module ([76d236a](https://github.com/AlaskaAirlines/auro-radio/commit/76d236a39ffec829cf4491a95879f9d0b5b5d516))
+
+
+### Features
+
+* **api:** add register static method [#144](https://github.com/AlaskaAirlines/auro-radio/issues/144) ([2664125](https://github.com/AlaskaAirlines/auro-radio/commit/26641259fbc524fd7b76422e9781e5732bf86820))
+
+
+### Performance Improvements
+
+* update dependency versions, remove duplicated scss imports ([b08b8b2](https://github.com/AlaskaAirlines/auro-radio/commit/b08b8b24518c3624d11f47f4de6345cd8a10b881))
+
 ## [4.0.1](https://github.com/AlaskaAirlines/auro-radio/compare/v4.0.0...v4.0.1) (2024-10-14)
 
 

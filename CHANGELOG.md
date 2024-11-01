@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.1.1](https://github.com/AlaskaAirlines/auro-radio/compare/v4.1.0...v4.1.1) (2024-11-01)
+
+
+### Performance Improvements
+
+* change api attr type ([8895246](https://github.com/AlaskaAirlines/auro-radio/commit/889524649be4ddc2e464ee9ac8c757716fc10d74))
+
 # [4.1.0](https://github.com/AlaskaAirlines/auro-radio/compare/v4.0.1...v4.1.0) (2024-10-24)
 
 

@@ -8,7 +8,7 @@
 | `error`                         | `error`                         | `String`      |             | When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value. |
 | `horizontal`                    | `horizontal`                    | `boolean`     | false       |                                                  |
 | `noValidate`                    | `noValidate`                    | `Boolean`     |             | If set, disables auto-validation on blur.        |
-| `optionSelected`                | `optionSelected`                | `HTMLElement` | "undefined" | Specifies the current selected radio button.     |
+| `optionSelected`                | `optionSelected`                | `Object`      | "undefined" | Specifies the current selected radio button.     |
 | `required`                      | `required`                      | `Boolean`     | false       | Populates the `required` attribute on the element. Used for client-side validation. |
 | `setCustomValidity`             | `setCustomValidity`             | `String`      |             | Sets a custom help text message to display for all validityStates. |
 | `setCustomValidityCustomError`  | `setCustomValidityCustomError`  | `String`      |             | Custom help text message to display when validity = `customError`. |

@@ -31,7 +31,7 @@ import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/util
  * @attr {String} error - When defined, sets persistent validity to `customError` and sets `setCustomValidity` = attribute value.
  * @attr {Boolean} noValidate - If set, disables auto-validation on blur.
  * @attr {Boolean} required - Populates the `required` attribute on the element. Used for client-side validation.
- * @attr {HTMLElement} optionSelected - Specifies the current selected radio button.
+ * @attr {Object} optionSelected - Specifies the current selected radio button.
  * @csspart radio-group - Apply css to the fieldset element in the shadow DOM
  * @slot {HTMLSlotElement} legend - Allows for the legend to be overridden.
  * @slot {HTMLSlotElement} optionalLabel - Allows for the optional label to be overridden.
@@ -114,13 +114,13 @@ export class AuroRadioGroup extends LitElement {
         reflect: true
       },
       optionSelected: {
-        type: HTMLElement
+        type: Object
       }
     };
   }
 
   /**
-   * This will register this element with the browser
+   * This will register this element with the browser.
    * @param {string} [name="auro-radio-group"] - The name of element that you want to register to.
    *
    * @example

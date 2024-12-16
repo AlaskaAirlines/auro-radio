@@ -1,8 +1,6 @@
 repository:
   # See https://docs.github.com/en/free-pro-team@latest/rest/reference/repos#edit for all available settings.
-
-  # A short description of the repository that will show up on GitHub
-  description: Custom input element of type radio generally used in radio groups—collections of radio buttons describing a set of related options
+  # See https://github.com/apps/settings for app settings
 
   # A URL with more information about the repository
   homepage: https://auro.alaskaair.com/components/auro/radio
@@ -22,6 +20,9 @@ repository:
   # Updates the default branch for this repository.
   default_branch: main
 
+  # Either `true` to enable automatic deletion of branches on merge, or `false` to disable
+  delete_branch_on_merge: true
+
   # Either `true` to allow squash-merging pull requests, or `false` to prevent
   # squash-merging.
   allow_squash_merge: false
@@ -33,6 +34,19 @@ repository:
   # Either `true` to allow rebase-merging pull requests, or `false` to prevent
   # rebase-merging.
   allow_rebase_merge: true
+
+# See https://docs.github.com/en/rest/reference/teams#add-or-update-team-repository-permissions for available options
+teams:
+  # The permission to grant the team. Can be one of:
+  # * `pull` - can pull, but not push to or administer this repository.
+  # * `push` - can pull and push, but not administer this repository.
+  # * `admin` - can pull, push and administer this repository.
+  # * `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.
+  # * `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
+  - name: auro-team
+    permission: admin
+  - name: nonauroteamwriteaccess
+    permission: push
 
 branches:
   - &default_protection
@@ -73,7 +87,6 @@ branches:
 # Labels: define labels for Issues and Pull Requests
 labels:
   - name: auro-radio
-    cat: default
     color: 'fa23e4'
     description:
     process: Key filter for this repo
@@ -98,9 +111,6 @@ labels:
     color: '6bb7fb'
     description: Extra attention is needed, this user requires assistance to complete
       the work
-  - name: not-reviewed
-    color: '000000'
-    description: This issue has not yet been reviewed by the Auro team
   - name: released
     color: 'A9A9A9'
     description: Completed work has been released
@@ -115,20 +125,17 @@ labels:
     description: Owner has completed work and considers it ready to be merged
   - name: 'Status: Blocked'
     color: 'df0b37'
-    description: Progress on the issue is blocked, immediate attention is required
+    description: Progress on the issue is Blocked, immediate attention is required
     aliases:
     - blocked
-  - name: 'Status: Abandoned'
+  - name: 'Abandoned'
     color: '156fad'
-    description: The issue or Pull Request is wont-fix
+    description: The author of this issue or Pull Request is not responding
     aliases:
     - wontfix
     - invalid
-  - name: 'Type: Spike'
-    color: 'ab33d6'
-    description: Team requires further research or investigation
   - name: 'Type: Bug'
-    color: 'df0b37'
+    color: df0b37
     description: Bug or Bug fixes
     aliases:
     - bug
@@ -176,16 +183,8 @@ labels:
     description: Pull requests that update a dependency file
     aliases:
     - dependencies
-
-# See https://docs.github.com/en/rest/reference/teams#add-or-update-team-repository-permissions for available options
-teams:
-  # The permission to grant the team. Can be one of:
-  # * `pull` - can pull, but not push to or administer this repository.
-  # * `push` - can pull and push, but not administer this repository.
-  # * `admin` - can pull, push and administer this repository.
-  # * `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.
-  # * `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
-  - name: auro-team
-    permission: admin
-  - name: nonauroteamwriteaccess
-    permission: push
+  - name: 'Type: UI Update'
+    color: 'ffd200'
+    description: Changes to the user interface
+    aliases:
+    - dependencies

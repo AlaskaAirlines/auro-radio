@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.1.2](https://github.com/AlaskaAirlines/auro-radio/compare/v4.1.1...v4.1.2) (2024-12-20)
+
+
+### Performance Improvements
+
+* update node to version 22 ([9b23998](https://github.com/AlaskaAirlines/auro-radio/commit/9b239980dadc99b45a6fe5e9c36967e051b05520))
+
 ## [4.1.1](https://github.com/AlaskaAirlines/auro-radio/compare/v4.1.0...v4.1.1) (2024-11-01)
 
 

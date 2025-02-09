@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+## [4.1.3](https://github.com/AlaskaAirlines/auro-radio/compare/v4.1.2...v4.1.3) (2025-02-09)
+
+
+### Bug Fixes
+
+* update incorrect config ([8842134](https://github.com/AlaskaAirlines/auro-radio/commit/8842134f087a5b5eaa37f162058f6a8f16bc89e9))
+
+
+### Performance Improvements
+
+* update dependencies ([e93b4b9](https://github.com/AlaskaAirlines/auro-radio/commit/e93b4b9d1eda5684dc01f930e78c6b4b59994351))
+
 ## [4.1.2](https://github.com/AlaskaAirlines/auro-radio/compare/v4.1.1...v4.1.2) (2024-12-20)
 
 

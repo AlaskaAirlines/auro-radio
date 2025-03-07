@@ -4,7 +4,7 @@ The README.md file is a compiled document. No edits should be made directly to t
 README.md is created by running `npm run build:docs`.
 
 This file is generated based on a template fetched from
-`https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/README.md`
+`https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/README_updated_paths.md`
 and copied to `./componentDocs/README.md` each time the the docs are compiled.
 
 The following sections are editable by making changes to the following files:
@@ -17,14 +17,16 @@ The following sections are editable by making changes to the following files:
 | Component Example Code | HTML sample code of the components use            | `./apiExamples/basic.html`          |
 -->
 
-# Radio
+# Radio (DEPRECATED)
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
-<!-- The below content is automatically added from ./../docs/partials/description.md -->
+> **WARNING:** This component is deprecated and is no longer supported. Please migrate to the new [Auro Formkit](https://www.npmjs.com/package/@aurodesignsystem/auro-formkit) instead.
+
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./docs/partials/description.md) -->
+<!-- The below content is automatically added from ./docs/partials/description.md -->
 `<auro-radio>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) that is rendered as a small circle, which is filled or highlighted when selected. Only one `<auro-radio>` component in a given `<auro-radio-group>` can be selected at the same time.
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/readmeAddlInfo.md) -->
-<!-- The below content is automatically added from ./../docs/partials/readmeAddlInfo.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./docs/partials/readmeAddlInfo.md) -->
+<!-- The below content is automatically added from ./docs/partials/readmeAddlInfo.md -->
 <!-- AURO-GENERATED-CONTENT This file is to be used for any additional content that should be included in the README.md which is specific to this component. -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
@@ -72,8 +74,8 @@ import "@aurodesignsystem/auro-radio";
 
 <!-- AURO-GENERATED-CONTENT:END -->
 **Reference component in HTML**
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ./apiExamples/basic.html -->
 
 ```html
 <auro-radio id="basicRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
@@ -94,7 +96,7 @@ In cases where the project is not able to process JS assets, there are pre-proce
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/bundleUseModBrowsers.md) -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@4.13.0/dist/tokens/CSSCustomProperties.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@4.13.0/dist/auro-classic/CSSCustomProperties.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@6.0.2/dist/bundled/essentials.css" />
 <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-radio@4.1.3/dist/auro-radio__bundled.js" type="module"></script>
 ```
@@ -103,8 +105,8 @@ In cases where the project is not able to process JS assets, there are pre-proce
 
 ## auro-radio use cases
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
-<!-- The below content is automatically added from ./../docs/partials/useCases.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./docs/partials/useCases.md) -->
+<!-- The below content is automatically added from ./docs/partials/useCases.md -->
 The `<auro-radio>` element is designed to be a single component for the use of creating an input `type="radio"` with an associated `<label>` that meets all use case and accessibility standards.
 
 The following examples illustrate fully functional `<auro-radio>` elements wrapped with the `<auro-radio-group>` element. The `<auro-radio-group>` element is REQUIRED in order to mantain the relationship between individual `<auro-radio>` elements for functional radio button actions.
@@ -116,8 +118,8 @@ The following examples illustrate fully functional `<auro-radio>` elements wrapp
 
 ### Default auro-radio
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ./apiExamples/basic.html -->
 
 ```html
 <auro-radio id="basicRadio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
